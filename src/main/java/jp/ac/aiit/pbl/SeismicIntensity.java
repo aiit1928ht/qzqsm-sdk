@@ -2,102 +2,102 @@ package jp.ac.aiit.pbl;
 
 public class SeismicIntensity {
     // Preamble
-    private String Preamble;
+    private String preamble;
     // Message Type
-    private String MessageTypeID;
+    private String messageTypeID;
     // 通報区分
-    private String ReportClassification;
+    private String reportClassification;
     // 災害種別コード
-    private String DisasterCategory;
+    private String disasterCategory;
     // 発表時刻
-    private String ReportTimeMonth;
+    private String reportTimeMonth;
     // 発表時刻
-    private String ReportTimeDay;
+    private String reportTimeDay;
     // 発表時刻
-    private String ReportTimeHour;
+    private String reportTimeHour;
     // 発表時刻
     private String minute;
     // 情報形態
-    private String InformationType;
+    private String informationType;
     // 予備１
-    private String Spare1;
+    private String spare1;
     // 地震の発生時刻
-    private String OccurrenceTimeOfEarthquakeDay;
+    private String occurrenceTimeOfEarthquakeDay;
     // 地震の発生時刻
-    private String OccurrenceTimeOfEarthquakeHour;
+    private String occurrenceTimeOfEarthquakeHour;
     // 地震の発生時刻
-    private String OccurrenceTimeOfEarthquakeMinute;
+    private String occurrenceTimeOfEarthquakeMinute;
     // 震度(地点1)
-    private String SeismicIntensityRegion1;
+    private String seismicIntensityRegion1;
     // 都道府県(地点1)
-    private String PrefectureRegion1;
+    private String prefectureRegion1;
     // 震度(地点2)
-    private String SeismicIntensityRegion2;
+    private String seismicIntensityRegion2;
     // 都道府県(地点2)
-    private String PrefectureRegion2;
+    private String prefectureRegion2;
     // 震度(地点3)
-    private String SeismicIntensityRegion3;
+    private String seismicIntensityRegion3;
     // 都道府県(地点3)
-    private String PrefectureRegion3;
+    private String prefectureRegion3;
     // 震度(地点4)
-    private String SeismicIntensityRegion4;
+    private String seismicIntensityRegion4;
     // 都道府県(地点4)
-    private String PrefectureRegion4;
+    private String prefectureRegion4;
     // 震度(地点5)
-    private String SeismicIntensityRegion5;
+    private String seismicIntensityRegion5;
     // 都道府県(地点5)
-    private String PrefectureRegion5;
+    private String prefectureRegion5;
     // 震度(地点6)
-    private String SeismicIntensityRegion6;
+    private String seismicIntensityRegion6;
     // 都道府県(地点6)
-    private String PrefectureRegion6;
+    private String prefectureRegion6;
     // 震度(地点7)
-    private String SeismicIntensityRegion7;
+    private String seismicIntensityRegion7;
     // 都道府県(地点7)
-    private String PrefectureRegion7;
+    private String prefectureRegion7;
     // 震度(地点8)
-    private String SeismicIntensityRegion8;
+    private String seismicIntensityRegion8;
     // 都道府県(地点8)
-    private String PrefectureRegion8;
+    private String prefectureRegion8;
     // 震度(地点9)
-    private String SeismicIntensityRegion9;
+    private String seismicIntensityRegion9;
     // 都道府県(地点9)
-    private String PrefectureRegion9;
+    private String prefectureRegion9;
     // 震度(地点10)
-    private String SeismicIntensityRegion10;
+    private String seismicIntensityRegion10;
     // 都道府県(地点10)
-    private String PrefectureRegion10;
+    private String prefectureRegion10;
     // 震度(地点11)
-    private String SeismicIntensityRegion11;
+    private String seismicIntensityRegion11;
     // 都道府県(地点11)
-    private String PrefectureRegion11;
+    private String prefectureRegion11;
     // 震度(地点12)
-    private String SeismicIntensityRegion12;
+    private String seismicIntensityRegion12;
     // 都道府県(地点12)
-    private String PrefectureRegion12;
+    private String prefectureRegion12;
     // 震度(地点13)
-    private String SeismicIntensityRegion13;
+    private String seismicIntensityRegion13;
     // 都道府県(地点13)
-    private String PrefectureRegion13;
+    private String prefectureRegion13;
     // 震度(地点14)
-    private String SeismicIntensityRegion14;
+    private String seismicIntensityRegion14;
     // 都道府県(地点14)
-    private String PrefectureRegion14;
+    private String prefectureRegion14;
     // 震度(地点15)
     private String SeismicIntensityRegion15;
     // 都道府県(地点15)
-    private String PrefectureRegion15;
+    private String prefectureRegion15;
     // 震度(地点16)
-    private String SeismicIntensityRegion16;
+    private String seismicIntensityRegion16;
     // 都道府県(地点16)
-    private String PrefectureRegion16;
+    private String prefectureRegion16;
     // 予備2
-    private String Spare2;
+    private String spare2;
     // バージョン番号
-    private String VersionNumber;
+    private String versionNumber;
     // 予約領域
-    private String Reserved;
+    private String reserved;
     // Cyclic Redundancy Check
-    private String CRC;
+    private String crc;
     
 }
