@@ -3,16 +3,17 @@ package jp.ac.aiit.pbl;
 import java.time.LocalDateTime;
 
 public class Weather {
-    public Weather(String qzqsm) {
+/*    public Weather(String qzqsm) {
         this.qzqsm = qzqsm;
     }
-
-    private String qzqsm;   // QZSSから受信した250bitの信号データ
+*/
+//    private String qzqsm;   // QZSSから受信した250bitの信号データ
     private String pab;
     private String messageType;
     private String reportClassification;
     private String disasterCategory;
-    private LocalDateTime reportTime;
+//    private LocalDateTime reportTime;
+    private String reportTime;
     private String infoType;
     private String warningState;
     private String disasterSubCategoryRegion1;
@@ -59,12 +60,20 @@ public class Weather {
     public void setDisasterCategory(String disasterCategory) {
         this.disasterCategory = disasterCategory;
     }
-
+/*
     public LocalDateTime getReportTime() {
         return reportTime;
     }
 
     public void setReportTime(LocalDateTime reportTime) {
+        this.reportTime = reportTime;
+    }
+*/
+    public String getReportTime() {
+        return reportTime;
+    }
+
+    public void setReportTime(String reportTime) {
         this.reportTime = reportTime;
     }
 
