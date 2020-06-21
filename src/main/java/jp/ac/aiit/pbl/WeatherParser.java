@@ -41,32 +41,39 @@ public class WeatherParser {
 
     public Weather parse() {
         Weather weather = new Weather();
-        weather.setWarningState(WetherDefinition.Definition.WARNING_STATE.getValue(
+        WarningState warningstate = new WarningState();
+        DisasterSubcategoryRegion disastersubcategoryregion = new DisasterSubcategoryRegion();
+        PrefecturalForecastRegion prefecturalforecastregion = new PrefecturalForecastRegion();
+
+        weather.setWarningState(warningstate.definition.get(
                 String.valueOf(Integer.parseInt(Format.WARNING_STATE.signalValue(qzqms), 2))));
-        weather.setDisasterSubCategoryRegion1(WetherDefinition.Definition.DISASTER_SUBCATEGORY_REGION.getValue(
+
+        weather.setDisasterSubCategoryRegion1(disastersubcategoryregion.definition.get(
                 String.valueOf(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION1.signalValue(qzqms), 2))));
-        weather.setDisasterSubCategoryRegion2(WetherDefinition.Definition.DISASTER_SUBCATEGORY_REGION.getValue(
+        weather.setDisasterSubCategoryRegion2(disastersubcategoryregion.definition.get(
                 String.valueOf(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION2.signalValue(qzqms), 2))));
-        weather.setDisasterSubCategoryRegion3(WetherDefinition.Definition.DISASTER_SUBCATEGORY_REGION.getValue(
+        weather.setDisasterSubCategoryRegion3(disastersubcategoryregion.definition.get(
                 String.valueOf(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION3.signalValue(qzqms), 2))));
-        weather.setDisasterSubCategoryRegion4(WetherDefinition.Definition.DISASTER_SUBCATEGORY_REGION.getValue(
+        weather.setDisasterSubCategoryRegion4(disastersubcategoryregion.definition.get(
                 String.valueOf(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION4.signalValue(qzqms), 2))));
-        weather.setDisasterSubCategoryRegion5(WetherDefinition.Definition.DISASTER_SUBCATEGORY_REGION.getValue(
+        weather.setDisasterSubCategoryRegion5(disastersubcategoryregion.definition.get(
                 String.valueOf(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION5.signalValue(qzqms), 2))));
-        weather.setDisasterSubCategoryRegion6(WetherDefinition.Definition.DISASTER_SUBCATEGORY_REGION.getValue(
+        weather.setDisasterSubCategoryRegion6(disastersubcategoryregion.definition.get(
                 String.valueOf(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION6.signalValue(qzqms), 2))));
-        weather.setPrefecturalForecastRegionRegion1(WetherDefinition.Definition.PREFECTURAL_FORECAST_REGION.getValue(
+
+        weather.setPrefecturalForecastRegionRegion1(prefecturalforecastregion.definition.get(
                 String.valueOf(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION1.signalValue(qzqms), 2))));
-        weather.setPrefecturalForecastRegionRegion2(WetherDefinition.Definition.PREFECTURAL_FORECAST_REGION.getValue(
+        weather.setPrefecturalForecastRegionRegion2(prefecturalforecastregion.definition.get(
                 String.valueOf(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION2.signalValue(qzqms), 2))));
-        weather.setPrefecturalForecastRegionRegion3(WetherDefinition.Definition.PREFECTURAL_FORECAST_REGION.getValue(
+        weather.setPrefecturalForecastRegionRegion3(prefecturalforecastregion.definition.get(
                 String.valueOf(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION3.signalValue(qzqms), 2))));
-        weather.setPrefecturalForecastRegionRegion4(WetherDefinition.Definition.PREFECTURAL_FORECAST_REGION.getValue(
+        weather.setPrefecturalForecastRegionRegion4(prefecturalforecastregion.definition.get(
                 String.valueOf(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION4.signalValue(qzqms), 2))));
-        weather.setPrefecturalForecastRegionRegion5(WetherDefinition.Definition.PREFECTURAL_FORECAST_REGION.getValue(
+        weather.setPrefecturalForecastRegionRegion5(prefecturalforecastregion.definition.get(
                 String.valueOf(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION5.signalValue(qzqms), 2))));
-        weather.setPrefecturalForecastRegionRegion6(WetherDefinition.Definition.PREFECTURAL_FORECAST_REGION.getValue(
+        weather.setPrefecturalForecastRegionRegion6(prefecturalforecastregion.definition.get(
                 String.valueOf(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION6.signalValue(qzqms), 2))));
+
         return weather;
     }
 }

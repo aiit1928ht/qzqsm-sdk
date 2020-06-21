@@ -3,11 +3,6 @@ package jp.ac.aiit.pbl;
 import java.time.LocalDateTime;
 
 public class Weather {
-/*    public Weather(String qzqsm) {
-        this.qzqsm = qzqsm;
-    }
-*/
-//    private String qzqsm;   // QZSSから受信した250bitの信号データ
     private String pab;
     private String messageType;
     private String reportClassification;
