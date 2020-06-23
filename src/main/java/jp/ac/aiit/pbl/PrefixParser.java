@@ -8,15 +8,12 @@ public class PrefixParser {
     public Prefix parse(String qzMessage){
         Prefix prefix = new Prefix();
         prefix.setPreamble(Preamble.getById(qzMessage.substring(0,8)));
-        //prefix.setPreamble(String.valueOf(Integer.parseInt( qzMessage.substring(0,8),2)));
         prefix.setMessageType(MessageType.getById(Integer.parseInt( qzMessage.substring(8,14),2)));
         prefix.setReportClassification(ReportClassification.getById(Integer.parseInt(qzMessage.substring(14,17),2)));
         prefix.setDisasterCategory(DisasterCategory.getById(Integer.parseInt(qzMessage.substring(17,21),2)));
         prefix.setReportTime(toLocalDateTime(qzMessage.substring(21,41)));
         prefix.setInformationType(InformationType.getById(Integer.parseInt(qzMessage.substring(41,43),2)));
         prefix.setSpare1(qzMessage.substring(43,53));
-        //System.out.println("Spare1:" + qzMessage.substring(43,53));
-
         return prefix;
 
     }
