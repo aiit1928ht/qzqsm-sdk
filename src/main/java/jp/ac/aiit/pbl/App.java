@@ -8,8 +8,11 @@ public class App
 {
     public static void main( String[] args ) {
         SeismicIntensity pc = new SeismicIntensity();
-        pc.setPrefectureRegion1(PrefectureCode.getRegion(1));
+        pc.setPrefectureRegion1(PrefectureCode.getRegion(47));
         System.out.println(pc.getPrefectureRegion1());
+        
+        pc.setSeismicIntensityRegion1(SeismicIntensityMessage.getMessage(5));
+        System.out.println(pc.getSeismicIntensityRegion1());
     }
 }
 
