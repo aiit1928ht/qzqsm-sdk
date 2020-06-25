@@ -41,24 +41,24 @@ public enum VolcanoLocalGovernment {
     hokkaidoShinshinotsuMura(130400,"北海道新篠津村"),
     hokkaidoMatsumaeCho(133100,"北海道松前町"),
     hokkaisoFukushimaCho(133200,"北海道福島町"),
-////133300	北海道知内町
-////133400	北海道木古内町
-////133700	北海道七飯町
-////134300	北海道鹿部町
-////134500	北海道森町
-////134600	北海道八雲町
-////134700	北海道長万部町
-////136100	北海道江差町
-////136200	北海道上ノ国町
-////136300	北海道厚沢部町
-////136400	北海道乙部町
-////136700	北海道奥尻町
-////137000	北海道今金町
-////137100	北海道せたな町
-////139100	北海道島牧村
-////139200	北海道寿都町
-////139300	北海道黒松内町
-////139400	北海道蘭越町
+    hokkaisoShiriuchiCho(133300,"北海道知内町"),
+    hokkaidoKikonaiCho(133400,"北海道木古内町"),
+    hokkaidonanaeCho(133700,"北海道七飯町"),
+    hokkaidoShikabeCho(134300,"北海道鹿部町"),
+    hokkaidoMorimachi(134500,"北海道森町"),
+    hokkaidoYakumoCho(134600,"北海道八雲町"),
+    hokkaidoOshamambeCho(134700,"北海道長万部町"),
+    hokkaidoEsashiCho(136100,"北海道江差町"),
+    hokkaidoKaminokuniCho(136200,"北海道上ノ国町"),
+    hokkaidoAssabuCho(136300,"北海道厚沢部町"),
+    hokkaidoOtobeCho(136400,"北海道乙部町"),
+    hokkaidoOkushiriCho(136700,"北海道奥尻町"),
+    hokkaidoImakaneCho(137000,"北海道今金町"),
+    hokkaidoSetanaCho(137100,"北海道せたな町"),
+    hokkaidoShimamakimura(139100,"北海道島牧村"),
+    hokkaidoSuttsuCho(139200,"北海道寿都町"),
+    hokkaidoKuromatsunaiCho(139300,"北海道黒松内町"),
+    hokkaidoRankoshiCho(139400,"北海道蘭越町"),
 ////139500	北海道ニセコ町
 ////139600	北海道真狩村
 ////139700	北海道留寿都村

@@ -4,28 +4,29 @@ import java.util.Arrays;
 
 public enum VolcanoName {
     ShiretokoiouZan(101,"知床硫黄山"),
+    Rausudake(102,"羅臼岳"),
+    Mashuu(103,"摩周"),
+    Atosanupuri(104,"アトサヌプリ"),
+    Meakandake(105,"雌阿寒岳"),
+    Maruyama(106,"丸山"),
+    Daisetsuzan(107,"2大雪山"),
+    Tokachidake(108,"十勝岳"),
+    Tarumaeyama(109,"樽前山"),
+    Eniwadake(110,"恵庭岳"),
+    Kuttara(111,"倶多楽"),
+    Usuzan(112,"有珠山"),
+    HokkaidoKomagadake(113,"北海道駒ヶ岳"),
+    Esan(114,"恵山"),
+    OshimaOhshima(115,"渡島大島"),
+    Rishirizan(116,"利尻山"),
+    Youteizan(117,"羊蹄山"),
+    Niseko(118,"ニセコ"),
+    Naruko(211,"鳴子"),
+    Zaouzan(212,"蔵王山"),
+    Azumayama(213,"吾妻山"),
     others(4000,"その他の火山");
-    //101	知床硫黄山
-    //102	羅臼岳
-    //103	摩周
-    //104	アトサヌプリ
-    //105	雌阿寒岳
-    //106	丸山
-    //107	大雪山
-    //108	十勝岳
-    //109	樽前山
-    //110	恵庭岳
-    //111	倶多楽
-    //112	有珠山
-    //113	北海道駒ヶ岳
-    //114	恵山
-    //115	渡島大島
-    //116	利尻山
-    //117	羊蹄山
-    //118	ニセコ
-    //211	鳴子
-    //212	蔵王山
-    //213	吾妻山
+
+
     //214	安達太良山
     //215	磐梯山
     //216	燧ヶ岳

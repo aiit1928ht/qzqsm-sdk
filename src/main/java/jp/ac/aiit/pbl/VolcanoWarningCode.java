@@ -15,17 +15,15 @@ public enum VolcanoWarningCode {
     activeVolcano(21,"活火山であることに留意"),
     cratorInDanger(22,"火口周辺危険"),
     entryInDanger( 23,"入山危険"),
-    mauntanDustCaution( 24,"山麓厳重警戒"),
-
+    mauntainDustCaution( 24,"山麓厳重警戒"),
+    ResidentialAreaCaution(25,"居住地域厳重警戒"),
+    OceanCoutionErruption(31,"海上警報(噴火警報)"),
+    OceanCoutionRelease(32,"海上警報(噴火警報解除"),
+    OceanForecastErruptionForecast(33,"海上予報(噴火予報)"),
+    ActiveVolcanoUnderWarter(35,"活火山であることに留意(海底火山)"),
+    OceanSorroundingAreaCaution(36,"周辺海域警戒"),
     others(127,"その他の防災気象情報要素");
-    //
-//
-//    25	居住地域厳重警戒
-//    31	海上警報(噴火警報)
-//    32	海上警報(噴火警報解除)
-//    33	海上予報(噴火予報)
-//    35	活火山であることに留意(海底火山)
-//    36	周辺海域警戒
+
 //    41	噴火警報：避難等
 //    42	噴火警報：入山規制等
 //    43	火口周辺警報：入山規制等
