@@ -1,68 +1,68 @@
 package jp.ac.aiit.pbl;
 
-public enum PrefectureCode {
+public enum SeismicIntensityRegion {
     
-    Hokkaido(1, "Hokkaido"),
-    Aomori(2, "Aomori"),
-    Iwate(3, "Iwate"),
-    Miyagi(4, "Miyagi"),
-    Akita(5, "Akita"),
-    Yamagata(6, "Yamagata"),
-    Fukushima(7, "Fukushima"),
-    Ibaraki(8, "Ibaraki"),
-    Tochigi(9, "Tochigi"),
-    Gunma(10, "Gunma"),
-    Saitama(11, "Saitama"),
-    Chiba(12, "Chiba"),
-    Tokyo(13, "Tokyo"),
-    Kanagawa(14, "Kanagawa"),
-    Niigata(15, "Niigata"),
-    Toyama(16, "Toyama"),
-    Ishikawa(17, "Ishikawa"),
-    Fukui(18, "Fukui"),
-    Yamanashi(19, "Yamanashi"),
-    Nagano(20, "Nagano"),
-    Gifu(21, "Gifu"),
-    Shizuoka(22, "Shizuoka"),
-    Aichi(23, "Aichi"),
-    Mie(24, "Mie"),
-    Shiga(25, "Shiga"),
-    Kyoto(26, "Kyoto"),
-    Osaka(27, "Osaka"),
-    Hyogo(28, "Hyogo"),
-    Nara(29, "Nara"),
-    Wakayama(30, "Wakayama"),
-    Tottori(31, "Tottori"),
-    Shimane(32, "Shimane"),
-    Okayama(33, "Okayama"),
-    Hiroshima(34, "Hiroshima"),
-    Yamaguchi(35, "Yamaguchi"),
-    Tokushima(36, "Tokushima"),
-    Kagawa(37, "Kagawa"),
-    Ehime(38, "Ehime"),
-    Kochi(39, "Kochi"),
-    Fukuoka(40, "Fukuoka"),
-    Saga(41, "Saga"),
-    Nagasaki(42, "Nagasaki"),
-    Kumamoto(43, "Kumamoto"),
-    Oita(44, "Oita"),
-    Miyazaki(45, "Miyazaki"),
-    Kagoshima(46, "Kagoshima"),
-    Okinawa(47, "Okinawa");
+    Hokkaido(1, "北海道"),
+    Aomori(2, "青森県"),
+    Iwate(3, "岩手県"),
+    Miyagi(4, "宮城県"),
+    Akita(5, "秋田県"),
+    Yamagata(6, "山形県"),
+    Fukushima(7, "福島県"),
+    Ibaraki(8, "茨城県"),
+    Tochigi(9, "栃木県"),
+    Gunma(10, "群馬県"),
+    Saitama(11, "埼玉県"),
+    Chiba(12, "千葉県"),
+    Tokyo(13, "東京都"),
+    Kanagawa(14, "神奈川県"),
+    Niigata(15, "新潟県"),
+    Toyama(16, "富山県"),
+    Ishikawa(17, "石川県"),
+    Fukui(18, "福井県"),
+    Yamanashi(19, "山梨県"),
+    Nagano(20, "長野県"),
+    Gifu(21, "岐阜県"),
+    Shizuoka(22, "静岡県"),
+    Aichi(23, "愛知県"),
+    Mie(24, "三重県"),
+    Shiga(25, "滋賀県"),
+    Kyoto(26, "京都府"),
+    Osaka(27, "大阪府"),
+    Hyogo(28, "兵庫県"),
+    Nara(29, "奈良県"),
+    Wakayama(30, "和歌山県"),
+    Tottori(31, "鳥取県"),
+    Shimane(32, "島根県"),
+    Okayama(33, "岡山県"),
+    Hiroshima(34, "広島県"),
+    Yamaguchi(35, "山口県"),
+    Tokushima(36, "徳島県"),
+    Kagawa(37, "香川県"),
+    Ehime(38, "愛媛県"),
+    Kochi(39, "高知県"),
+    Fukuoka(40, "福岡県"),
+    Saga(41, "佐賀県"),
+    Nagasaki(42, "長崎県"),
+    Kumamoto(43, "熊本県"),
+    Oita(44, "大分県"),
+    Miyazaki(45, "宮崎県"),
+    Kagoshima(46, "鹿児島県"),
+    Okinawa(47, "沖縄県");
     
-    private int prefectureCode;
+    private int code;
     private String regionName;
     
-    private PrefectureCode(int prefectureCode, String regionName){
-        this.prefectureCode = prefectureCode;
+    private SeismicIntensityRegion(int code, String regionName){
+        this.code = code;
         this.regionName = regionName;
     }
     
-    public int getPrefectureCode(){
-        return this.prefectureCode;
+    public int getCode(){
+        return this.code;
     }
-    public static PrefectureCode getRegion(int prefectureCode){
-        switch (prefectureCode){
+    public static SeismicIntensityRegion getRegionName(int code){
+        switch (code){
             case 1:
                 return Hokkaido;
             case 2:
