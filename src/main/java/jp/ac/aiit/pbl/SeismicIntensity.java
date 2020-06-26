@@ -23,12 +23,14 @@ public class SeismicIntensity {
     // 予備１
     //private String spare1;
     // 地震の発生時刻
-    private LocalDateTime occurrenceTimeOfEarthquakeDay;
-    private LocalDateTime occurrenceTimeOfEarthquake;
+    //private LocalDateTime occurrenceTimeOfEarthquakeDay;
     // 地震の発生時刻
-    private LocalDateTime occurrenceTimeOfEarthquakeHour;
+    //private LocalDateTime occurrenceTimeOfEarthquakeHour;
     // 地震の発生時刻
-    private LocalDateTime occurrenceTimeOfEarthquakeMinute;
+    //private LocalDateTime occurrenceTimeOfEarthquakeMinute;
+    
+    private LocalDateTime occurrenceTime;
+    
     // 震度(地点1)
     private SeismicIntensityWarningCode seismicIntensityRegion1;
     // 都道府県(地点1)
@@ -154,24 +156,28 @@ public class SeismicIntensity {
     //    return occurrenceTimeOfEarthquakeDay;
     //}
     
-    public void setOccurrenceTimeOfEarthquakeDay(LocalDateTime occurrenceTimeOfEarthquakeDay) {
-        this.occurrenceTimeOfEarthquakeDay = occurrenceTimeOfEarthquakeDay;
-    }
+    //public void setOccurrenceTimeOfEarthquakeDay(LocalDateTime occurrenceTimeOfEarthquakeDay) {
+    //    this.occurrenceTimeOfEarthquakeDay = occurrenceTimeOfEarthquakeDay;
+    //}
     
     //public LocalDateTime getOccurrenceTimeOfEarthquakeHour() {
     //    return occurrenceTimeOfEarthquakeHour;
     //}
     
-    public void setOccurrenceTimeOfEarthquakeHour(LocalDateTime occurrenceTimeOfEarthquakeHour) {
-        this.occurrenceTimeOfEarthquakeHour = occurrenceTimeOfEarthquakeHour;
-    }
+    //public void setOccurrenceTimeOfEarthquakeHour(LocalDateTime occurrenceTimeOfEarthquakeHour) {
+    //    this.occurrenceTimeOfEarthquakeHour = occurrenceTimeOfEarthquakeHour;
+    //}
     
     //public LocalDateTime getOccurrenceTimeOfEarthquakeMinute() {
     //    return occurrenceTimeOfEarthquakeMinute;
     //}
     
-    public void setOccurrenceTimeOfEarthquakeMinute(LocalDateTime occurrenceTimeOfEarthquakeMinute) {
-        this.occurrenceTimeOfEarthquakeMinute = occurrenceTimeOfEarthquakeMinute;
+    //public void setOccurrenceTimeOfEarthquakeMinute(LocalDateTime occurrenceTimeOfEarthquakeMinute) {
+    //    this.occurrenceTimeOfEarthquakeMinute = occurrenceTimeOfEarthquakeMinute;
+    //}
+    
+    public void setOccurrenceTime(LocalDateTime occurrenceTime){
+        this.occurrenceTime = occurrenceTime;
     }
     
     public SeismicIntensityWarningCode getSeismicIntensityRegion1() {

@@ -7,9 +7,11 @@ public class SeismicIntensityParser {
     public SeismicIntensity parse(String qzMessage){
         SeismicIntensity seismicIntensity = new SeismicIntensity();
         
-        seismicIntensity.setOccurrenceTimeOfEarthquakeDay(toOccurrenceTime(qzMessage.substring(53, 58)));
-        seismicIntensity.setOccurrenceTimeOfEarthquakeHour(toOccurrenceTime(qzMessage.substring(58, 63)));
-        seismicIntensity.setOccurrenceTimeOfEarthquakeMinute(toOccurrenceTime(qzMessage.substring(63, 69)));
+        //seismicIntensity.setOccurrenceTimeOfEarthquakeDay(toOccurrenceTime(qzMessage.substring(53, 58)));
+        //seismicIntensity.setOccurrenceTimeOfEarthquakeHour(toOccurrenceTime(qzMessage.substring(58, 63)));
+        //seismicIntensity.setOccurrenceTimeOfEarthquakeMinute(toOccurrenceTime(qzMessage.substring(63, 69)));
+        
+        seismicIntensity.setOccurrenceTime(toOccurrenceTime(qzMessage.substring(53, 69)));
         
         seismicIntensity.setSeismicIntensityRegion1(SeismicIntensityWarningCode.getSeismicIntensity(Integer.parseInt(qzMessage.substring(69, 72))));
         seismicIntensity.setPrefectureRegion1(SeismicIntensityRegion.getRegionName(Integer.parseInt(qzMessage.substring(72, 78))));
