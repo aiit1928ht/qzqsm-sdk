@@ -24,6 +24,7 @@ public class SeismicIntensity {
     //private String spare1;
     // 地震の発生時刻
     private LocalDateTime occurrenceTimeOfEarthquakeDay;
+    private LocalDateTime occurrenceTimeOfEarthquake;
     // 地震の発生時刻
     private LocalDateTime occurrenceTimeOfEarthquakeHour;
     // 地震の発生時刻
