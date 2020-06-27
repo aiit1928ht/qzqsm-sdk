@@ -60,7 +60,7 @@ public enum LocalGovernment {
     HokkaidoKuromatsunaiCho(139300,"北海道黒松内町"),
     HokkaidoRankoshiCho(139400,"北海道蘭越町"),
     HokkaidoNisekoCho(139500,"北海道ニセコ町"),
-////139600	北海道真狩村
+    HokkaidoShinkarimura(139600,"北海道真狩村"),
 ////139700	北海道留寿都村
 ////139800	北海道喜茂別町
 ////139900	北海道京極町
