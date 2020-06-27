@@ -1,7 +1,7 @@
 package jp.ac.aiit.pbl;
 import java.util.Arrays;
 
-public enum VolcanoWarningCode {
+public enum WarningCode {
     eruptionWarning(1,"噴火警報"),
     cratorWarining(2,"火口周辺警報"),
     eruptionWarningOceam(3, "噴火警報(周辺海域)"),
@@ -52,7 +52,7 @@ public enum VolcanoWarningCode {
 
     private Integer id;
     private String warningCode;
-    private VolcanoWarningCode(int id, String warningCode){
+    private WarningCode(int id, String warningCode){
         this.id  = id;
         this.warningCode = warningCode;
     }
@@ -61,8 +61,8 @@ public enum VolcanoWarningCode {
         return id;
     }
 
-    public static VolcanoWarningCode getById(int id){
-        return Arrays.stream(VolcanoWarningCode.values())
+    public static WarningCode getById(int id){
+        return Arrays.stream(WarningCode.values())
                 .filter(data -> data.getId().equals(id))
                 .findFirst()
                 .orElse(null);

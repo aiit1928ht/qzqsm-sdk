@@ -1,17 +1,16 @@
 package jp.ac.aiit.pbl;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Volcano {
 
     private LocalDateTime activityTime;                     //Activity Time(Td)Day(D1)  Hour(H1) Minute(M1)
-    private VolcanoWarningCode warningCode;                 //Warning Code(Dw)
+    private WarningCode warningCode;                 //Warning Code(Dw)
     private VolcanoName volcanoName;                        //Volcano Name(Vo)
-    private VolcanoLocalGovernment localGovernmentRegion1;  //Local Government Region1
-    private VolcanoLocalGovernment localGovernmentRegion2;  //Local Government Region2
-    private VolcanoLocalGovernment localGovernmentRegion3;  //Local Government Region3
-    private VolcanoLocalGovernment localGovernmentRegion4;  //Local Government Region4
-    private VolcanoLocalGovernment localGovernmentRegion5;  //Local Government Region5
+    private LocalGovernment localGovernmentRegion1;  //Local Government Region1
+    private LocalGovernment localGovernmentRegion2;  //Local Government Region2
+    private LocalGovernment localGovernmentRegion3;  //Local Government Region3
+    private LocalGovernment localGovernmentRegion4;  //Local Government Region4
+    private LocalGovernment localGovernmentRegion5;  //Local Government Region5
 
     public LocalDateTime getActivityTime() {
         return activityTime;
@@ -19,10 +18,10 @@ public class Volcano {
     public void setActivityTime(LocalDateTime activityTime) {
         this.activityTime = activityTime;
     }
-    public VolcanoWarningCode getWarningCode() {
+    public WarningCode getWarningCode() {
         return warningCode;
     }
-    public void setWarningCode(VolcanoWarningCode warningCode) {
+    public void setWarningCode(WarningCode warningCode) {
         this.warningCode = warningCode;
     }
     public VolcanoName getVolcanoName() {
@@ -31,34 +30,34 @@ public class Volcano {
     public void setVolcanoName(VolcanoName volcanoName) {
         this.volcanoName = volcanoName;
     }
-    public VolcanoLocalGovernment getLocalGovernmentRegion1() {
+    public LocalGovernment getLocalGovernmentRegion1() {
         return localGovernmentRegion1;
     }
-    public void setLocalGovernmentRegion1(VolcanoLocalGovernment localGovernmentRegion1) {
+    public void setLocalGovernmentRegion1(LocalGovernment localGovernmentRegion1) {
         this.localGovernmentRegion1 = localGovernmentRegion1;
     }
-    public VolcanoLocalGovernment getLocalGovernmentRegion2() {
+    public LocalGovernment getLocalGovernmentRegion2() {
         return localGovernmentRegion2;
     }
-    public void setLocalGovernmentRegion2(VolcanoLocalGovernment localGovernmentRegion2) {
+    public void setLocalGovernmentRegion2(LocalGovernment localGovernmentRegion2) {
         this.localGovernmentRegion2 = localGovernmentRegion2;
     }
-    public VolcanoLocalGovernment getLocalGovernmentRegion3() {
+    public LocalGovernment getLocalGovernmentRegion3() {
         return localGovernmentRegion3;
     }
-    public void setLocalGovernmentRegion3(VolcanoLocalGovernment localGovernmentRegion3) {
+    public void setLocalGovernmentRegion3(LocalGovernment localGovernmentRegion3) {
         this.localGovernmentRegion3 = localGovernmentRegion3;
     }
-    public VolcanoLocalGovernment getLocalGovernmentRegion4() {
+    public LocalGovernment getLocalGovernmentRegion4() {
         return localGovernmentRegion4;
     }
-    public void setLocalGovernmentRegion4(VolcanoLocalGovernment localGovernmentRegion4) {
+    public void setLocalGovernmentRegion4(LocalGovernment localGovernmentRegion4) {
         this.localGovernmentRegion4 = localGovernmentRegion4;
     }
-    public VolcanoLocalGovernment getLocalGovernmentRegion5() {
+    public LocalGovernment getLocalGovernmentRegion5() {
         return localGovernmentRegion5;
     }
-    public void setLocalGovernmentRegion5(VolcanoLocalGovernment localGovernmentRegion5) {
+    public void setLocalGovernmentRegion5(LocalGovernment localGovernmentRegion5) {
         this.localGovernmentRegion5 = localGovernmentRegion5;
     }
 }

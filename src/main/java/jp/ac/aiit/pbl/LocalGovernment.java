@@ -1,65 +1,65 @@
 package jp.ac.aiit.pbl;
 import java.util.Arrays;
 
-public enum VolcanoLocalGovernment {
-    hokkaidoSapporoShi(110000, "北海道札幌市"),
-    hokkaidoHakodateShi(120200, "北海道函館市"),
-    hokkaidoOtaruShi(120300, "北海道小樽市"),
-    hokkaidoAsahikawaShi(120400, "北海道旭川市"),
-    hokkaidoMuroranShi(120500, "北海道室蘭市"),
-    hokkaidoKushiroShi(120600, "北海道釧路市"),
-    hokkaidoObihiroShi(120700, "北海道帯広市"),
-    hokkaidoKitamiShi(120800, "北海道北見市"),
-    hokkaidoYubariShi(120900, "北海道夕張市"),
-    hokkaidoIwamizawaShi(121000, "北海道岩見沢市"),
-    hokkaidoAbashiriShi(121100, "北海道網走市"),
-    hokkaidoRumoishiShi(121200, "北海道留萌市"),
-    hokkaidoTomakomaiShi(121300, "北海道苫小牧市"),
-    hokkaidoWakkanaiShi(121400, "北海道稚内市"),
-    hokkaidoBibaiShi(121500, "北海道美唄市"),
+public enum LocalGovernment {
+    HokkaidoSapporoShi(110000, "北海道札幌市"),
+    HokkaidoHakodateShi(120200, "北海道函館市"),
+    HokkaidoOtaruShi(120300, "北海道小樽市"),
+    HokkaidoAsahikawaShi(120400, "北海道旭川市"),
+    HokkaidoMuroranShi(120500, "北海道室蘭市"),
+    HokkaidoKushiroShi(120600, "北海道釧路市"),
+    HokkaidoObihiroShi(120700, "北海道帯広市"),
+    HokkaidoKitamiShi(120800, "北海道北見市"),
+    HokkaidoYubariShi(120900, "北海道夕張市"),
+    HokkaidoIwamizawaShi(121000, "北海道岩見沢市"),
+    HokkaidoAbashiriShi(121100, "北海道網走市"),
+    HokkaidoRumoishiShi(121200, "北海道留萌市"),
+    HokkaidoTomakomaiShi(121300, "北海道苫小牧市"),
+    HokkaidoWakkanaiShi(121400, "北海道稚内市"),
+    HokkaidoBibaiShi(121500, "北海道美唄市"),
     hokkaidoAshibetsuShi(121600, "北海道芦別市"),
-    hokkaidoEbetsuShi(121700, "北海道江別市"),
-    hokkaidoAkabiraShi(121800, "北海道赤平市"),
-    hokkaioMonbetsuShi(121900, "北海道紋別市"),
-    hokkaidoShibetsuShi(122000, "北海道士別市"),
-    hokkaidoNayoroShi(122100, "北海道名寄市"),
-    hokkaidoMikasaShi(122200, "北海道三笠市"),
-    hokkaidoNemuroShi(122300, "北海道根室市"),
-    hokkaidoChitoseShi(122400,"北海道千歳市"),
-    hokkaidoTakigawaShi(122500,"北海道滝川市"),
-    hokkaidoSunagawaShi(122600,"北海道砂川市"),
-    hokkaidoUtashinaiShi(122700,"北海道歌志内市"),
-    hokkaidoFukagawaShi(122800,"北海道深川市"),
-    hokkaidoFuranoShi(122900,"北海道富良野市"),
-    hokkaidoNoboribetsuShi(123000,"北海道登別市"),
-    hokkaidoEniwaShi(123100,"北海道恵庭市"),
-    hokkaidoDateShi(123300,"北海道伊達市"),
-    hokkaidoKitahiroshimaShi(123400,"北海道北広島市"),
-    hokkaisoIshikariShi(123500,"北海道石狩市"),
-    hokkaidoHokutoShi(123600,"北海道北斗市"),
-    hokkaidoToubetsuCho(130300,"北海道当別町"),
-    hokkaidoShinshinotsuMura(130400,"北海道新篠津村"),
-    hokkaidoMatsumaeCho(133100,"北海道松前町"),
-    hokkaisoFukushimaCho(133200,"北海道福島町"),
-    hokkaisoShiriuchiCho(133300,"北海道知内町"),
-    hokkaidoKikonaiCho(133400,"北海道木古内町"),
-    hokkaidonanaeCho(133700,"北海道七飯町"),
-    hokkaidoShikabeCho(134300,"北海道鹿部町"),
-    hokkaidoMorimachi(134500,"北海道森町"),
-    hokkaidoYakumoCho(134600,"北海道八雲町"),
-    hokkaidoOshamambeCho(134700,"北海道長万部町"),
-    hokkaidoEsashiCho(136100,"北海道江差町"),
-    hokkaidoKaminokuniCho(136200,"北海道上ノ国町"),
-    hokkaidoAssabuCho(136300,"北海道厚沢部町"),
-    hokkaidoOtobeCho(136400,"北海道乙部町"),
-    hokkaidoOkushiriCho(136700,"北海道奥尻町"),
-    hokkaidoImakaneCho(137000,"北海道今金町"),
-    hokkaidoSetanaCho(137100,"北海道せたな町"),
-    hokkaidoShimamakimura(139100,"北海道島牧村"),
-    hokkaidoSuttsuCho(139200,"北海道寿都町"),
-    hokkaidoKuromatsunaiCho(139300,"北海道黒松内町"),
-    hokkaidoRankoshiCho(139400,"北海道蘭越町"),
-////139500	北海道ニセコ町
+    HokkaidoEbetsuShi(121700, "北海道江別市"),
+    HokkaidoAkabiraShi(121800, "北海道赤平市"),
+    HokkaioMonbetsuShi(121900, "北海道紋別市"),
+    HokkaidoShibetsuShi(122000, "北海道士別市"),
+    HokkaidoNayoroShi(122100, "北海道名寄市"),
+    HokkaidoMikasaShi(122200, "北海道三笠市"),
+    HokkaidoNemuroShi(122300, "北海道根室市"),
+    HokkaidoChitoseShi(122400,"北海道千歳市"),
+    HokkaidoTakigawaShi(122500,"北海道滝川市"),
+    HokkaidoSunagawaShi(122600,"北海道砂川市"),
+    HokkaidoUtashinaiShi(122700,"北海道歌志内市"),
+    HokkaidoFukagawaShi(122800,"北海道深川市"),
+    HokkaidoFuranoShi(122900,"北海道富良野市"),
+    HokkaidoNoboribetsuShi(123000,"北海道登別市"),
+    HokkaidoEniwaShi(123100,"北海道恵庭市"),
+    HokkaidoDateShi(123300,"北海道伊達市"),
+    HokkaidoKitahiroshimaShi(123400,"北海道北広島市"),
+    HokkaisoIshikariShi(123500,"北海道石狩市"),
+    HokkaidoHokutoShi(123600,"北海道北斗市"),
+    HokkaidoToubetsuCho(130300,"北海道当別町"),
+    HokkaidoShinshinotsuMura(130400,"北海道新篠津村"),
+    HokkaidoMatsumaeCho(133100,"北海道松前町"),
+    HokkaisoFukushimaCho(133200,"北海道福島町"),
+    HokkaisoShiriuchiCho(133300,"北海道知内町"),
+    HokkaidoKikonaiCho(133400,"北海道木古内町"),
+    HokkaidonanaeCho(133700,"北海道七飯町"),
+    HokkaidoShikabeCho(134300,"北海道鹿部町"),
+    HokkaidoMorimachi(134500,"北海道森町"),
+    HokkaidoYakumoCho(134600,"北海道八雲町"),
+    HokkaidoOshamambeCho(134700,"北海道長万部町"),
+    HokkaidoEsashiCho(136100,"北海道江差町"),
+    HokkaidoKaminokuniCho(136200,"北海道上ノ国町"),
+    HokkaidoAssabuCho(136300,"北海道厚沢部町"),
+    HokkaidoOtobeCho(136400,"北海道乙部町"),
+    HokkaidoOkushiriCho(136700,"北海道奥尻町"),
+    HokkaidoImakaneCho(137000,"北海道今金町"),
+    HokkaidoSetanaCho(137100,"北海道せたな町"),
+    HokkaidoShimamakimura(139100,"北海道島牧村"),
+    HokkaidoSuttsuCho(139200,"北海道寿都町"),
+    HokkaidoKuromatsunaiCho(139300,"北海道黒松内町"),
+    HokkaidoRankoshiCho(139400,"北海道蘭越町"),
+    HokkaidoNisekoCho(139500,"北海道ニセコ町"),
 ////139600	北海道真狩村
 ////139700	北海道留寿都村
 ////139800	北海道喜茂別町
@@ -175,20 +175,20 @@ public enum VolcanoLocalGovernment {
 ////166300	北海道浜中町
 ////166400	北海道標茶町
 ////166500	北海道弟子屈町
-////166700	北海道鶴居村
-////166800	北海道白糠町
-    hokkaidoKunashiriTou(169001,"北海道国後島"),
-    hokkaidoEtorofuTou(169002,"北海道択捉島"),
-    hokkaidoBetsukaiCho(169100,"北海道別海町"),
-    hokkaidoNakashibetsuCho(169200,"北海道中標津町"),
-    hokkaidoShibetsuCho(169300,"北海道標津町"),
-    hokkaidoRausuCho(169400,"北海道羅臼町"),
-    hokkidoShikotanMura(169500,"北海道色丹村"),
-    hokkaidoOthers(199999,"北海道のその他の市町村");
+    HokkaidoTsuruimura(166700,	"北海道鶴居村"),
+    HokkaidoShiranukacho(166800,"北海道白糠町"),
+    HokkaidoKunashiriTou(169001,"北海道国後島"),
+    HokkaidoEtorofuTou(169002,"北海道択捉島"),
+    HokkaidoBetsukaiCho(169100,"北海道別海町"),
+    HokkaidoNakashibetsuCho(169200,"北海道中標津町"),
+    HokkaidoShibetsuCho(169300,"北海道標津町"),
+    HokkaidoRausuCho(169400,"北海道羅臼町"),
+    HokkidoShikotanMura(169500,"北海道色丹村"),
+    HokkaidoOthers(199999,"北海道のその他の市町村");
 
     private Integer id;
     private String regionCode;
-    private VolcanoLocalGovernment(int id, String regionCode){
+    private LocalGovernment(int id, String regionCode){
         this.id  = id;
         this.regionCode = regionCode;
     }
@@ -197,8 +197,8 @@ public enum VolcanoLocalGovernment {
         return id;
     }
 
-    public static VolcanoLocalGovernment getById(int id){
-        return Arrays.stream(VolcanoLocalGovernment.values())
+    public static LocalGovernment getById(int id){
+        return Arrays.stream(LocalGovernment.values())
                 .filter(data -> data.getId().equals(id))
                 .findFirst()
                 .orElse(null);
