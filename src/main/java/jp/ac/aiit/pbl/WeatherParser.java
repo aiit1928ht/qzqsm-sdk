@@ -48,28 +48,23 @@ public class WeatherParser {
         weather.setWarningState(WarningState.getById(
                 Integer.parseInt(Format.WARNING_STATE.signalValue(qzqms), 2)).getWarningStateName());
 
-        List<List<Enum>> weatherRegion = new ArrayList<List<Enum>>();
-
-        List<Enum> disasterSubcategory = new ArrayList<>();
+        List<DisasterSubcategory> disasterSubcategory = new ArrayList<>();
         disasterSubcategory.add(DisasterSubcategory.get(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION1.signalValue(qzqms), 2)));
         disasterSubcategory.add(DisasterSubcategory.get(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION2.signalValue(qzqms), 2)));
         disasterSubcategory.add(DisasterSubcategory.get(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION3.signalValue(qzqms), 2)));
         disasterSubcategory.add(DisasterSubcategory.get(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION4.signalValue(qzqms), 2)));
         disasterSubcategory.add(DisasterSubcategory.get(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION5.signalValue(qzqms), 2)));
         disasterSubcategory.add(DisasterSubcategory.get(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION6.signalValue(qzqms), 2)));
+        weather.setDisasterSubcategory(disasterSubcategory);
 
-        List<Enum> prefecturalForecastRegion = new ArrayList<>();
+        List<PrefecturalForecastRegion> prefecturalForecastRegion = new ArrayList<>();
         prefecturalForecastRegion.add(PrefecturalForecastRegion.get(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION1.signalValue(qzqms), 2)));
         prefecturalForecastRegion.add(PrefecturalForecastRegion.get(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION2.signalValue(qzqms), 2)));
         prefecturalForecastRegion.add(PrefecturalForecastRegion.get(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION3.signalValue(qzqms), 2)));
         prefecturalForecastRegion.add(PrefecturalForecastRegion.get(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION4.signalValue(qzqms), 2)));
         prefecturalForecastRegion.add(PrefecturalForecastRegion.get(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION5.signalValue(qzqms), 2)));
         prefecturalForecastRegion.add(PrefecturalForecastRegion.get(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION6.signalValue(qzqms), 2)));
-
-        weatherRegion.add(disasterSubcategory);
-        weatherRegion.add(prefecturalForecastRegion);
-
-        weather.setWeatherRegion(weatherRegion);
+        weather.setPrefecturalForecastRegion(prefecturalForecastRegion);
 
         return weather;
     }

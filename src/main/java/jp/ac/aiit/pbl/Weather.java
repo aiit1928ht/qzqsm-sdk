@@ -1,11 +1,11 @@
 package jp.ac.aiit.pbl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Weather {
     private String warningState;
-    private List<List<Enum>> weatherRegion;
+    private List<DisasterSubcategory> disasterSubcategory;
+    private List<PrefecturalForecastRegion> prefecturalForecastRegion;
 
     public String getWarningState() {
         return warningState;
@@ -15,9 +15,15 @@ public class Weather {
         this.warningState = warningState;
     }
 
-    public List<List<Enum>> getWeatherRegion() { return weatherRegion; }
+    public List<DisasterSubcategory> getDisasterSubcategory() { return disasterSubcategory; }
 
-    public void setWeatherRegion(List<List<Enum>> weatherRegion) {
-         this.weatherRegion = weatherRegion;
+    public void setDisasterSubcategory(List<DisasterSubcategory> disasterSubcategory) {
+         this.disasterSubcategory = disasterSubcategory;
+    }
+
+    public List<PrefecturalForecastRegion> getPrefecturalForecastRegion() { return prefecturalForecastRegion; }
+
+    public void setPrefecturalForecastRegion(List<PrefecturalForecastRegion> prefecturalForecastRegion) {
+        this.prefecturalForecastRegion = prefecturalForecastRegion;
     }
 }

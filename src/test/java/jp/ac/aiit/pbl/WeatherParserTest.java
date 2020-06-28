@@ -17,44 +17,50 @@ public class WeatherParserTest {
     }
 
     @Test
-    public void canGetWeatherRegion(){
-        int expected = 2;
-        assertThat(weather.getWeatherRegion().size(),is(expected));
+    public void canGetDisasterSubcategoryList(){
+        int expected = 6;
+        assertThat(weather.getDisasterSubcategory().size(),is(expected));
+    }
+
+    @Test
+    public void canGetPrefecturalForecastRegionList(){
+        int expected = 6;
+        assertThat(weather.getPrefecturalForecastRegion().size(),is(expected));
     }
 
     @Test
     public void canGetDisasterSubcategory1(){
         DisasterSubcategory expected = DisasterSubcategory.EARTH_AND_SAND_DISASTER_CAUTION_INFORMATION;
-        assertThat(weather.getWeatherRegion().get(0).get(0),is(expected));
+        assertThat(weather.getDisasterSubcategory().get(0),is(expected));
     }
 
     @Test
     public void canGetPrefecturalForecastRegion1(){
         PrefecturalForecastRegion expected = PrefecturalForecastRegion.FUKUOKAKEN;
-        assertThat(weather.getWeatherRegion().get(1).get(0),is(expected));
+        assertThat(weather.getPrefecturalForecastRegion().get(0),is(expected));
     }
 
     @Test
     public void canGetDisasterSubcategory2(){
         DisasterSubcategory expected = DisasterSubcategory.EARTH_AND_SAND_DISASTER_CAUTION_INFORMATION;
-        assertThat(weather.getWeatherRegion().get(0).get(1),is(expected));
+        assertThat(weather.getDisasterSubcategory().get(1),is(expected));
     }
 
     @Test
     public void canGetPrefecturalForecastRegion2(){
         PrefecturalForecastRegion expected = PrefecturalForecastRegion.SAGAKEN;
-        assertThat(weather.getWeatherRegion().get(1).get(1),is(expected));
+        assertThat(weather.getPrefecturalForecastRegion().get(1),is(expected));
     }
 
     @Test
     public void canGetDisasterSubcategory3(){
         DisasterSubcategory expected = DisasterSubcategory.EARTH_AND_SAND_DISASTER_CAUTION_INFORMATION;
-        assertThat(weather.getWeatherRegion().get(0).get(2),is(expected));
+        assertThat(weather.getDisasterSubcategory().get(2),is(expected));
     }
 
     @Test
     public void canGetPrefecturalForecastRegion3(){
         PrefecturalForecastRegion expected = PrefecturalForecastRegion.OITAKEN;
-        assertThat(weather.getWeatherRegion().get(1).get(2),is(expected));
+        assertThat(weather.getPrefecturalForecastRegion().get(2),is(expected));
     }
 }
