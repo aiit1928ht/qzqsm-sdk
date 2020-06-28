@@ -32,69 +32,69 @@ public class SeismicIntensity {
     private LocalDateTime occurrenceTime;
     
     // 震度(地点1)
-    private SeismicIntensityWarningCode seismicIntensityRegion1;
+    private SeismicIntensityWarning seismicIntensityRegion1;
     // 都道府県(地点1)
-    private SeismicIntensityRegion prefectureRegion1;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion1;
     // 震度(地点2)
-    private SeismicIntensityWarningCode seismicIntensityRegion2;
+    private SeismicIntensityWarning seismicIntensityRegion2;
     // 都道府県(地点2)
-    private SeismicIntensityRegion prefectureRegion2;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion2;
     // 震度(地点3)
-    private SeismicIntensityWarningCode seismicIntensityRegion3;
+    private SeismicIntensityWarning seismicIntensityRegion3;
     // 都道府県(地点3)
-    private SeismicIntensityRegion prefectureRegion3;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion3;
     // 震度(地点4)
-    private SeismicIntensityWarningCode seismicIntensityRegion4;
+    private SeismicIntensityWarning seismicIntensityRegion4;
     // 都道府県(地点4)
-    private SeismicIntensityRegion prefectureRegion4;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion4;
     // 震度(地点5)
-    private SeismicIntensityWarningCode seismicIntensityRegion5;
+    private SeismicIntensityWarning seismicIntensityRegion5;
     // 都道府県(地点5)
-    private SeismicIntensityRegion prefectureRegion5;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion5;
     // 震度(地点6)
-    private SeismicIntensityWarningCode seismicIntensityRegion6;
+    private SeismicIntensityWarning seismicIntensityRegion6;
     // 都道府県(地点6)
-    private SeismicIntensityRegion prefectureRegion6;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion6;
     // 震度(地点7)
-    private SeismicIntensityWarningCode seismicIntensityRegion7;
+    private SeismicIntensityWarning seismicIntensityRegion7;
     // 都道府県(地点7)
-    private SeismicIntensityRegion prefectureRegion7;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion7;
     // 震度(地点8)
-    private SeismicIntensityWarningCode seismicIntensityRegion8;
+    private SeismicIntensityWarning seismicIntensityRegion8;
     // 都道府県(地点8)
-    private SeismicIntensityRegion prefectureRegion8;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion8;
     // 震度(地点9)
-    private SeismicIntensityWarningCode seismicIntensityRegion9;
+    private SeismicIntensityWarning seismicIntensityRegion9;
     // 都道府県(地点9)
-    private SeismicIntensityRegion prefectureRegion9;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion9;
     // 震度(地点10)
-    private SeismicIntensityWarningCode seismicIntensityRegion10;
+    private SeismicIntensityWarning seismicIntensityRegion10;
     // 都道府県(地点10)
-    private SeismicIntensityRegion prefectureRegion10;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion10;
     // 震度(地点11)
-    private SeismicIntensityWarningCode seismicIntensityRegion11;
+    private SeismicIntensityWarning seismicIntensityRegion11;
     // 都道府県(地点11)
-    private SeismicIntensityRegion prefectureRegion11;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion11;
     // 震度(地点12)
-    private SeismicIntensityWarningCode seismicIntensityRegion12;
+    private SeismicIntensityWarning seismicIntensityRegion12;
     // 都道府県(地点12)
-    private SeismicIntensityRegion prefectureRegion12;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion12;
     // 震度(地点13)
-    private SeismicIntensityWarningCode seismicIntensityRegion13;
+    private SeismicIntensityWarning seismicIntensityRegion13;
     // 都道府県(地点13)
-    private SeismicIntensityRegion prefectureRegion13;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion13;
     // 震度(地点14)
-    private SeismicIntensityWarningCode seismicIntensityRegion14;
+    private SeismicIntensityWarning seismicIntensityRegion14;
     // 都道府県(地点14)
-    private SeismicIntensityRegion prefectureRegion14;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion14;
     // 震度(地点15)
-    private SeismicIntensityWarningCode seismicIntensityRegion15;
+    private SeismicIntensityWarning seismicIntensityRegion15;
     // 都道府県(地点15)
-    private SeismicIntensityRegion prefectureRegion15;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion15;
     // 震度(地点16)
-    private SeismicIntensityWarningCode seismicIntensityRegion16;
+    private SeismicIntensityWarning seismicIntensityRegion16;
     // 都道府県(地点16)
-    private SeismicIntensityRegion prefectureRegion16;
+    private SeismicIntensityPrefecture seismicIntensityPrefectureRegion16;
     // 予備2
     //private String spare2;
     // バージョン番号
@@ -180,259 +180,296 @@ public class SeismicIntensity {
         this.occurrenceTime = occurrenceTime;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion1() {
+    public SeismicIntensityWarning getSeismicIntensityRegion1() {
         return seismicIntensityRegion1;
     }
     
-    public void setSeismicIntensityRegion1(SeismicIntensityWarningCode seismicIntensityRegion1) {
+    public void setSeismicIntensityRegion1(SeismicIntensityWarning seismicIntensityRegion1) {
         this.seismicIntensityRegion1 = seismicIntensityRegion1;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion1() {
-        return prefectureRegion1;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion1() {
+        return seismicIntensityPrefectureRegion1;
     }
     
-    public void setPrefectureRegion1(SeismicIntensityRegion prefectureRegion1) {
-        this.prefectureRegion1 = prefectureRegion1;
+    public void setSeismicIntensityPrefectureRegion1(SeismicIntensityPrefecture seismicIntensityPrefectureRegion1) {
+        this.seismicIntensityPrefectureRegion1 = seismicIntensityPrefectureRegion1;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion2() {
+    public SeismicIntensityWarning getSeismicIntensityRegion2() {
         return seismicIntensityRegion2;
     }
     
-    public void setSeismicIntensityRegion2(SeismicIntensityWarningCode seismicIntensityRegion2) {
+    public void setSeismicIntensityRegion2(SeismicIntensityWarning seismicIntensityRegion2) {
         this.seismicIntensityRegion2 = seismicIntensityRegion2;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion2() {
-        return prefectureRegion2;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion2() {
+        return seismicIntensityPrefectureRegion2;
     }
     
-    public void setPrefectureRegion2(SeismicIntensityRegion prefectureRegion2) {
-        this.prefectureRegion2 = prefectureRegion2;
+    public void setSeismicIntensityPrefectureRegion2(SeismicIntensityPrefecture seismicIntensityPrefectureRegion2) {
+        this.seismicIntensityPrefectureRegion2 = seismicIntensityPrefectureRegion2;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion3() {
+    public SeismicIntensityWarning getSeismicIntensityRegion3() {
         return seismicIntensityRegion3;
     }
     
-    public void setSeismicIntensityRegion3(SeismicIntensityWarningCode seismicIntensityRegion3) {
+    public void setSeismicIntensityRegion3(SeismicIntensityWarning seismicIntensityRegion3) {
         this.seismicIntensityRegion3 = seismicIntensityRegion3;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion3() {
-        return prefectureRegion3;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion3() {
+        return seismicIntensityPrefectureRegion3;
     }
     
-    public void setPrefectureRegion3(SeismicIntensityRegion prefectureRegion3) {
-        this.prefectureRegion3 = prefectureRegion3;
+    public void setSeismicIntensityPrefectureRegion3(SeismicIntensityPrefecture seismicIntensityPrefectureRegion3) {
+        this.seismicIntensityPrefectureRegion3 = seismicIntensityPrefectureRegion3;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion4() {
+    public SeismicIntensityWarning getSeismicIntensityRegion4() {
         return seismicIntensityRegion4;
     }
     
-    public void setSeismicIntensityRegion4(SeismicIntensityWarningCode seismicIntensityRegion4) {
+    public void setSeismicIntensityRegion4(SeismicIntensityWarning seismicIntensityRegion4) {
         this.seismicIntensityRegion4 = seismicIntensityRegion4;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion4() {
-        return prefectureRegion4;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion4() {
+        return seismicIntensityPrefectureRegion4;
     }
     
-    public void setPrefectureRegion4(SeismicIntensityRegion prefectureRegion4) {
-        this.prefectureRegion4 = prefectureRegion4;
+    public void setSeismicIntensityPrefectureRegion4(SeismicIntensityPrefecture seismicIntensityPrefectureRegion4) {
+        this.seismicIntensityPrefectureRegion4 = seismicIntensityPrefectureRegion4;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion5() {
+    public SeismicIntensityWarning getSeismicIntensityRegion5() {
         return seismicIntensityRegion5;
     }
     
-    public void setSeismicIntensityRegion5(SeismicIntensityWarningCode seismicIntensityRegion5) {
+    public void setSeismicIntensityRegion5(SeismicIntensityWarning seismicIntensityRegion5) {
         this.seismicIntensityRegion5 = seismicIntensityRegion5;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion5() {
-        return prefectureRegion5;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion5() {
+        return seismicIntensityPrefectureRegion5;
     }
     
-    public void setPrefectureRegion5(SeismicIntensityRegion prefectureRegion5) {
-        this.prefectureRegion5 = prefectureRegion5;
+    public void setSeismicIntensityPrefectureRegion5(SeismicIntensityPrefecture seismicIntensityPrefectureRegion5) {
+        this.seismicIntensityPrefectureRegion5 = seismicIntensityPrefectureRegion5;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion6() {
+    public SeismicIntensityWarning getSeismicIntensityRegion6() {
         return seismicIntensityRegion6;
     }
     
-    public void setSeismicIntensityRegion6(SeismicIntensityWarningCode seismicIntensityRegion6) {
+    public void setSeismicIntensityRegion6(SeismicIntensityWarning seismicIntensityRegion6) {
         this.seismicIntensityRegion6 = seismicIntensityRegion6;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion6() {
-        return prefectureRegion6;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion6() {
+        return seismicIntensityPrefectureRegion6;
     }
     
-    public void setPrefectureRegion6(SeismicIntensityRegion prefectureRegion6) {
-        this.prefectureRegion6 = prefectureRegion6;
+    public void setSeismicIntensityPrefectureRegion6(SeismicIntensityPrefecture seismicIntensityPrefectureRegion6) {
+        this.seismicIntensityPrefectureRegion6 = seismicIntensityPrefectureRegion6;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion7() {
+    public SeismicIntensityWarning getSeismicIntensityRegion7() {
         return seismicIntensityRegion7;
     }
     
-    public void setSeismicIntensityRegion7(SeismicIntensityWarningCode seismicIntensityRegion7) {
+    public void setSeismicIntensityRegion7(SeismicIntensityWarning seismicIntensityRegion7) {
         this.seismicIntensityRegion7 = seismicIntensityRegion7;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion7() {
-        return prefectureRegion7;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion7() {
+        return seismicIntensityPrefectureRegion7;
     }
     
-    public void setPrefectureRegion7(SeismicIntensityRegion prefectureRegion7) {
-        this.prefectureRegion7 = prefectureRegion7;
+    public void setSeismicIntensityPrefectureRegion7(SeismicIntensityPrefecture seismicIntensityPrefectureRegion7) {
+        this.seismicIntensityPrefectureRegion7 = seismicIntensityPrefectureRegion7;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion8() {
+    public SeismicIntensityWarning getSeismicIntensityRegion8() {
         return seismicIntensityRegion8;
     }
     
-    public void setSeismicIntensityRegion8(SeismicIntensityWarningCode seismicIntensityRegion8) {
+    public void setSeismicIntensityRegion8(SeismicIntensityWarning seismicIntensityRegion8) {
         this.seismicIntensityRegion8 = seismicIntensityRegion8;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion8() {
-        return prefectureRegion8;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion8() {
+        return seismicIntensityPrefectureRegion8;
     }
     
-    public void setPrefectureRegion8(SeismicIntensityRegion prefectureRegion8) {
-        this.prefectureRegion8 = prefectureRegion8;
+    public void setSeismicIntensityPrefectureRegion8(SeismicIntensityPrefecture seismicIntensityPrefectureRegion8) {
+        this.seismicIntensityPrefectureRegion8 = seismicIntensityPrefectureRegion8;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion9() {
+    public SeismicIntensityWarning getSeismicIntensityRegion9() {
         return seismicIntensityRegion9;
     }
     
-    public void setSeismicIntensityRegion9(SeismicIntensityWarningCode seismicIntensityRegion9) {
+    public void setSeismicIntensityRegion9(SeismicIntensityWarning seismicIntensityRegion9) {
         this.seismicIntensityRegion9 = seismicIntensityRegion9;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion9() {
-        return prefectureRegion9;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion9() {
+        return seismicIntensityPrefectureRegion9;
     }
     
-    public void setPrefectureRegion9(SeismicIntensityRegion prefectureRegion9) {
-        this.prefectureRegion9 = prefectureRegion9;
+    public void setSeismicIntensityPrefectureRegion9(SeismicIntensityPrefecture seismicIntensityPrefectureRegion9) {
+        this.seismicIntensityPrefectureRegion9 = seismicIntensityPrefectureRegion9;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion10() {
+    public SeismicIntensityWarning getSeismicIntensityRegion10() {
         return seismicIntensityRegion10;
     }
     
-    public void setSeismicIntensityRegion10(SeismicIntensityWarningCode seismicIntensityRegion10) {
+    public void setSeismicIntensityRegion10(SeismicIntensityWarning seismicIntensityRegion10) {
         this.seismicIntensityRegion10 = seismicIntensityRegion10;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion10() {
-        return prefectureRegion10;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion10() {
+        return seismicIntensityPrefectureRegion10;
     }
     
-    public void setPrefectureRegion10(SeismicIntensityRegion prefectureRegion10) {
-        this.prefectureRegion10 = prefectureRegion10;
+    public void setSeismicIntensityPrefectureRegion10(SeismicIntensityPrefecture seismicIntensityPrefectureRegion10) {
+        this.seismicIntensityPrefectureRegion10 = seismicIntensityPrefectureRegion10;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion11() {
+    public SeismicIntensityWarning getSeismicIntensityRegion11() {
         return seismicIntensityRegion11;
     }
     
-    public void setSeismicIntensityRegion11(SeismicIntensityWarningCode seismicIntensityRegion11) {
+    public void setSeismicIntensityRegion11(SeismicIntensityWarning seismicIntensityRegion11) {
         this.seismicIntensityRegion11 = seismicIntensityRegion11;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion11() {
-        return prefectureRegion11;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion11() {
+        return seismicIntensityPrefectureRegion11;
     }
     
-    public void setPrefectureRegion11(SeismicIntensityRegion prefectureRegion11) {
-        this.prefectureRegion11 = prefectureRegion11;
+    public void setSeismicIntensityPrefectureRegion11(SeismicIntensityPrefecture seismicIntensityPrefectureRegion11) {
+        this.seismicIntensityPrefectureRegion11 = seismicIntensityPrefectureRegion11;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion12() {
+    public SeismicIntensityWarning getSeismicIntensityRegion12() {
         return seismicIntensityRegion12;
     }
     
-    public void setSeismicIntensityRegion12(SeismicIntensityWarningCode seismicIntensityRegion12) {
+    public void setSeismicIntensityRegion12(SeismicIntensityWarning seismicIntensityRegion12) {
         this.seismicIntensityRegion12 = seismicIntensityRegion12;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion12() {
-        return prefectureRegion12;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion12() {
+        return seismicIntensityPrefectureRegion12;
     }
     
-    public void setPrefectureRegion12(SeismicIntensityRegion prefectureRegion12) {
-        this.prefectureRegion12 = prefectureRegion12;
+    public void setSeismicIntensityPrefectureRegion12(SeismicIntensityPrefecture seismicIntensityPrefectureRegion12) {
+        this.seismicIntensityPrefectureRegion12 = seismicIntensityPrefectureRegion12;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion13() {
+    public SeismicIntensityWarning getSeismicIntensityRegion13() {
         return seismicIntensityRegion13;
     }
     
-    public void setSeismicIntensityRegion13(SeismicIntensityWarningCode seismicIntensityRegion13) {
+    public void setSeismicIntensityRegion13(SeismicIntensityWarning seismicIntensityRegion13) {
         this.seismicIntensityRegion13 = seismicIntensityRegion13;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion13() {
-        return prefectureRegion13;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion13() {
+        return seismicIntensityPrefectureRegion13;
     }
     
-    public void setPrefectureRegion13(SeismicIntensityRegion prefectureRegion13) {
-        this.prefectureRegion13 = prefectureRegion13;
+    public void setSeismicIntensityPrefectureRegion13(SeismicIntensityPrefecture seismicIntensityPrefectureRegion13) {
+        this.seismicIntensityPrefectureRegion13 = seismicIntensityPrefectureRegion13;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion14() {
+    public SeismicIntensityWarning getSeismicIntensityRegion14() {
         return seismicIntensityRegion14;
     }
     
-    public void setSeismicIntensityRegion14(SeismicIntensityWarningCode seismicIntensityRegion14) {
+    public void setSeismicIntensityRegion14(SeismicIntensityWarning seismicIntensityRegion14) {
         this.seismicIntensityRegion14 = seismicIntensityRegion14;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion14() {
-        return prefectureRegion14;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion14() {
+        return seismicIntensityPrefectureRegion14;
     }
     
-    public void setPrefectureRegion14(SeismicIntensityRegion prefectureRegion14) {
-        this.prefectureRegion14 = prefectureRegion14;
+    public void setSeismicIntensityPrefectureRegion14(SeismicIntensityPrefecture seismicIntensityPrefectureRegion14) {
+        this.seismicIntensityPrefectureRegion14 = seismicIntensityPrefectureRegion14;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion15() {
+    public SeismicIntensityWarning getSeismicIntensityRegion15() {
         return seismicIntensityRegion15;
     }
     
-    public void setSeismicIntensityRegion15(SeismicIntensityWarningCode seismicIntensityRegion15) {
+    public void setSeismicIntensityRegion15(SeismicIntensityWarning seismicIntensityRegion15) {
         this.seismicIntensityRegion15 = seismicIntensityRegion15;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion15() {
-        return prefectureRegion15;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion15() {
+        return seismicIntensityPrefectureRegion15;
     }
     
-    public void setPrefectureRegion15(SeismicIntensityRegion prefectureRegion15) {
-        this.prefectureRegion15 = prefectureRegion15;
+    public void setSeismicIntensityPrefectureRegion15(SeismicIntensityPrefecture seismicIntensityPrefectureRegion15) {
+        this.seismicIntensityPrefectureRegion15 = seismicIntensityPrefectureRegion15;
     }
     
-    public SeismicIntensityWarningCode getSeismicIntensityRegion16() {
+    public SeismicIntensityWarning getSeismicIntensityRegion16() {
         return seismicIntensityRegion16;
     }
     
-    public void setSeismicIntensityRegion16(SeismicIntensityWarningCode seismicIntensityRegion16) {
+    public void setSeismicIntensityRegion16(SeismicIntensityWarning seismicIntensityRegion16) {
         this.seismicIntensityRegion16 = seismicIntensityRegion16;
     }
     
-    public SeismicIntensityRegion getPrefectureRegion16() {
-        return prefectureRegion16;
+    public SeismicIntensityPrefecture getSeismicIntensityPrefectureRegion16() {
+        return seismicIntensityPrefectureRegion16;
     }
     
-    public void setPrefectureRegion16(SeismicIntensityRegion prefectureRegion16) {
-        this.prefectureRegion16 = prefectureRegion16;
+    public void setSeismicIntensityPrefectureRegion16(SeismicIntensityPrefecture seismicIntensityPrefectureRegion16) {
+        this.seismicIntensityPrefectureRegion16 = seismicIntensityPrefectureRegion16;
     }
+    @Override
+    public String toString() {
+        return "SeismicIntensity{" +
+                "occurrenceTime='" + occurrenceTime + '\'' +
+                ", seismicIntensityRegion1=" + seismicIntensityRegion1 +
+                ", seismicIntensityPrefectureRegion1=" + seismicIntensityPrefectureRegion1 +
+                ", seismicIntensityRegion2=" + seismicIntensityRegion2 +
+                ", seismicIntensityPrefectureRegion2=" + seismicIntensityPrefectureRegion2 +
+                ", seismicIntensityRegion3=" + seismicIntensityRegion3 +
+                ", seismicIntensityPrefectureRegion3=" + seismicIntensityPrefectureRegion3 +
+                ", seismicIntensityRegion4=" + seismicIntensityRegion4 +
+                ", seismicIntensityPrefectureRegion4=" + seismicIntensityPrefectureRegion4 +
+                ", seismicIntensityRegion5=" + seismicIntensityRegion5 +
+                ", seismicIntensityPrefectureRegion5=" + seismicIntensityPrefectureRegion5 +
+                ", seismicIntensityRegion6=" + seismicIntensityRegion6 +
+                ", seismicIntensityPrefectureRegion6=" + seismicIntensityPrefectureRegion6 +
+                ", seismicIntensityRegion7=" + seismicIntensityRegion7 +
+                ", seismicIntensityPrefectureRegion7=" + seismicIntensityPrefectureRegion7 +
+                ", seismicIntensityRegion8=" + seismicIntensityRegion8 +
+                ", seismicIntensityPrefectureRegion8=" + seismicIntensityPrefectureRegion8 +
+                ", seismicIntensityRegion9=" + seismicIntensityRegion9 +
+                ", seismicIntensityPrefectureRegion9=" + seismicIntensityPrefectureRegion9 +
+                ", seismicIntensityRegion10=" + seismicIntensityRegion10 +
+                ", seismicIntensityPrefectureRegion11=" + seismicIntensityPrefectureRegion11 +
+                ", seismicIntensityRegion12=" + seismicIntensityRegion12 +
+                ", seismicIntensityPrefectureRegion12=" + seismicIntensityPrefectureRegion12 +
+                ", seismicIntensityRegion13=" + seismicIntensityRegion13 +
+                ", seismicIntensityPrefectureRegion13=" + seismicIntensityPrefectureRegion13 +
+                ", seismicIntensityRegion14=" + seismicIntensityRegion14 +
+                ", seismicIntensityPrefectureRegion14=" + seismicIntensityPrefectureRegion14 +
+                ", seismicIntensityRegion15=" + seismicIntensityRegion15 +
+                ", seismicIntensityPrefectureRegion1=" + seismicIntensityPrefectureRegion15 +
+                ", seismicIntensityRegion16=" + seismicIntensityRegion16 +
+                ", seismicIntensityPrefectureRegion16=" + seismicIntensityPrefectureRegion16 +
+                '}';
+    }
+    
 }

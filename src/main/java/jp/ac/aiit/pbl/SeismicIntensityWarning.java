@@ -1,6 +1,6 @@
 package jp.ac.aiit.pbl;
 
-public enum SeismicIntensityWarningCode {
+public enum SeismicIntensityWarning {
     
     SeismicIntensityLessThan4(1, "震度4未満"),
     SeismicIntensity4(2, "震度4"),
@@ -13,7 +13,7 @@ public enum SeismicIntensityWarningCode {
     private int code;
     private String seismicIntensity;
     
-    private SeismicIntensityWarningCode(int code, String seismicIntensity){
+    private SeismicIntensityWarning(int code, String seismicIntensity){
         this.code = code;
         this.seismicIntensity = seismicIntensity;
         
@@ -21,7 +21,7 @@ public enum SeismicIntensityWarningCode {
     public int getCode(){
         return this.code;
     }
-    public static SeismicIntensityWarningCode getSeismicIntensity(int code){
+    public static SeismicIntensityWarning getSeismicIntensity(int code){
         switch (code) {
             case 1:
                 return SeismicIntensityLessThan4;

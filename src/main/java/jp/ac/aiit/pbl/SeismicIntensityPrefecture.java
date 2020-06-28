@@ -1,6 +1,6 @@
 package jp.ac.aiit.pbl;
 
-public enum SeismicIntensityRegion {
+public enum SeismicIntensityPrefecture {
     
     Hokkaido(1, "北海道"),
     Aomori(2, "青森県"),
@@ -53,7 +53,7 @@ public enum SeismicIntensityRegion {
     private int code;
     private String regionName;
     
-    private SeismicIntensityRegion(int code, String regionName){
+    private SeismicIntensityPrefecture(int code, String regionName){
         this.code = code;
         this.regionName = regionName;
     }
@@ -61,7 +61,7 @@ public enum SeismicIntensityRegion {
     public int getCode(){
         return this.code;
     }
-    public static SeismicIntensityRegion getRegionName(int code){
+    public static SeismicIntensityPrefecture getRegionName(int code){
         switch (code){
             case 1:
                 return Hokkaido;
