@@ -60,6 +60,20 @@ public class Volcano {
     public void setLocalGovernmentRegion5(LocalGovernment localGovernmentRegion5) {
         this.localGovernmentRegion5 = localGovernmentRegion5;
     }
+    @Override
+    public String toString() {
+        return "Volcano{" +
+                "activityTime='" + activityTime + '\'' +
+                ", warningCode=" + warningCode +
+                ", volcanoName=" + volcanoName +
+                ", localGovernmentRegion1=" + localGovernmentRegion1 +
+                ", localGovernmentRegion2=" + localGovernmentRegion2 +
+                ", localGovernmentRegion3=" + localGovernmentRegion3 +
+                ", localGovernmentRegion4=" + localGovernmentRegion4 +
+                ", localGovernmentRegion5=" + localGovernmentRegion5 + '\'' +
+                '}';
+    }
+
 }
 
 //    private String preamble;                //Preample(PUB)
