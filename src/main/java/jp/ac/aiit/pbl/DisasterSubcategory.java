@@ -1,11 +1,9 @@
 package jp.ac.aiit.pbl;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.Map;
 
-public enum DisasterSubcategoryRegion {
+public enum DisasterSubcategory {
     BLIZZARD_SPECIAL_ALERT(1, "暴風雪特別警報"),
     HEAVY_RAIN_SPECIAL_ALERT(2, "大雨特別警報"),
     STORM_SPECIAL_ALERT(3, "暴風特別警報"),
@@ -19,22 +17,28 @@ public enum DisasterSubcategoryRegion {
     OTHERS(31, "その他の警報等情報要素");
 
     private final int id;
-    private final String 
+    private final String disasterSubcategoryName;
+    private static final HashMap<Integer, String> disasterSubcategoryMap;
 
-    DisasterSubcategoryRegion(final String id) {
+    DisasterSubcategory(final int id, final String disasterSubcategoryName) {
         this.id = id;
+        this.disasterSubcategoryName = disasterSubcategoryName;
     }
 
-    public String getInt() {
-        return this.id;
+    static {
+        disasterSubcategoryMap = new HashMap<Integer, String>();
+        Arrays.stream(DisasterSubcategory.values()).forEach(value -> disasterSubcategoryMap.put(DisasterSubcategory.valueOf(value.toString()).getId(), DisasterSubcategory.valueOf(value.toString()).getDisasterSubcategoryName()));
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getDisasterSubcategoryName() {
+        return disasterSubcategoryName;
+    }
+
+    public static String get(int key) {
+        return disasterSubcategoryMap.get(key);
     }
 }
-
-public final Map<String, String> definition;
-
-public DisasterSubcategoryRegion() {
-    Map<String, String> definition = new HashMap<String, String>();
-    Arrays.stream(Definition.values()).forEach(value -> definition.put(Definition.valueOf(value.toString()).getInt(), value.toString()));
-    this.definition = Collections.unmodifiableMap(definition);
-}
-

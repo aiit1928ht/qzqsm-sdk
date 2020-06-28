@@ -1,31 +1,30 @@
 package jp.ac.aiit.pbl;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+public enum WarningState {
+    ISSUED(1, "発表"),
+    CANCELED(2, "解除");
 
-public class WarningState {
-    public enum Definition {
-        発表("1"),
-        解除("2");
+    private final int id;
+    private final String warningStateName;
 
-        private final String id;
-
-        Definition(final String id) {
-            this.id = id;
-        }
-
-        public String getInt() {
-            return this.id;
-        }
+    WarningState(final int id, final String warningStateName) {
+        this.id = id;
+        this.warningStateName = warningStateName;
     }
 
-    public final Map<String, String> definition;
+    public int getId() {
+        return id;
+    }
 
-    public WarningState() {
-        Map<String, String> definition = new HashMap<String, String>();
-        Arrays.stream(Definition.values()).forEach(value -> definition.put(Definition.valueOf(value.toString()).getInt(), value.toString()));
-        this.definition = Collections.unmodifiableMap(definition);
+    public String getWarningStateName() {
+        return warningStateName;
+    }
+
+    public static WarningState getById(int id) {
+        if(id == 1) {
+            return ISSUED;
+        } else {
+            return CANCELED;
+        }
     }
 }
