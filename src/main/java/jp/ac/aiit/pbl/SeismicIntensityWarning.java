@@ -1,5 +1,7 @@
 package jp.ac.aiit.pbl;
 
+import java.util.Arrays;
+
 public enum SeismicIntensityWarning {
     
     SeismicIntensityLessThan4(1, "震度4未満"),
@@ -18,26 +20,14 @@ public enum SeismicIntensityWarning {
         this.seismicIntensity = seismicIntensity;
         
     }
-    public int getCode(){
+    public Integer getCode(){
         return this.code;
     }
+    
     public static SeismicIntensityWarning getSeismicIntensity(int code){
-        switch (code) {
-            case 1:
-                return SeismicIntensityLessThan4;
-            case 2:
-                return SeismicIntensity4;
-            case 3:
-                return SeismicIntensity5Lower;
-            case 4:
-                return SeismicIntensityUpper5;
-            case 5:
-                return SeismicIntensity6Lower;
-            case 6:
-                return SeismicIntensityUpper6;
-            case 7:
-                return SeismicIntensity7;
-        }
-        return null;
+        return Arrays.stream(SeismicIntensityWarning.values())
+                .filter(data -> data.getCode().equals(code))
+                .findFirst()
+                .orElse(null);
     }
 }

@@ -1,5 +1,7 @@
 package jp.ac.aiit.pbl;
 
+import java.util.Arrays;
+
 public enum SeismicIntensityPrefecture {
     
     Hokkaido(1, "北海道"),
@@ -58,106 +60,14 @@ public enum SeismicIntensityPrefecture {
         this.regionName = regionName;
     }
     
-    public int getCode(){
+    public Integer getCode(){
         return this.code;
     }
+
     public static SeismicIntensityPrefecture getRegionName(int code){
-        switch (code){
-            case 1:
-                return Hokkaido;
-            case 2:
-                return Aomori;
-            case 3:
-                return Iwate;
-            case 4:
-                return Miyagi;
-            case 5:
-                return Akita;
-            case 6:
-                return Yamagata;
-            case 7:
-                return Fukushima;
-            case 8:
-                return Ibaraki;
-            case 9:
-                return Tochigi;
-            case 10:
-                return Gunma;
-            case 11:
-                return Saitama;
-            case 12:
-                return Chiba;
-            case 13:
-                return Tokyo;
-            case 14:
-                return Kanagawa;
-            case 15:
-                return Niigata;
-            case 16:
-                return Toyama;
-            case 17:
-                return Ishikawa;
-            case 18:
-                return Fukui;
-            case 19:
-                return Yamanashi;
-            case 20:
-                return Nagano;
-            case 21:
-                return Gifu;
-            case 22:
-                return Shizuoka;
-            case 23:
-                return Aichi;
-            case 24:
-                return Mie;
-            case 25:
-                return Shiga;
-            case 26:
-                return Kyoto;
-            case 27:
-                return Osaka;
-            case 28:
-                return Hyogo;
-            case 29:
-                return Nara;
-            case 30:
-                return Wakayama;
-            case 31:
-                return Tottori;
-            case 32:
-                return Shimane;
-            case 33:
-                return Okayama;
-            case 34:
-                return Hiroshima;
-            case 35:
-                return Yamaguchi;
-            case 36:
-                return Tokushima;
-            case 37:
-                return Kagawa;
-            case 38:
-                return Ehime;
-            case 39:
-                return Kochi;
-            case 40:
-                return Fukuoka;
-            case 41:
-                return Saga;
-            case 42:
-                return Nagasaki;
-            case 43:
-                return Kumamoto;
-            case 44:
-                return Oita;
-            case 45:
-                return Miyazaki;
-            case 46:
-                return Kagoshima;
-            case 47:
-                return Okinawa;
-        }
-        return null;
+        return Arrays.stream(SeismicIntensityPrefecture.values())
+                .filter(data -> data.getCode().equals(code))
+                .findFirst()
+                .orElse(null);
     }
 }
