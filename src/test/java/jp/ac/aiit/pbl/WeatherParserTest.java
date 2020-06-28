@@ -24,37 +24,37 @@ public class WeatherParserTest {
 
     @Test
     public void canGetDisasterSubcategory1(){
-        String expected = new String("土砂災害警戒情報");
+        DisasterSubcategory expected = DisasterSubcategory.EARTH_AND_SAND_DISASTER_CAUTION_INFORMATION;
         assertThat(weather.getWeatherRegion().get(0).get(0),is(expected));
     }
 
     @Test
     public void canGetPrefecturalForecastRegion1(){
-        String expected = new String("福岡県");
+        PrefecturalForecastRegion expected = PrefecturalForecastRegion.FUKUOKAKEN;
         assertThat(weather.getWeatherRegion().get(0).get(1),is(expected));
     }
 
     @Test
     public void canGetDisasterSubcategory2(){
-        String expected = new String("土砂災害警戒情報");
+        DisasterSubcategory expected = DisasterSubcategory.EARTH_AND_SAND_DISASTER_CAUTION_INFORMATION;
         assertThat(weather.getWeatherRegion().get(1).get(0),is(expected));
     }
 
     @Test
     public void canGetPrefecturalForecastRegion2(){
-        String expected = new String("佐賀県");
+        PrefecturalForecastRegion expected = PrefecturalForecastRegion.SAGAKEN;
         assertThat(weather.getWeatherRegion().get(1).get(1),is(expected));
     }
 
     @Test
     public void canGetDisasterSubcategory3(){
-        String expected = new String("土砂災害警戒情報");
+        DisasterSubcategory expected = DisasterSubcategory.EARTH_AND_SAND_DISASTER_CAUTION_INFORMATION;
         assertThat(weather.getWeatherRegion().get(2).get(0),is(expected));
     }
 
     @Test
     public void canGetPrefecturalForecastRegion3(){
-        String expected = new String("大分県");
+        PrefecturalForecastRegion expected = PrefecturalForecastRegion.OITAKEN;
         assertThat(weather.getWeatherRegion().get(2).get(1),is(expected));
     }
 }

@@ -1,10 +1,11 @@
 package jp.ac.aiit.pbl;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Weather {
     private String warningState;
-    private ArrayList<ArrayList<String>> weatherRegion;
+    private List<List<Enum>> weatherRegion;
 
     public String getWarningState() {
         return warningState;
@@ -14,9 +15,9 @@ public class Weather {
         this.warningState = warningState;
     }
 
-    public ArrayList<ArrayList<String>> getWeatherRegion() { return weatherRegion; }
+    public List<List<Enum>> getWeatherRegion() { return weatherRegion; }
 
-    public void setWeatherRegion(ArrayList<ArrayList<String>> weatherRegion) {
-        this.weatherRegion = weatherRegion;
+    public void setWeatherRegion(List<List<Enum>> weatherRegion) {
+         this.weatherRegion = weatherRegion;
     }
 }

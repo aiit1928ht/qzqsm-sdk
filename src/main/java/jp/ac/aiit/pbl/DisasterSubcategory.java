@@ -18,7 +18,7 @@ public enum DisasterSubcategory {
 
     private final int id;
     private final String disasterSubcategoryName;
-    private static final HashMap<Integer, String> disasterSubcategoryMap;
+    private static final HashMap<Integer, DisasterSubcategory> disasterSubcategoryMap;
 
     DisasterSubcategory(final int id, final String disasterSubcategoryName) {
         this.id = id;
@@ -26,8 +26,8 @@ public enum DisasterSubcategory {
     }
 
     static {
-        disasterSubcategoryMap = new HashMap<Integer, String>();
-        Arrays.stream(DisasterSubcategory.values()).forEach(value -> disasterSubcategoryMap.put(DisasterSubcategory.valueOf(value.toString()).getId(), DisasterSubcategory.valueOf(value.toString()).getDisasterSubcategoryName()));
+        disasterSubcategoryMap = new HashMap<Integer, DisasterSubcategory>();
+        Arrays.stream(DisasterSubcategory.values()).forEach(value -> disasterSubcategoryMap.put(DisasterSubcategory.valueOf(value.toString()).getId(), value));
     }
 
     public int getId() {
@@ -38,7 +38,7 @@ public enum DisasterSubcategory {
         return disasterSubcategoryName;
     }
 
-    public static String get(int key) {
+    public static DisasterSubcategory get(int key) {
         return disasterSubcategoryMap.get(key);
     }
 }
