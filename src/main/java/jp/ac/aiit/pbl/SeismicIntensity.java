@@ -2,26 +2,6 @@ package jp.ac.aiit.pbl;
 import java.time.LocalDateTime;
 
 public class SeismicIntensity {
-    // Preamble
-    //private String preamble;
-    // Message Type
-    //private String messageTypeID;
-    // 通報区分
-    //private String reportClassification;
-    // 災害種別コード
-    //private String disasterCategory;
-    // 発表時刻
-    //private LocalDateTime reportTimeMonth;
-    // 発表時刻
-    //private LocalDateTime reportTimeDay;
-    // 発表時刻
-    //private LocalDateTime reportTimeHour;
-    // 発表時刻
-    //private LocalDateTime reportTimeMinute;
-    // 情報形態
-    //private String informationType;
-    // 予備１
-    //private String spare1;
     // 地震の発生時刻
     //private LocalDateTime occurrenceTimeOfEarthquakeDay;
     // 地震の発生時刻
@@ -95,62 +75,6 @@ public class SeismicIntensity {
     private SeismicIntensityWarning seismicIntensityRegion16;
     // 都道府県(地点16)
     private SeismicIntensityPrefecture seismicIntensityPrefectureRegion16;
-    // 予備2
-    //private String spare2;
-    // バージョン番号
-    //private String versionNumber;
-    // 予約領域
-    //private String reserved;
-    // Cyclic Redundancy Check
-    //private String crc;
-    
-    //public LocalDateTime getReportTimeMonth() {
-    //    return reportTimeMonth;
-    //}
-    
-    //public void setReportTimeMonth(LocalDateTime reportTimeMonth) {
-    //    this.reportTimeMonth = reportTimeMonth;
-    //}
-    
-    //public LocalDateTime getReportTimeDay() {
-    //    return reportTimeDay;
-    //}
-    
-    //public void setReportTimeDay(LocalDateTime reportTimeDay) {
-    //    this.reportTimeDay = reportTimeDay;
-    //}
-    
-    //public LocalDateTime getReportTimeHour() {
-    //    return reportTimeHour;
-    //}
-    
-    //public void setReportTimeHour(LocalDateTime reportTimeHour) {
-    //    this.reportTimeHour = reportTimeHour;
-    //}
-    
-    //public LocalDateTime getReportTimeMinute() {
-    //    return reportTimeMinute;
-    //}
-    
-    //public void setReportTimeMinute(LocalDateTime reportTimeMinute) {
-    //    this.reportTimeMinute = reportTimeMinute;
-    //}
-    
-    //public String getInformationType() {
-    //    return informationType;
-    //}
-    
-    //public void setInformationType(String informationType) {
-    //    this.informationType = informationType;
-    //}
-    
-    //public String getSpare1() {
-    //    return spare1;
-    //}
-    
-    //public void setSpare1(String spare1) {
-    //    this.spare1 = spare1;
-    //}
     
     //public LocalDateTime getOccurrenceTimeOfEarthquakeDay() {
     //    return occurrenceTimeOfEarthquakeDay;
@@ -178,6 +102,10 @@ public class SeismicIntensity {
     
     public void setOccurrenceTime(LocalDateTime occurrenceTime){
         this.occurrenceTime = occurrenceTime;
+    }
+    
+    public LocalDateTime getOccurrenceTime() {
+        return occurrenceTime;
     }
     
     public SeismicIntensityWarning getSeismicIntensityRegion1() {
@@ -466,7 +394,7 @@ public class SeismicIntensity {
                 ", seismicIntensityRegion14=" + seismicIntensityRegion14 +
                 ", seismicIntensityPrefectureRegion14=" + seismicIntensityPrefectureRegion14 +
                 ", seismicIntensityRegion15=" + seismicIntensityRegion15 +
-                ", seismicIntensityPrefectureRegion1=" + seismicIntensityPrefectureRegion15 +
+                ", seismicIntensityPrefectureRegion15=" + seismicIntensityPrefectureRegion15 +
                 ", seismicIntensityRegion16=" + seismicIntensityRegion16 +
                 ", seismicIntensityPrefectureRegion16=" + seismicIntensityPrefectureRegion16 +
                 '}';
