@@ -2,7 +2,7 @@ package jp.ac.aiit.pbl;
 
 import java.util.Arrays;
 
-public enum SeismicIntensityPrefecture {
+public enum Prefecture {
     
     Hokkaido(1, "北海道"),
     Aomori(2, "青森県"),
@@ -55,7 +55,7 @@ public enum SeismicIntensityPrefecture {
     private int code;
     private String regionName;
     
-    private SeismicIntensityPrefecture(int code, String regionName){
+    private Prefecture(int code, String regionName){
         this.code = code;
         this.regionName = regionName;
     }
@@ -64,8 +64,8 @@ public enum SeismicIntensityPrefecture {
         return this.code;
     }
 
-    public static SeismicIntensityPrefecture getRegionName(int code){
-        return Arrays.stream(SeismicIntensityPrefecture.values())
+    public static Prefecture getRegionName(int code){
+        return Arrays.stream(Prefecture.values())
                 .filter(data -> data.getCode().equals(code))
                 .findFirst()
                 .orElse(null);

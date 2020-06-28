@@ -2,7 +2,7 @@ package jp.ac.aiit.pbl;
 
 import java.util.Arrays;
 
-public enum SeismicIntensityWarning {
+public enum Warning {
     
     SeismicIntensityLessThan4(1, "震度4未満"),
     SeismicIntensity4(2, "震度4"),
@@ -15,7 +15,7 @@ public enum SeismicIntensityWarning {
     private int code;
     private String seismicIntensity;
     
-    private SeismicIntensityWarning(int code, String seismicIntensity){
+    private Warning(int code, String seismicIntensity){
         this.code = code;
         this.seismicIntensity = seismicIntensity;
         
@@ -24,8 +24,8 @@ public enum SeismicIntensityWarning {
         return this.code;
     }
     
-    public static SeismicIntensityWarning getSeismicIntensity(int code){
-        return Arrays.stream(SeismicIntensityWarning.values())
+    public static Warning getSeismicIntensity(int code){
+        return Arrays.stream(Warning.values())
                 .filter(data -> data.getCode().equals(code))
                 .findFirst()
                 .orElse(null);
