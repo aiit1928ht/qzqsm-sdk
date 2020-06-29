@@ -7,7 +7,7 @@ import static org.junit.Assert.assertThat;
 public class VolcanoNameTest {
     @Test
     public void canGetVolcanoName101(){
-        assertThat(VolcanoName.ShiretokoiouZan,is(VolcanoName.getById(101)));
+        assertThat(VolcanoName.Shiretokoiozan,is(VolcanoName.getById(101)));
     }
     @Test
     public void canGetVolcanoName110(){
@@ -19,7 +19,7 @@ public class VolcanoNameTest {
     }
     @Test
     public void canGetVolcanoNameMax(){
-        assertThat(VolcanoName.others,is(VolcanoName.getById(4000)));
+        assertThat(VolcanoName.Others,is(VolcanoName.getById(4000)));
     }
     @Test
     public void canGetVolcanoNameMoreThanMax(){
