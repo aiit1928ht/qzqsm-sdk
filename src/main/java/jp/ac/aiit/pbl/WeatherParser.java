@@ -46,25 +46,28 @@ public class WeatherParser {
         Weather weather = new Weather();
 
         weather.setWarningState(WarningState.getById(
-                Integer.parseInt(Format.WARNING_STATE.signalValue(qzqms), 2)).getWarningStateName());
+                Integer.parseInt(Format.WARNING_STATE.signalValue(qzqms), 2)));
 
-        List<DisasterSubcategory> disasterSubcategory = new ArrayList<>();
-        disasterSubcategory.add(DisasterSubcategory.get(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION1.signalValue(qzqms), 2)));
-        disasterSubcategory.add(DisasterSubcategory.get(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION2.signalValue(qzqms), 2)));
-        disasterSubcategory.add(DisasterSubcategory.get(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION3.signalValue(qzqms), 2)));
-        disasterSubcategory.add(DisasterSubcategory.get(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION4.signalValue(qzqms), 2)));
-        disasterSubcategory.add(DisasterSubcategory.get(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION5.signalValue(qzqms), 2)));
-        disasterSubcategory.add(DisasterSubcategory.get(Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION6.signalValue(qzqms), 2)));
-        weather.setDisasterSubcategory(disasterSubcategory);
-
-        List<PrefecturalForecastRegion> prefecturalForecastRegion = new ArrayList<>();
-        prefecturalForecastRegion.add(PrefecturalForecastRegion.get(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION1.signalValue(qzqms), 2)));
-        prefecturalForecastRegion.add(PrefecturalForecastRegion.get(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION2.signalValue(qzqms), 2)));
-        prefecturalForecastRegion.add(PrefecturalForecastRegion.get(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION3.signalValue(qzqms), 2)));
-        prefecturalForecastRegion.add(PrefecturalForecastRegion.get(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION4.signalValue(qzqms), 2)));
-        prefecturalForecastRegion.add(PrefecturalForecastRegion.get(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION5.signalValue(qzqms), 2)));
-        prefecturalForecastRegion.add(PrefecturalForecastRegion.get(Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION6.signalValue(qzqms), 2)));
-        weather.setPrefecturalForecastRegion(prefecturalForecastRegion);
+        List<WeatherSubcategoryAndRegion> weatherSubcategoryAndRegions = new ArrayList<>();
+        weatherSubcategoryAndRegions.add(new WeatherSubcategoryAndRegion(
+                Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION1.signalValue(qzqms), 2),
+                Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION1.signalValue(qzqms), 2)));
+        weatherSubcategoryAndRegions.add(new WeatherSubcategoryAndRegion(
+                Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION2.signalValue(qzqms), 2),
+                Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION2.signalValue(qzqms), 2)));
+        weatherSubcategoryAndRegions.add(new WeatherSubcategoryAndRegion(
+                Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION3.signalValue(qzqms), 2),
+                Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION3.signalValue(qzqms), 2)));
+        weatherSubcategoryAndRegions.add(new WeatherSubcategoryAndRegion(
+                Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION4.signalValue(qzqms), 2),
+                Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION4.signalValue(qzqms), 2)));
+        weatherSubcategoryAndRegions.add(new WeatherSubcategoryAndRegion(
+                Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION5.signalValue(qzqms), 2),
+                Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION5.signalValue(qzqms), 2)));
+        weatherSubcategoryAndRegions.add(new WeatherSubcategoryAndRegion(
+                Integer.parseInt(Format.DISASTER_SUBCATEGORY_REGION6.signalValue(qzqms), 2),
+                Integer.parseInt(Format.PREFECTURAL_FORECAST_REGION_REGION6.signalValue(qzqms), 2)));
+        weather.setWeatherSubcategoryAndRegions(weatherSubcategoryAndRegions);
 
         return weather;
     }

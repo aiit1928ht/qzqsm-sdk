@@ -1,8 +1,8 @@
 package jp.ac.aiit.pbl;
 
 public enum WarningState {
-    ISSUED(1, "発表"),
-    CANCELED(2, "解除");
+    ISSUE(1, "発表"),
+    CANCEL(2, "解除");
 
     private final int id;
     private final String warningStateName;
@@ -16,15 +16,15 @@ public enum WarningState {
         return id;
     }
 
-    public String getWarningStateName() {
+    public String getValue() {
         return warningStateName;
     }
 
     public static WarningState getById(int id) {
         if(id == 1) {
-            return ISSUED;
+            return ISSUE;
         } else {
-            return CANCELED;
+            return CANCEL;
         }
     }
 }

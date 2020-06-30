@@ -3,27 +3,20 @@ package jp.ac.aiit.pbl;
 import java.util.List;
 
 public class Weather {
-    private String warningState;
-    private List<DisasterSubcategory> disasterSubcategory;
-    private List<PrefecturalForecastRegion> prefecturalForecastRegion;
+    private WarningState warningState;
+    private List<WeatherSubcategoryAndRegion> weatherSubcategoryAndRegions;
 
-    public String getWarningState() {
+    public WarningState getWarningState() {
         return warningState;
     }
-
-    public void setWarningState(String warningState) {
+    public void setWarningState(WarningState warningState) {
         this.warningState = warningState;
     }
 
-    public List<DisasterSubcategory> getDisasterSubcategory() { return disasterSubcategory; }
-
-    public void setDisasterSubcategory(List<DisasterSubcategory> disasterSubcategory) {
-         this.disasterSubcategory = disasterSubcategory;
+    public List<WeatherSubcategoryAndRegion> getWeatherSubcategoryAndRegions() {
+        return weatherSubcategoryAndRegions;
     }
-
-    public List<PrefecturalForecastRegion> getPrefecturalForecastRegion() { return prefecturalForecastRegion; }
-
-    public void setPrefecturalForecastRegion(List<PrefecturalForecastRegion> prefecturalForecastRegion) {
-        this.prefecturalForecastRegion = prefecturalForecastRegion;
+    public void setWeatherSubcategoryAndRegions(List<WeatherSubcategoryAndRegion> weatherSubcategoryAndRegions) {
+        this.weatherSubcategoryAndRegions = weatherSubcategoryAndRegions;
     }
 }

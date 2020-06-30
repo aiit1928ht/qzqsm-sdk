@@ -82,7 +82,7 @@ public enum PrefecturalForecastRegion {
 
     private final int id;
     private final String prefecturalForecastRegionName;
-    private static final HashMap<Integer, PrefecturalForecastRegion> prefecturalForecastRegionMap;
+    private static final HashMap<Integer, PrefecturalForecastRegion> PREFECTURAL_FORECAST_REGION_HASH_MAP;
 
     PrefecturalForecastRegion(final int id, final String region) {
         this.id = id;
@@ -90,20 +90,21 @@ public enum PrefecturalForecastRegion {
     }
 
     static {
-        prefecturalForecastRegionMap = new HashMap<Integer, PrefecturalForecastRegion>();
-        Arrays.stream(PrefecturalForecastRegion.values()).forEach(value -> prefecturalForecastRegionMap.put(PrefecturalForecastRegion.valueOf(value.toString()).getId(), value));
+        PREFECTURAL_FORECAST_REGION_HASH_MAP = new HashMap<Integer, PrefecturalForecastRegion>();
+        Arrays.stream(PrefecturalForecastRegion.values()).forEach(value ->
+                PREFECTURAL_FORECAST_REGION_HASH_MAP.put(PrefecturalForecastRegion.valueOf(value.toString()).getId(), value));
     }
 
     public int getId() {
         return id;
     }
 
-    public String getPrefecturalForecastRegionName() {
+    public String getValue() {
         return prefecturalForecastRegionName;
     }
 
     public static PrefecturalForecastRegion get(int key) {
-        return prefecturalForecastRegionMap.get(key);
+        return PREFECTURAL_FORECAST_REGION_HASH_MAP.get(key);
     }
 
 }
