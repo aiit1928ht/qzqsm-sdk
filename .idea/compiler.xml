@@ -9,5 +9,8 @@
         <module name="qzqsm-sdk" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="qzqsm-sdk" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
