@@ -25,25 +25,28 @@ public class WeatherParser {
         DISASTER_SUBCATEGORY_REGION6(176, 181),
         PREFECTURAL_FORECAST_REGION_REGION6(181, 200);
 
-        private final int biginIndex;
+        private final int beginIndex;
         private final int endIndex;
 
-        Format(final int biginIndex, final int endIndex) {
-            this.biginIndex = biginIndex;
+        Format(final int beginIndex, final int endIndex) {
+            this.beginIndex = beginIndex;
             this.endIndex = endIndex;
         }
 
-        public int biginIndex() { return biginIndex; }
+        public int beginIndex() { return beginIndex; }
 
         public int endIndex() { return endIndex; }
 
         public String signalValue(String qzqms) {
-            return qzqms.substring(biginIndex, endIndex);
+            return qzqms.substring(beginIndex, endIndex);
         }
     }
 
     public Weather parse() {
         Weather weather = new Weather();
+
+        PrefixParser prefixParser = new PrefixParser();
+        weather.setPrefix(prefixParser.parse(qzqms));
 
         weather.setWarningState(WarningState.getById(
                 Integer.parseInt(Format.WARNING_STATE.signalValue(qzqms), 2)));

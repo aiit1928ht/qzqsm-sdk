@@ -11,6 +11,11 @@ public class WeatherParserTest {
     Weather weather = weatherParser.parse();
 
     @Test
+    public  void canGetPrefix(){
+        System.out.println(weather.getPrefix().toString());
+    }
+
+    @Test
     public void canGetWarningState(){
         WarningState expected = WarningState.CANCEL;
         assertThat(weather.getWarningState(),is(expected));
