@@ -7,14 +7,13 @@ public class SeismicIntensity {
     
     private Prefix prefix;
     
-    // 地震の発生時刻
-    //private LocalDateTime occurrenceTimeOfEarthquakeDay;
-    // 地震の発生時刻
-    //private LocalDateTime occurrenceTimeOfEarthquakeHour;
-    // 地震の発生時刻
-    //private LocalDateTime occurrenceTimeOfEarthquakeMinute;
-    
     private LocalDateTime occurrenceTime;
+    
+    private SeismicIntensityRegion warning;
+    
+    public void setWarning(SeismicIntensityRegion warning) {
+        this.warning = warning;
+    }
     
     // 震度(地点1)
     private Warning seismicIntensityRegion1;
@@ -91,6 +90,27 @@ public class SeismicIntensity {
         this.regions = regions;
     }
     
+    
+    
+    public List<Warning> warnings;
+    
+    public List<Warning> getWarnings() {
+        return warnings;
+    }
+    
+    public void setWarnings(List<Warning> warnings) {
+        this.warnings = warnings;
+    }
+    
+    public List<Prefecture> getPrefectures() {
+        return prefectures;
+    }
+    
+    public void setPrefectures(List<Prefecture> prefectures) {
+        this.prefectures = prefectures;
+    }
+    
+    public List<Prefecture> prefectures;
     
     //public LocalDateTime getOccurrenceTimeOfEarthquakeDay() {
     //    return occurrenceTimeOfEarthquakeDay;
@@ -380,42 +400,16 @@ public class SeismicIntensity {
         this.seismicIntensityPrefectureRegion16 = seismicIntensityPrefectureRegion16;
     }
     
+    public void setPrefix(Prefix prefix) {
+        this.prefix = prefix;
+    }
+    
     @Override
     public String toString() {
         return "SeismicIntensity{" +
-                "occurrenceTime='" + occurrenceTime + '\'' +
-                ", seismicIntensityRegion1=" + seismicIntensityRegion1 +
-                ", seismicIntensityPrefectureRegion1=" + seismicIntensityPrefectureRegion1 +
-                ", seismicIntensityRegion2=" + seismicIntensityRegion2 +
-                ", seismicIntensityPrefectureRegion2=" + seismicIntensityPrefectureRegion2 +
-                ", seismicIntensityRegion3=" + seismicIntensityRegion3 +
-                ", seismicIntensityPrefectureRegion3=" + seismicIntensityPrefectureRegion3 +
-                ", seismicIntensityRegion4=" + seismicIntensityRegion4 +
-                ", seismicIntensityPrefectureRegion4=" + seismicIntensityPrefectureRegion4 +
-                ", seismicIntensityRegion5=" + seismicIntensityRegion5 +
-                ", seismicIntensityPrefectureRegion5=" + seismicIntensityPrefectureRegion5 +
-                ", seismicIntensityRegion6=" + seismicIntensityRegion6 +
-                ", seismicIntensityPrefectureRegion6=" + seismicIntensityPrefectureRegion6 +
-                ", seismicIntensityRegion7=" + seismicIntensityRegion7 +
-                ", seismicIntensityPrefectureRegion7=" + seismicIntensityPrefectureRegion7 +
-                ", seismicIntensityRegion8=" + seismicIntensityRegion8 +
-                ", seismicIntensityPrefectureRegion8=" + seismicIntensityPrefectureRegion8 +
-                ", seismicIntensityRegion9=" + seismicIntensityRegion9 +
-                ", seismicIntensityPrefectureRegion9=" + seismicIntensityPrefectureRegion9 +
-                ", seismicIntensityRegion10=" + seismicIntensityRegion10 +
-                ", seismicIntensityPrefectureRegion10=" + seismicIntensityPrefectureRegion10 +
-                ", seismicIntensityRegion11=" + seismicIntensityRegion11 +
-                ", seismicIntensityPrefectureRegion11=" + seismicIntensityPrefectureRegion11 +
-                ", seismicIntensityRegion12=" + seismicIntensityRegion12 +
-                ", seismicIntensityPrefectureRegion12=" + seismicIntensityPrefectureRegion12 +
-                ", seismicIntensityRegion13=" + seismicIntensityRegion13 +
-                ", seismicIntensityPrefectureRegion13=" + seismicIntensityPrefectureRegion13 +
-                ", seismicIntensityRegion14=" + seismicIntensityRegion14 +
-                ", seismicIntensityPrefectureRegion14=" + seismicIntensityPrefectureRegion14 +
-                ", seismicIntensityRegion15=" + seismicIntensityRegion15 +
-                ", seismicIntensityPrefectureRegion15=" + seismicIntensityPrefectureRegion15 +
-                ", seismicIntensityRegion16=" + seismicIntensityRegion16 +
-                ", seismicIntensityPrefectureRegion16=" + seismicIntensityPrefectureRegion16 +
+                "prefix=" + prefix +
+                ", occurrenceTime=" + occurrenceTime +
+                ", regions=" + regions +
                 '}';
     }
 }

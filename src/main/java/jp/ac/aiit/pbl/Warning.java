@@ -20,6 +20,19 @@ public enum Warning {
         this.seismicIntensity = seismicIntensity;
         
     }
+    
+    public String getSeismicIntensity() {
+        return seismicIntensity;
+    }
+    
+    public void setSeismicIntensity(String seismicIntensity) {
+        this.seismicIntensity = seismicIntensity;
+    }
+    
+    public void setCode(int code) {
+        this.code = code;
+    }
+    
     public Integer getCode(){
         return this.code;
     }
