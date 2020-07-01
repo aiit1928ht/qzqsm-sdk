@@ -163,8 +163,6 @@ public class SeismicIntensityParser {
     
         prefectureList16.add(Prefecture.getRegionName(Integer.parseInt(qzMessage.substring(207, 213), 2)));
         regionData16.setPrefectureList(prefectureList16);
-    
-        
         
         region.add(regionData1);
         region.add(regionData2);
