@@ -2,7 +2,7 @@ package jp.ac.aiit.pbl;
 import java.util.Arrays;
 
 public enum VolcanoName {
-    ShiretokoiouZan(101,"知床硫黄山"),
+    Shiretokoiozan(101,"知床硫黄山"),
     Rausudake(102,"羅臼岳"),
     Mashuu(103,"摩周"),
     Atosanupuri(104,"アトサヌプリ"),
@@ -14,9 +14,9 @@ public enum VolcanoName {
     Eniwadake(110,"恵庭岳"),
     Kuttara(111,"倶多楽"),
     Usuzan(112,"有珠山"),
-    HokkaidoKomagadake(113,"北海道駒ヶ岳"),
+    Hokkaidokomagadake(113,"北海道駒ヶ岳"),
     Esan(114,"恵山"),
-    OshimaOhshima(115,"渡島大島"),
+    Oshimaohshima(115,"渡島大島"),
     Rishirizan(116,"利尻山"),
     Youteizan(117,"羊蹄山"),
     Niseko(118,"ニセコ"),
@@ -46,7 +46,7 @@ public enum VolcanoName {
     Minaminiyoshikaizan(340,"南日吉海山"),
     Nikkoukaizan(341,"日光海山"),
     Nantaisan(342,"男体山"),
-    KusatsushiranesanShiranesan(350,"草津白根山(白根山(湯釜付近)"),
+    Kusatsushiranesanshiranesan(350,"草津白根山(白根山(湯釜付近)"),
     KusatsushiranesanHonshiranesan(351,"草津白根山(本白根山)"),
     Sanbesan(401,"三瓶山"),
     Kuzyuusan(502,"九重山"),
@@ -60,22 +60,22 @@ public enum VolcanoName {
     Nakanoshima(510,"中之島"),
     Suwanosezima(511,"諏訪之瀬島"),
     Abukazangun(512,"阿武火山群"),
-    TsurumidakeGarandake(513,"鶴見岳・伽藍岳"),
+    Tsurumidakegarandake(513,"鶴見岳・伽藍岳"),
     Yufudake(514,"由布岳"),
     Fukuekazangun(515,"福江火山群"),
-    YonemaruSumiyoshiike(516,"米丸・住吉池"),
+    Yonemarusumiyoshiike(516,"米丸・住吉池"),
     Wakamiko(517,"若尊"),
-    IkedaYamagawa(518,"池田・山川"),
+    Ikedayamagawa(518,"池田・山川"),
     Kuchinoshima(519,"口之島"),
-    KirishimayamaOhachi(550,"霧島山(御鉢)"),
-    KirishimayaShinmoedake(551,"霧島山(新燃岳)"),
+    Kirishimayamaohachi(550,"霧島山(御鉢)"),
+    Kirishimayashinmoedake(551,"霧島山(新燃岳)"),
     Kirichimayamaebinokougen(552,"霧島山(えびの高原(硫黄山)周辺)"),
     Ioutorishima(601,"硫黄鳥島"),
     Iriomotezimahokuhokuroukaiteikazan(602,"西表島北北東海底火山"),
     ActivevolcanoAll(900,"全国の活火山"),
     OtherActiveVolcano(901,"その他の活火山"),
     NewActiveVolcano(902,"新たな活火山"),
-    others(4000,"その他の火山");
+    Others(4000,"その他の火山");
     //NNNN*	火山(コード番号：NNNN)
 
     private Integer id;
