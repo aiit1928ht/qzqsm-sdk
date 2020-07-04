@@ -10,6 +10,8 @@ public class HypocenterParser {
         PrefixParser prefixParser = new PrefixParser();
         hypocenter.setPrefix(prefixParser.parse(qzMessage));
         
+        
+        
         hypocenter.setOccurrenceTime(toOccurrenceTime(qzMessage.substring(81, 96)));
         
         return hypocenter;
