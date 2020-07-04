@@ -1,9 +1,12 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.diaster.ashfall;
+
+import jp.ac.aiit.pbl.LocalGovernment;
+import jp.ac.aiit.pbl.diaster.ashfall.WarningCode;
 
 public class AshFallTimeWarningCodeLocalGovernment {
-        private final int expectedAshFall;
-        private final WarningCode warningCode;
-        private final LocalGovernment  localGovernment;
+        private int expectedAshFall;
+        private WarningCode warningCode;
+        private LocalGovernment localGovernment;
 
         AshFallTimeWarningCodeLocalGovernment(int expectedAshFall, int warningCodeId, int localGovernmentId) {
             this.expectedAshFall=expectedAshFall;

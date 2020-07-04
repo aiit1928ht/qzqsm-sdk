@@ -1,4 +1,8 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.diaster.ashfall;
+
+import jp.ac.aiit.pbl.PrefixParser;
+import jp.ac.aiit.pbl.VolcanoName;
+import jp.ac.aiit.pbl.WarningType;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
