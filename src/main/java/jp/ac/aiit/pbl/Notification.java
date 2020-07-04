@@ -2,7 +2,7 @@ package jp.ac.aiit.pbl;
 
 import java.util.Arrays;
 
-public enum NotificationsOnDisasterPrevention {
+public enum Notification {
     
     Notification0(0, "なし"),
     Notification101(101, "今後若干の海面変動があるかもしれません。"),
@@ -19,7 +19,7 @@ public enum NotificationsOnDisasterPrevention {
     private String notificationContent;
     
     
-    private NotificationsOnDisasterPrevention(int code, String notificationContent){
+    private Notification(int code, String notificationContent){
         this.code = code;
         this.notificationContent = notificationContent;
     }
@@ -40,8 +40,8 @@ public enum NotificationsOnDisasterPrevention {
         this.notificationContent = notificationContent;
     }
     
-    public static NotificationsOnDisasterPrevention getNotificationContent(int code){
-        return Arrays.stream(NotificationsOnDisasterPrevention.values())
+    public static Notification getNotificationContent(int code){
+        return Arrays.stream(Notification.values())
                 .filter(data -> data.getCode().equals(code))
                 .findFirst()
                 .orElse(null);
