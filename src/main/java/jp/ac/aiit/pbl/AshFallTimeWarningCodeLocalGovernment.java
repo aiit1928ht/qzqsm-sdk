@@ -1,9 +1,9 @@
 package jp.ac.aiit.pbl;
 
 public class AshFallTimeWarningCodeLocalGovernment {
-        public final int expectedAshFall;
-        public final WarningCode warningCode;
-        public final LocalGovernment  localGovernment;
+        private final int expectedAshFall;
+        private final WarningCode warningCode;
+        private final LocalGovernment  localGovernment;
 
         AshFallTimeWarningCodeLocalGovernment(int expectedAshFall, int warningCodeId, int localGovernmentId) {
             this.expectedAshFall=expectedAshFall;
