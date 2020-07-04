@@ -25,7 +25,7 @@ public class AshFallTimeWarningCodeLocalGovernment {
 
     @Override
     public String toString() {
-        return "ExpectedAshFallTimeWarningCodeAndLocalGovernment{" +
+        return "AshFallTimeWarningCodeLocalGovernment{" +
                 "expectedAshFall=" + expectedAshFall +
                 ", warningCode=" + warningCode +
                 ", localGovernment=" + localGovernment +
