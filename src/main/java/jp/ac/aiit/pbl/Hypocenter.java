@@ -10,11 +10,16 @@ public class Hypocenter {
     private DepthOfHypocenter depthOfHypocenter;
     private Magnitude magnitude;
     private SeismicEpicenter SeismicEpicenter;
-    private NorthSouthLatitude latitudeNorthSouth;
-    private List<Latitude> Latitude;
-    private EastWestLongitude longitudeEastWest;
-    private List<Longtitude> Longitude;
+    private LatitudeOnLongitude latitudeOnLongitude;
     
+    
+    public LatitudeOnLongitude getLatitudeOnLongitude() {
+        return latitudeOnLongitude;
+    }
+    
+    public void setLatitudeOnLongitude(LatitudeOnLongitude latitudeOnLongitude) {
+        this.latitudeOnLongitude = latitudeOnLongitude;
+    }
     
     public Prefix getPrefix() {
         return prefix;
@@ -64,38 +69,6 @@ public class Hypocenter {
         this.magnitude = magnitude;
     }
     
-    public NorthSouthLatitude getLatitudeNorthSouth() {
-        return latitudeNorthSouth;
-    }
-    
-    public void setLatitudeNorthSouth(NorthSouthLatitude latitudeNorthSouth) {
-        this.latitudeNorthSouth = latitudeNorthSouth;
-    }
-    
-    public List<Latitude> getLatitude() {
-        return Latitude;
-    }
-    
-    public void setLatitude(List<Latitude> latitude) {
-        Latitude = latitude;
-    }
-    
-    public EastWestLongitude getLongitudeEastWest() {
-        return longitudeEastWest;
-    }
-    
-    public void setLongitudeEastWest(EastWestLongitude longitudeEastWest) {
-        this.longitudeEastWest = longitudeEastWest;
-    }
-    
-    public List<Longtitude> getLongitude() {
-        return Longitude;
-    }
-    
-    public void setLongitude(List<Longtitude> longitude) {
-        Longitude = longitude;
-    }
-    
     @Override
     public String toString() {
         return "Hypocenter{" +
@@ -105,10 +78,7 @@ public class Hypocenter {
                 ", depthOfHypocenter=" + depthOfHypocenter +
                 ", magnitude=" + magnitude +
                 ", SeismicEpicenter=" + SeismicEpicenter +
-                ", latitudeNorthSouth=" + latitudeNorthSouth +
-                ", Latitude=" + Latitude +
-                ", longitudeEastWest=" + longitudeEastWest +
-                ", Longitude=" + Longitude +
+                ", latitudeOnLongitude=" + latitudeOnLongitude +
                 '}';
     }
 }

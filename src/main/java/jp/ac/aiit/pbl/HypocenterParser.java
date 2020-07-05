@@ -25,24 +25,32 @@ public class HypocenterParser {
         hypocenter.setMagnitude(new Magnitude(Integer.parseInt(qzMessage.substring(105, 112), 2)));
         
         hypocenter.setSeismicEpicenter(SeismicEpicenter.getRegionName(Integer.parseInt(qzMessage.substring(112, 122), 2)));
+    
+    
+        LatitudeOnLongitude latitudeOnLongitude = new LatitudeOnLongitude(
+                Integer.parseInt(qzMessage.substring(122, 123), 2),
+                Integer.parseInt(qzMessage.substring(142, 143), 2));
         
-        hypocenter.setLatitudeNorthSouth(NorthSouthLatitude.getByCode(Integer.parseInt(qzMessage.substring(122, 123), 2)));
+        //hypocenter.setLatitudeNorthSouth(NorthSouthLatitude.getByCode(Integer.parseInt(qzMessage.substring(122, 123), 2)));
+        
         
         List<Latitude> latitudeList = new ArrayList<>();
         latitudeList.add(new Latitude(
                 Integer.parseInt(qzMessage.substring(123, 130), 2),
                 Integer.parseInt(qzMessage.substring(130, 136), 2),
                 Integer.parseInt(qzMessage.substring(136, 142), 2)));
-        hypocenter.setLatitude(latitudeList);
+        latitudeOnLongitude.setLatitudes(latitudeList);
         
-        hypocenter.setLongitudeEastWest(EastWestLongitude.getByCode(Integer.parseInt(qzMessage.substring(142, 143), 2)));
+        //hypocenter.setLongitudeEastWest(EastWestLongitude.getByCode(Integer.parseInt(qzMessage.substring(142, 143), 2)));
+        //latitudeOnLongitude.setEastWestLongitude(EastWestLongitude.getByCode(Integer.parseInt(qzMessage.substring(142, 143), 2)));
         
         List<Longtitude> longtitudelist = new ArrayList<>();
         longtitudelist.add(new Longtitude(
                 Integer.parseInt(qzMessage.substring(143, 151), 2),
                 Integer.parseInt(qzMessage.substring(151, 157), 2),
                 Integer.parseInt(qzMessage.substring(157, 163), 2)));
-        hypocenter.setLongitude(longtitudelist);
+        latitudeOnLongitude.setLongtitudes(longtitudelist);
+        hypocenter.setLatitudeOnLongitude(latitudeOnLongitude);
         
         return hypocenter;
     }

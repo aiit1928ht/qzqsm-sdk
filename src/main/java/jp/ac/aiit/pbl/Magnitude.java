@@ -1,7 +1,7 @@
 package jp.ac.aiit.pbl;
 
 public class Magnitude {
-    public final int magunitude;
+    private int magunitude;
     
     Magnitude(int magunitude){
         this.magunitude = magunitude;

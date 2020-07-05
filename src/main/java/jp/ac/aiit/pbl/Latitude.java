@@ -1,9 +1,9 @@
 package jp.ac.aiit.pbl;
 
 public class Latitude {
-    public final int degree;
-    public final int minute;
-    public final int second;
+    private int degree;
+    private int minute;
+    private int second;
     
     Latitude(int degree, int minute, int second){
         this.degree = degree;
