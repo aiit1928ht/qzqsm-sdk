@@ -17,11 +17,11 @@ public class NotificationTest {
     }
     @Test
     public void canGetNotification102() {
-        assertThat(Notification.Notification102, is(Notification.getNotificationContent(0)));
+        assertThat(Notification.Notification102, is(Notification.getNotificationContent(102)));
     }
     @Test
     public void canGetNotification103() {
-        assertThat(Notification.Notification103, is(Notification.getNotificationContent(101)));
+        assertThat(Notification.Notification103, is(Notification.getNotificationContent(103)));
     }
     @Test
     public void canGetNotification104() {
@@ -43,4 +43,5 @@ public class NotificationTest {
     public void canGetNotification110() {
         assertThat(Notification.Notification110, is(Notification.getNotificationContent(110)));
     }
+    
 }

@@ -13,18 +13,18 @@ public class HypocenterParser {
         hypocenter.setPrefix(prefixParser.parse(qzMessage));
         
         List<Notification> notifications = new ArrayList<>();
-        
         notifications.add(Notification.getNotificationContent(Integer.parseInt(qzMessage.substring(53, 62),2)));
         notifications.add(Notification.getNotificationContent(Integer.parseInt(qzMessage.substring(62, 71),2)));
         notifications.add(Notification.getNotificationContent(Integer.parseInt(qzMessage.substring(71, 80),2)));
-        hypocenter.setNotifications(notifications);
+        hypocenter.setNotificationOnDisasterPreventions(notifications);
         
-        hypocenter.setOccurrenceTime(toOccurrenceTime(qzMessage.substring(80, 96)));
+        hypocenter.setOccurrenceTimeOfEarthquake(toOccurrenceTime(qzMessage.substring(80, 96)));
         
-        hypocenter.setDepthOfHypocenter(Integer.parseInt(qzMessage.substring(96, 105), 2));
-        hypocenter.setMagnitude(Integer.parseInt(qzMessage.substring(105, 112), 2));
+        hypocenter.setDepthOfHypocenter(new DepthOfHypocenter(Integer.parseInt(qzMessage.substring(96, 105), 2)));
         
-        hypocenter.setSeismicEpicenter(Epicenter.getRegionName(Integer.parseInt(qzMessage.substring(112, 122), 2)));
+        hypocenter.setMagnitude(new Magnitude(Integer.parseInt(qzMessage.substring(105, 112), 2)));
+        
+        hypocenter.setSeismicEpicenter(SeismicEpicenter.getRegionName(Integer.parseInt(qzMessage.substring(112, 122), 2)));
         
         hypocenter.setLatitudeNorthSouth(NorthSouthLatitude.getByCode(Integer.parseInt(qzMessage.substring(122, 123), 2)));
         

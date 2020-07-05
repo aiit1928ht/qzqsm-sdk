@@ -1,25 +1,26 @@
 package jp.ac.aiit.pbl;
 
 public class Latitude {
-    public final int latitudeDegree;
-    public final int latitudeMinute;
-    public final int latitudeSecond;
+    public final int degree;
+    public final int minute;
+    public final int second;
     
-    Latitude(int latitudeDegree, int latitudeMinute, int latitudeSecond){
-        this.latitudeDegree = latitudeDegree;
-        this.latitudeMinute = latitudeMinute;
-        this.latitudeSecond = latitudeSecond;
+    Latitude(int degree, int minute, int second){
+        this.degree = degree;
+        this.minute = minute;
+        this.second = second;
     }
     
-    public int getLatitudeDegree() {
-        return latitudeDegree;
+    public int getDegree() {
+        return degree;
     }
     
-    public int getLatitudeMinute() {
-        return latitudeMinute;
+    public int getMinute() {
+        return minute;
     }
     
-    public int getLatitudeSecond() {
-        return latitudeSecond;
+    public int getSecond() {
+        return second;
     }
+    
 }

@@ -2,7 +2,7 @@ package jp.ac.aiit.pbl;
 
 import java.util.Arrays;
 
-public enum Epicenter {
+public enum SeismicEpicenter {
     
     HokkaidoRegion(11, "北海道地方"),
     TohokuRegion(12, "東北地方"),
@@ -19,7 +19,7 @@ public enum Epicenter {
     private int code;
     private String regionName;
     
-    private Epicenter(int code, String regionName){
+    private SeismicEpicenter(int code, String regionName){
         this.code = code;
         this.regionName = regionName;
     }
@@ -40,8 +40,8 @@ public enum Epicenter {
         this.regionName = regionName;
     }
     
-    public static Epicenter getRegionName(int code){
-        return Arrays.stream(Epicenter.values())
+    public static SeismicEpicenter getRegionName(int code){
+        return Arrays.stream(SeismicEpicenter.values())
                 .filter(data -> data.getCode().equals(code))
                 .findFirst()
                 .orElse(null);

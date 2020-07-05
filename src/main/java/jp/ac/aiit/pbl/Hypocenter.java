@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Hypocenter {
     private Prefix prefix;
-    private LocalDateTime occurrenceTime;
-    private List<Notification> notifications;
-    private Integer depthOfHypocenter;
-    private Integer magnitude;
-    private Epicenter SeismicEpicenter;
+    private List<Notification> notificationOnDisasterPreventions;
+    private LocalDateTime occurrenceTimeOfEarthquake;
+    private DepthOfHypocenter depthOfHypocenter;
+    private Magnitude magnitude;
+    private SeismicEpicenter SeismicEpicenter;
     private NorthSouthLatitude latitudeNorthSouth;
     private List<Latitude> Latitude;
     private EastWestLongitude longitudeEastWest;
@@ -24,44 +24,44 @@ public class Hypocenter {
         this.prefix = prefix;
     }
     
-    public void setOccurrenceTime(LocalDateTime occurrenceTime) {
-        this.occurrenceTime = occurrenceTime;
+    public void setOccurrenceTimeOfEarthquake(LocalDateTime occurrenceTimeOfEarthquake) {
+        this.occurrenceTimeOfEarthquake = occurrenceTimeOfEarthquake;
     }
     
-    public LocalDateTime getOccurrenceTime() {
-        return occurrenceTime;
+    public LocalDateTime getOccurrenceTimeOfEarthquake() {
+        return occurrenceTimeOfEarthquake;
     }
     
-    public List<Notification> getNotifications() {
-        return notifications;
+    public List<Notification> getNotificationOnDisasterPreventions() {
+        return notificationOnDisasterPreventions;
     }
     
-    public void setNotifications(List<Notification> notifications) {
-        this.notifications = notifications;
+    public void setNotificationOnDisasterPreventions(List<Notification> notificationOnDisasterPreventions) {
+        this.notificationOnDisasterPreventions = notificationOnDisasterPreventions;
     }
     
-    public Integer getDepthOfHypocenter() {
+    public DepthOfHypocenter getDepthOfHypocenter() {
         return depthOfHypocenter;
     }
     
-    public void setDepthOfHypocenter(Integer depthOfHypocenter) {
+    public void setDepthOfHypocenter(DepthOfHypocenter depthOfHypocenter) {
         this.depthOfHypocenter = depthOfHypocenter;
     }
     
-    public Integer getMagnitude() {
-        return magnitude;
-    }
-    
-    public void setMagnitude(Integer magnitude) {
-        this.magnitude = magnitude;
-    }
-    
-    public Epicenter getSeismicEpicenter() {
+    public SeismicEpicenter getSeismicEpicenter() {
         return SeismicEpicenter;
     }
     
-    public void setSeismicEpicenter(Epicenter seismicEpicenter) {
+    public void setSeismicEpicenter(SeismicEpicenter seismicEpicenter) {
         SeismicEpicenter = seismicEpicenter;
+    }
+    
+    public Magnitude getMagnitude() {
+        return magnitude;
+    }
+    
+    public void setMagnitude(Magnitude magnitude) {
+        this.magnitude = magnitude;
     }
     
     public NorthSouthLatitude getLatitudeNorthSouth() {
@@ -94,5 +94,21 @@ public class Hypocenter {
     
     public void setLongitude(List<Longtitude> longitude) {
         Longitude = longitude;
+    }
+    
+    @Override
+    public String toString() {
+        return "Hypocenter{" +
+                "prefix=" + prefix +
+                ", notificationOnDisasterPreventions=" + notificationOnDisasterPreventions +
+                ", occurrenceTimeOfEarthquake=" + occurrenceTimeOfEarthquake +
+                ", depthOfHypocenter=" + depthOfHypocenter +
+                ", magnitude=" + magnitude +
+                ", SeismicEpicenter=" + SeismicEpicenter +
+                ", latitudeNorthSouth=" + latitudeNorthSouth +
+                ", Latitude=" + Latitude +
+                ", longitudeEastWest=" + longitudeEastWest +
+                ", Longitude=" + Longitude +
+                '}';
     }
 }
