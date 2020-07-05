@@ -23,4 +23,12 @@ public class Latitude {
         return second;
     }
     
+    @Override
+    public String toString() {
+        return "{" +
+                "degree=" + degree +
+                ", minute=" + minute +
+                ", second=" + second +
+                '}';
+    }
 }

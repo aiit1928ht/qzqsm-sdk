@@ -22,4 +22,13 @@ public class Longtitude {
     public int getSecond() {
         return second;
     }
+    
+    @Override
+    public String toString() {
+        return "{" +
+                "degree=" + degree +
+                ", minute=" + minute +
+                ", second=" + second +
+                '}';
+    }
 }

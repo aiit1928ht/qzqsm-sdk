@@ -31,11 +31,11 @@ public class HypocenterParser {
         List<Latitude> latitudeList = new ArrayList<>();
         latitudeList.add(new Latitude(
                 Integer.parseInt(qzMessage.substring(123, 130), 2),
-                Integer.parseInt(qzMessage.substring(130, 137), 2),
-                Integer.parseInt(qzMessage.substring(137, 143), 2)));
+                Integer.parseInt(qzMessage.substring(130, 136), 2),
+                Integer.parseInt(qzMessage.substring(136, 142), 2)));
         hypocenter.setLatitude(latitudeList);
         
-        hypocenter.setLongitudeEastWest(EastWestLongitude.getByCode(Integer.parseInt(qzMessage.substring(123, 124), 2)));
+        hypocenter.setLongitudeEastWest(EastWestLongitude.getByCode(Integer.parseInt(qzMessage.substring(142, 143), 2)));
         
         List<Longtitude> longtitudelist = new ArrayList<>();
         longtitudelist.add(new Longtitude(

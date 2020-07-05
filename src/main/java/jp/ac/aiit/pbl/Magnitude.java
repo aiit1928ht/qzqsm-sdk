@@ -10,4 +10,11 @@ public class Magnitude {
     public int getMagunitude() {
         return magunitude;
     }
+    
+    @Override
+    public String toString() {
+        return "{" +
+                "magunitude=" + magunitude +
+                '}';
+    }
 }

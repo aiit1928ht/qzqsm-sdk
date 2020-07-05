@@ -10,4 +10,11 @@ public class DepthOfHypocenter {
     public int getDepthOfHypocenter() {
         return depthOfHypocenter;
     }
+    
+    @Override
+    public String toString() {
+        return "{" +
+                "depthOfHypocenter=" + depthOfHypocenter +
+                '}';
+    }
 }
