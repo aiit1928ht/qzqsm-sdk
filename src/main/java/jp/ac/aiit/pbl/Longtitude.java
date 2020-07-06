@@ -1,25 +1,25 @@
 package jp.ac.aiit.pbl;
 
 public class Longtitude {
-    private int degree;
-    private int minute;
-    private int second;
+    private double degree;
+    private double minute;
+    private double second;
     
-    Longtitude(int degree, int minute, int second){
+    Longtitude(double degree, double minute, double second){
         this.degree = degree;
         this.minute = minute;
         this.second = second;
     }
     
-    public int getDegree() {
+    public double getDegree() {
         return degree;
     }
     
-    public int getMinute() {
+    public double getMinute() {
         return minute;
     }
     
-    public int getSecond() {
+    public double getSecond() {
         return second;
     }
     

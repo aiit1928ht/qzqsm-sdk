@@ -21,18 +21,11 @@ public class HypocenterParser {
         hypocenter.setOccurrenceTimeOfEarthquake(toOccurrenceTime(qzMessage.substring(80, 96)));
         
         hypocenter.setDepthOfHypocenter(new DepthOfHypocenter(Integer.parseInt(qzMessage.substring(96, 105), 2)));
-        
         hypocenter.setMagnitude(new Magnitude(Integer.parseInt(qzMessage.substring(105, 112), 2)));
-        
         hypocenter.setSeismicEpicenter(SeismicEpicenter.getRegionName(Integer.parseInt(qzMessage.substring(112, 122), 2)));
-    
-    
-        LatitudeOnLongitude latitudeOnLongitude = new LatitudeOnLongitude(
-                Integer.parseInt(qzMessage.substring(122, 123), 2),
-                Integer.parseInt(qzMessage.substring(142, 143), 2));
         
-        //hypocenter.setLatitudeNorthSouth(NorthSouthLatitude.getByCode(Integer.parseInt(qzMessage.substring(122, 123), 2)));
-        
+        LatitudeOnLongitude latitudeOnLongitude = new LatitudeOnLongitude();
+        latitudeOnLongitude.setLatitudeNorthSouth(parserLatitudeNorthSouth(Integer.parseInt(qzMessage.substring(122, 123), 2)));
         
         List<Latitude> latitudeList = new ArrayList<>();
         latitudeList.add(new Latitude(
@@ -40,9 +33,8 @@ public class HypocenterParser {
                 Integer.parseInt(qzMessage.substring(130, 136), 2),
                 Integer.parseInt(qzMessage.substring(136, 142), 2)));
         latitudeOnLongitude.setLatitudes(latitudeList);
-        
-        //hypocenter.setLongitudeEastWest(EastWestLongitude.getByCode(Integer.parseInt(qzMessage.substring(142, 143), 2)));
-        //latitudeOnLongitude.setEastWestLongitude(EastWestLongitude.getByCode(Integer.parseInt(qzMessage.substring(142, 143), 2)));
+
+        latitudeOnLongitude.setLongitudeEastWest(parserLongitudeEastWest(Integer.valueOf((String) qzMessage.substring(142, 143), 2)));
         
         List<Longtitude> longtitudelist = new ArrayList<>();
         longtitudelist.add(new Longtitude(
@@ -54,12 +46,27 @@ public class HypocenterParser {
         
         return hypocenter;
     }
-    
     private LocalDateTime toOccurrenceTime(String message){
         int day = Integer.parseInt(message.substring(0, 4),2);
         int hour = Integer.parseInt(message.substring(4, 9),2);
         int minute  = Integer.parseInt(message.substring(9, 15),2);
         return LocalDateTime.of(LocalDateTime.now().getYear(),LocalDateTime.now().getMonth(),day,hour,minute);
     }
+    private String parserLatitudeNorthSouth(int latitudeNorthSouth) {
+        if(latitudeNorthSouth == 0){
+            return "NorthLatitude";
+        }
+        else {
+            return "SouthLatitude";
+        }
+    }
     
+    private String parserLongitudeEastWest(int longitudeEastWest) {
+        if(longitudeEastWest == 0){
+            return "EastLongitude";
+        }
+        else {
+            return "WestLongitude";
+        }
+    }
 }

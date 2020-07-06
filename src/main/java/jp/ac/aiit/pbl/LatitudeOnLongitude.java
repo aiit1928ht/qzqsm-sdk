@@ -3,30 +3,27 @@ package jp.ac.aiit.pbl;
 import java.util.List;
 
 public class LatitudeOnLongitude {
-    private NorthSouthLatitude northSouthLatitude;
-    private EastWestLongitude eastWestLongitude;
+    
+    private String latitudeNorthSouth;
+    private String longitudeEastWest;
     private List<Latitude> latitudes;
     private List<Longtitude> longtitudes;
     
-    LatitudeOnLongitude(int northSouthLatitude, int eastWestLongitude){
-        this.northSouthLatitude = NorthSouthLatitude.getByCode(northSouthLatitude);
-        this.eastWestLongitude = EastWestLongitude.getByCode(eastWestLongitude);
+    
+    public String getLatitudeNorthSouth() {
+        return latitudeNorthSouth;
     }
     
-    public NorthSouthLatitude getNorthSouthLatitude() {
-        return northSouthLatitude;
+    public void setLatitudeNorthSouth(String latitudeNorthSouth) {
+        this.latitudeNorthSouth = latitudeNorthSouth;
     }
     
-    public void setNorthSouthLatitude(NorthSouthLatitude northSouthLatitude) {
-        this.northSouthLatitude = northSouthLatitude;
+    public String getLongitudeEastWest() {
+        return longitudeEastWest;
     }
     
-    public EastWestLongitude getEastWestLongitude() {
-        return eastWestLongitude;
-    }
-    
-    public void setEastWestLongitude(EastWestLongitude eastWestLongitude) {
-        this.eastWestLongitude = eastWestLongitude;
+    public void setLongitudeEastWest(String longitudeEastWest) {
+        this.longitudeEastWest = longitudeEastWest;
     }
     
     public List<Latitude> getLatitudes() {
@@ -45,12 +42,13 @@ public class LatitudeOnLongitude {
         this.longtitudes = longtitudes;
     }
     
+    
     @Override
     public String toString() {
         return "{" +
-                "NorthLatitude/SouthLatitude=" + northSouthLatitude +
+                "latitudeNorthSouthL=" + latitudeNorthSouth +
                 ", latitudes=" + latitudes +
-                ", EastLongitude/WestLongitude=" + eastWestLongitude +
+                ", longitudeEastWest=" + longitudeEastWest +
                 ", longtitudes=" + longtitudes +
                 '}';
     }
