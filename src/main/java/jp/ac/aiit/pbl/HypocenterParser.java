@@ -34,7 +34,7 @@ public class HypocenterParser {
                 Integer.parseInt(qzMessage.substring(136, 142), 2)));
         latitudeOnLongitude.setLatitudes(latitudeList);
 
-        latitudeOnLongitude.setLongitudeEastWest(parserLongitudeEastWest(Integer.valueOf((String) qzMessage.substring(142, 143), 2)));
+        latitudeOnLongitude.setLongitudeEastWest(parserLongitudeEastWest(Integer.parseInt(qzMessage.substring(142, 143), 2)));
         
         List<Longtitude> longtitudelist = new ArrayList<>();
         longtitudelist.add(new Longtitude(
