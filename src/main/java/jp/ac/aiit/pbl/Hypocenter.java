@@ -10,15 +10,52 @@ public class Hypocenter {
     private DepthOfHypocenter depthOfHypocenter;
     private Magnitude magnitude;
     private SeismicEpicenter SeismicEpicenter;
-    private LatitudeOnLongitude latitudeOnLongitude;
+    private boolean northLatitude;
+    private double latitude;
+    private boolean eastLongitude;
+    private double longitude;
+    //private LatitudeOnLongitude latitudeOnLongitude;
     
     
-    public LatitudeOnLongitude getLatitudeOnLongitude() {
-        return latitudeOnLongitude;
+    //public LatitudeOnLongitude getLatitudeOnLongitude() {
+    //    return latitudeOnLongitude;
+    //}
+    
+    //public void setLatitudeOnLongitude(LatitudeOnLongitude latitudeOnLongitude) {
+    //    this.latitudeOnLongitude = latitudeOnLongitude;
+    //}
+    
+    
+    public boolean isNorthLatitude() {
+        return northLatitude;
     }
     
-    public void setLatitudeOnLongitude(LatitudeOnLongitude latitudeOnLongitude) {
-        this.latitudeOnLongitude = latitudeOnLongitude;
+    public void setNorthLatitude(boolean northLatitude) {
+        this.northLatitude = northLatitude;
+    }
+    
+    public double getLatitude() {
+        return latitude;
+    }
+    
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+    
+    public boolean isEastLongitude() {
+        return eastLongitude;
+    }
+    
+    public void setEastLongitude(boolean eastLongitude) {
+        this.eastLongitude = eastLongitude;
+    }
+    
+    public double getLongitude() {
+        return longitude;
+    }
+    
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
     
     public Prefix getPrefix() {
@@ -78,7 +115,10 @@ public class Hypocenter {
                 ", depthOfHypocenter=" + depthOfHypocenter +
                 ", magnitude=" + magnitude +
                 ", SeismicEpicenter=" + SeismicEpicenter +
-                ", latitudeOnLongitude=" + latitudeOnLongitude +
+                ", northLatitude=" + northLatitude +
+                ", latitude=" + latitude +
+                ", eastLongitude=" + eastLongitude +
+                ", longitude=" + longitude +
                 '}';
     }
 }

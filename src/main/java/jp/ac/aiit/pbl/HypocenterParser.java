@@ -24,25 +24,38 @@ public class HypocenterParser {
         hypocenter.setMagnitude(new Magnitude(Integer.parseInt(qzMessage.substring(105, 112), 2)));
         hypocenter.setSeismicEpicenter(SeismicEpicenter.getRegionName(Integer.parseInt(qzMessage.substring(112, 122), 2)));
         
-        LatitudeOnLongitude latitudeOnLongitude = new LatitudeOnLongitude();
-        latitudeOnLongitude.setLatitudeNorthSouth(parserLatitudeNorthSouth(Integer.parseInt(qzMessage.substring(122, 123), 2)));
+        //LatitudeOnLongitude latitudeOnLongitude = new LatitudeOnLongitude();
+        //latitudeOnLongitude.setLatitudeNorthSouth(parserLatitudeNorthSouth(Integer.parseInt(qzMessage.substring(122, 123), 2)));
+        hypocenter.setNorthLatitude(parserLatitudeNorth(Integer.parseInt(qzMessage.substring(122, 123), 2)));
         
-        List<Latitude> latitudeList = new ArrayList<>();
-        latitudeList.add(new Latitude(
+        hypocenter.setLatitude(parserLatlon(
                 Integer.parseInt(qzMessage.substring(123, 130), 2),
                 Integer.parseInt(qzMessage.substring(130, 136), 2),
                 Integer.parseInt(qzMessage.substring(136, 142), 2)));
-        latitudeOnLongitude.setLatitudes(latitudeList);
-
-        latitudeOnLongitude.setLongitudeEastWest(parserLongitudeEastWest(Integer.parseInt(qzMessage.substring(142, 143), 2)));
         
-        List<Longtitude> longtitudelist = new ArrayList<>();
-        longtitudelist.add(new Longtitude(
+        //List<Latitude> latitudeList = new ArrayList<>();
+        //latitudeList.add(new Latitude(
+        //        Integer.parseInt(qzMessage.substring(123, 130), 2),
+        //        Integer.parseInt(qzMessage.substring(130, 136), 2),
+        //        Integer.parseInt(qzMessage.substring(136, 142), 2)));
+        //latitudeOnLongitude.setLatitudes(latitudeList);
+
+        //latitudeOnLongitude.setLongitudeEastWest(parserLongitudeEastWest(Integer.parseInt(qzMessage.substring(142, 143), 2)));
+        
+        hypocenter.setEastLongitude(parserLongitudeEast(Integer.parseInt(qzMessage.substring(142, 143), 2)));
+        
+        //List<Longtitude> longtitudelist = new ArrayList<>();
+        //longtitudelist.add(new Longtitude(
+        //        Integer.parseInt(qzMessage.substring(143, 151), 2),
+        //        Integer.parseInt(qzMessage.substring(151, 157), 2),
+        //        Integer.parseInt(qzMessage.substring(157, 163), 2)));
+        //latitudeOnLongitude.setLongtitudes(longtitudelist);
+        //hypocenter.setLatitudeOnLongitude(latitudeOnLongitude);
+        
+        hypocenter.setLongitude(parserLatlon(
                 Integer.parseInt(qzMessage.substring(143, 151), 2),
                 Integer.parseInt(qzMessage.substring(151, 157), 2),
                 Integer.parseInt(qzMessage.substring(157, 163), 2)));
-        latitudeOnLongitude.setLongtitudes(longtitudelist);
-        hypocenter.setLatitudeOnLongitude(latitudeOnLongitude);
         
         return hypocenter;
     }
@@ -52,21 +65,31 @@ public class HypocenterParser {
         int minute  = Integer.parseInt(message.substring(9, 15),2);
         return LocalDateTime.of(LocalDateTime.now().getYear(),LocalDateTime.now().getMonth(),day,hour,minute);
     }
-    private String parserLatitudeNorthSouth(int latitudeNorthSouth) {
-        if(latitudeNorthSouth == 0){
-            return "NorthLatitude";
-        }
-        else {
-            return "SouthLatitude";
-        }
+//    private String parserLatitudeNorthSouth(int latitudeNorthSouth) {
+//        if(latitudeNorthSouth == 0){
+//            return "NorthLatitude";
+//        }
+//        else {
+//            return "SouthLatitude";
+//        }
+//    }
+
+//    private String parserLongitudeEastWest(int longitudeEastWest) {
+//        if(longitudeEastWest == 0){
+//            return "EastLongitude";
+//        }
+//        else {
+//            return "WestLongitude";
+//        }
+//    }
+    private boolean parserLatitudeNorth(int latitudeNorth) {
+        return latitudeNorth == 0;
+    }
+    private boolean parserLongitudeEast(int longitudeEast) {
+        return longitudeEast == 0;
     }
     
-    private String parserLongitudeEastWest(int longitudeEastWest) {
-        if(longitudeEastWest == 0){
-            return "EastLongitude";
-        }
-        else {
-            return "WestLongitude";
-        }
+    private double parserLatlon(int degree, int minute, int second) {
+        return (double)degree + (double)minute/60.0d + (double)second/3600d;
     }
 }
