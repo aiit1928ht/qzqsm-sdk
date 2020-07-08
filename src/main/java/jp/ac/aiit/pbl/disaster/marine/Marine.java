@@ -1,4 +1,4 @@
-package jp.ac.aiit.pbl.diaster.marine;
+package jp.ac.aiit.pbl.disaster.marine;
 
 import jp.ac.aiit.pbl.Prefix;
 import java.util.List;

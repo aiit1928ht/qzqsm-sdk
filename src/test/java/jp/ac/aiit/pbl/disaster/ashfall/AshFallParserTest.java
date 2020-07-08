@@ -1,8 +1,6 @@
-package jp.ac.aiit.pbl.diaster.ashfall;
+package jp.ac.aiit.pbl.disaster.ashfall;
 
 
-import jp.ac.aiit.pbl.diaster.ashfall.AshFallParser;
-import jp.ac.aiit.pbl.diaster.ashfall.AshFalll;
 import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;

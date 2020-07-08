@@ -1,7 +1,4 @@
-package jp.ac.aiit.pbl.diaster.marine;
-
-import jp.ac.aiit.pbl.LocalGovernment;
-import jp.ac.aiit.pbl.diaster.marine.WarningCode;
+package jp.ac.aiit.pbl.disaster.marine;
 
 public class WarningCodeMarineForecastRegion {
     private WarningCode warningCode;

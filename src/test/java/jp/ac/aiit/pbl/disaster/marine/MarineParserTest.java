@@ -1,6 +1,5 @@
-package jp.ac.aiit.pbl.diaster.marine;
+package jp.ac.aiit.pbl.disaster.marine;
 
-import jp.ac.aiit.pbl.diaster.marine.MarineParser;
 import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;

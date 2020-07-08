@@ -1,7 +1,6 @@
-package jp.ac.aiit.pbl.diaster.ashfall;
+package jp.ac.aiit.pbl.disaster.ashfall;
 
 import jp.ac.aiit.pbl.LocalGovernment;
-import jp.ac.aiit.pbl.diaster.ashfall.WarningCode;
 
 public class AshFallTimeWarningCodeLocalGovernment {
         private int expectedAshFall;
