@@ -1,14 +1,17 @@
-package jp.ac.aiit.pbl.diaster.ashfall;
-import jp.ac.aiit.pbl.diaster.ashfall.WarningCode;
+package jp.ac.aiit.pbl.disaster.marine;
+
 import java.util.Arrays;
 
 public enum WarningCode {
-
-        SmallAshFall(1,"少量の降灰"),
-        MediumAshFall(2,"やや多量の降灰"),
-        LargeAshFall(3, "多量の降灰"),
-        SmallMeteoriteFall(4,"小さな噴石の落下"),
-        Others(7,"その他の防災気象情報要素 2");
+    SeaAlertReleased(0,"海上警報解除"),
+    SeaAIcingAlert(10,"海上着氷警報"),
+    SeaDenceFog(11, "海上濃霧警報"),
+    SeaSurgeAlert(12,"海上うねり警報"),
+    SeaWindAlert(20,"海上風警報"),
+    SeaStrongWindAlert(21,"海上強風警報 "),
+    SeaStormAlert(22,"海上暴風警報"),
+    SeeTyhoonAlert(23,"海上台風警報"),
+    OtherSeeAlert(31,"その他の警報等情報要素_海上警報");
 
     private Integer id;
     private String warningCode;
