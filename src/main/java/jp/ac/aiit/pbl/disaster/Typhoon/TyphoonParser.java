@@ -1,4 +1,6 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.Typhoon;
+
+import jp.ac.aiit.pbl.PrefixParser;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
