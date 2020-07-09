@@ -1,4 +1,4 @@
-package jp.ac.aiit.pbl.diaster.ashfall;
+package jp.ac.aiit.pbl.disaster.ashfall;
 
 import jp.ac.aiit.pbl.Prefix;
 import jp.ac.aiit.pbl.VolcanoName;
