@@ -1,8 +1,8 @@
 package jp.ac.aiit.pbl;
 
+import jp.ac.aiit.pbl.disaster.seismicIntensity.SeismicIntensity;
+import jp.ac.aiit.pbl.disaster.seismicIntensity.SeismicIntensityParser;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class SeismicIntensityParserTest {
     
