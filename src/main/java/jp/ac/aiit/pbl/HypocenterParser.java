@@ -38,6 +38,14 @@ public class HypocenterParser implements DisasterParser{
                 Integer.parseInt(qzMessage.substring(151, 157), 2),
                 Integer.parseInt(qzMessage.substring(157, 163), 2)));
         
+        
+        double latitude = parserLatlon(89, 59, 59);
+        double longitude = parserLatlon(179, 59, 59);
+        
+        assert latitude == 89.99972222222222;
+        assert longitude == 179.9997222222222;
+        
+        
         return hypocenter;
     }
     private LocalDateTime toOccurrenceTime(String message){
@@ -50,6 +58,4 @@ public class HypocenterParser implements DisasterParser{
     private double parserLatlon(int degree, int minute, int second) {
         return (double)degree + (double)minute/60.0d + (double)second/3600d;
     }
-    
-
 }
