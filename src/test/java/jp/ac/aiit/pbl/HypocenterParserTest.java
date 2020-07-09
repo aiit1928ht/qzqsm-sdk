@@ -1,11 +1,8 @@
 package jp.ac.aiit.pbl;
 
+import jp.ac.aiit.pbl.disaster.hypocenter.Hypocenter;
+import jp.ac.aiit.pbl.disaster.hypocenter.HypocenterParser;
 import org.junit.Test;
-
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
-import static org.junit.Assert.*;
 
 public class HypocenterParserTest {
     

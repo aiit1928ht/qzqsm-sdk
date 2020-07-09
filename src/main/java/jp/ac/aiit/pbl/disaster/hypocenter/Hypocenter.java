@@ -1,4 +1,6 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.hypocenter;
+
+import jp.ac.aiit.pbl.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -7,7 +9,7 @@ This class holds the converted information about the Hypocenter of the signals r
 It retains the information of the region where the earthquake occurred,
 the content of the notification when it occurred, and the latitude and longitude.
  */
-public class Hypocenter implements Disaster{
+public class Hypocenter implements Disaster {
     private Prefix prefix;
     private List<Notification> notifications;
     private LocalDateTime occurrenceTimeOfEarthquake;

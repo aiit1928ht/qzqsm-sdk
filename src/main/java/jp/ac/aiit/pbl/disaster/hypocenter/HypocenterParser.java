@@ -1,10 +1,14 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.hypocenter;
+
+import jp.ac.aiit.pbl.DisasterParser;
+import jp.ac.aiit.pbl.Notification;
+import jp.ac.aiit.pbl.PrefixParser;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HypocenterParser implements DisasterParser{
+public class HypocenterParser implements DisasterParser {
     
     public Hypocenter parse(String qzMessage){
         Hypocenter hypocenter = new Hypocenter();
