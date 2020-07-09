@@ -1,4 +1,4 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.seismicIntensity;
 
 public class SeismicIntensityRegion {
     private Warning warning;

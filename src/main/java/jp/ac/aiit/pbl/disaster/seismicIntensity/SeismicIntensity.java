@@ -1,8 +1,15 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.seismicIntensity;
+import jp.ac.aiit.pbl.*;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class SeismicIntensity {
+/*
+This class holds the converted information about the SeismicIntensity of the signals received from QZSS.
+This class holds seismic intensity and area name in 16 areas.
+ */
+
+public class SeismicIntensity implements Disaster {
     
     private Prefix prefix;
     private LocalDateTime occurrenceTime;
@@ -36,5 +43,15 @@ public class SeismicIntensity {
                 ", occurrenceTime=" + occurrenceTime +
                 ", regions=" + regions +
                 '}';
+    }
+    
+    @Override
+    public MessageType getMessageType() {
+        return null;
+    }
+    
+    @Override
+    public DisasterCategory getDisasterCategory() {
+        return null;
     }
 }
