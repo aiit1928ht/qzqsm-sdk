@@ -1,8 +1,13 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.NankaiTroughEarthquake;
 
-public class NankaiTroughEarthquake {
+import jp.ac.aiit.pbl.Disaster;
+import jp.ac.aiit.pbl.DisasterCategory;
+import jp.ac.aiit.pbl.MessageType;
+import jp.ac.aiit.pbl.Prefix;
+
+public class NankaiTroughEarthquake implements Disaster {
     private Prefix prefix;
-    private TextInformations textInformations;
+    private String text;
     private int pageNumber;
     private int totalPage;
 
@@ -14,12 +19,12 @@ public class NankaiTroughEarthquake {
         this.prefix = prefix;
     }
 
-    public TextInformations getTextInformations() {
-        return textInformations;
+    public String getText() {
+        return text;
     }
 
-    public void setTextInformations(TextInformations textInformations) {
-        this.textInformations = textInformations;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public int getPageNumber() {
@@ -42,9 +47,19 @@ public class NankaiTroughEarthquake {
     public String toString() {
         return "NankaiTroughEarthquake{" +
                 "prefix=" + prefix +
-                ", textInformations=" + textInformations +
+                ", text='" + text + '\'' +
                 ", pageNumber=" + pageNumber +
                 ", totalPage=" + totalPage +
                 '}';
+    }
+
+    @Override
+    public MessageType getMessageType() {
+        return this.prefix.getMessageType();
+    }
+
+    @Override
+    public DisasterCategory getDisasterCategory() {
+        return this.prefix.getDisasterCategory();
     }
 }

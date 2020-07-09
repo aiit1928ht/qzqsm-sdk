@@ -1,7 +1,7 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.NankaiTroughearthquake;
 
-import jp.ac.aiit.pbl.NankaiTroughEarthquake;
-import jp.ac.aiit.pbl.NankaiTroughEarthquakeParser;
+import jp.ac.aiit.pbl.disaster.NankaiTroughEarthquake.NankaiTroughEarthquake;
+import jp.ac.aiit.pbl.disaster.NankaiTroughEarthquake.NankaiTroughEarthquakeParser;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -21,7 +21,7 @@ public class NankaiTroughEarthquakeTest {
     @Test
     public void canGetNankaiTroughEarthquakeTextInformations() {
         String expected = "ぁあぃいぅう";
-        assertThat(nankaiTroughEarthquake.getTextInformations().getText(),is(expected));
+        assertThat(nankaiTroughEarthquake.getText(),is(expected));
     }
 
     @Test
@@ -37,11 +37,20 @@ public class NankaiTroughEarthquakeTest {
     }
 
     @Test
-    public void canGetByteCodes() {
+    public void canGetByteCodes6() {
         String expected = "１２３４５６";
         String qzqms = "1001101010101101001000111001111011010110000000000000000001110111110111100100100011110111110111100100100101110111110111100100100111110111110111100100101001110111110111100100101011110111110111100100101100000100001000000001000000000000000000000000000001";
-    NankaiTroughEarthquakeParser nankaiTroughEarthquakeParser = new NankaiTroughEarthquakeParser();
+        NankaiTroughEarthquakeParser nankaiTroughEarthquakeParser = new NankaiTroughEarthquakeParser();
         NankaiTroughEarthquake nankaiTroughEarthquake = nankaiTroughEarthquakeParser.parse(qzqms);
-        assertThat(nankaiTroughEarthquake.getTextInformations().getText(),is(expected));
+        assertThat(nankaiTroughEarthquake.getText(),is(expected));
+    }
+
+    @Test
+    public void canGetByteCodes2() {
+        String expected = "１２";
+        String qzqms = "1001101010101101001000111001111011010110000000000000000001110111110111100100100011110111110111100100100100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100001000000001000000000000000000000000000001";
+        NankaiTroughEarthquakeParser nankaiTroughEarthquakeParser = new NankaiTroughEarthquakeParser();
+        NankaiTroughEarthquake nankaiTroughEarthquake = nankaiTroughEarthquakeParser.parse(qzqms);
+        assertThat(nankaiTroughEarthquake.getText(),is(expected));
     }
 }
