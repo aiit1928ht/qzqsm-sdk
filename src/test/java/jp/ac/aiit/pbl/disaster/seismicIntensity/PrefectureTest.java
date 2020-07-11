@@ -1,4 +1,4 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.seismicIntensity;
 
 import jp.ac.aiit.pbl.disaster.seismicIntensity.Prefecture;
 import org.junit.Test;

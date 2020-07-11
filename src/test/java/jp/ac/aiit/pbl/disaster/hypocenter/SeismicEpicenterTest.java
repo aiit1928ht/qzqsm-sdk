@@ -1,4 +1,4 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.hypocenter;
 
 import jp.ac.aiit.pbl.disaster.hypocenter.SeismicEpicenter;
 import org.junit.Test;
