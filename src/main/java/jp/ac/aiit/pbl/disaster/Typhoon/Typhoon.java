@@ -1,9 +1,14 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.Typhoon;
+
+import jp.ac.aiit.pbl.Disaster;
+import jp.ac.aiit.pbl.DisasterCategory;
+import jp.ac.aiit.pbl.MessageType;
+import jp.ac.aiit.pbl.Prefix;
 
 import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 
-public class Typhoon {
+public class Typhoon implements Disaster {
 
     private Prefix prefix;
     private LocalDateTime referenceTime;private ZonedDateTime referenceTimedayZone;
@@ -104,7 +109,6 @@ public class Typhoon {
         this.eastLongitude = eastLongitude;
     }
 
-
     public double getLongitude() {
         return longitude;
     }
@@ -165,5 +169,15 @@ public class Typhoon {
                 ", maximumWindSpeed=" + maximumWindSpeed +
                 ", maximumGustSpeed=" + maximumGustSpeed +
                 '}';
+    }
+
+    @Override
+    public MessageType getMessageType() {
+        return this.prefix.getMessageType();
+    }
+
+    @Override
+    public DisasterCategory getDisasterCategory() {
+        return this.prefix.getDisasterCategory();
     }
 }
