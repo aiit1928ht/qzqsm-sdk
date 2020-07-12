@@ -1,6 +1,9 @@
 package jp.ac.aiit.pbl.disaster.marine;
-
 import java.util.Arrays;
+
+/**
+ * Enum for Warning Code of Marine
+ */
 
 public enum WarningCode {
     SeaAlertReleased(0,"海上警報解除"),

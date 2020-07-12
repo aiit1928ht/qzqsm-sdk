@@ -2,6 +2,10 @@ package jp.ac.aiit.pbl.disaster.marine;
 
 import java.util.Arrays;
 
+/**
+ * Enum for Marine Forecast Region
+ */
+
 public enum MarineForecastRegion {
     NorthernJapaneseSeaSouthernOhootsukuSea(1000,"日本海北部及びオホーツク海南部"),
     SaharinEastSea(1010,"サハリン東方海上"),
