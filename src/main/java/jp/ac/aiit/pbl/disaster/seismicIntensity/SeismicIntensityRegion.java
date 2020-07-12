@@ -1,8 +1,8 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.seismicIntensity;
 
 public class SeismicIntensityRegion {
-    public final Warning warning;
-    public  final Prefecture prefecture;
+    private Warning warning;
+    private Prefecture prefecture;
     
     SeismicIntensityRegion(int warnigCode, int prefectureCode){
         this.warning = Warning.getSeismicIntensity(warnigCode);
