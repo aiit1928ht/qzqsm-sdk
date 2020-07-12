@@ -1,5 +1,9 @@
 package jp.ac.aiit.pbl.disaster.marine;
 
+/**
+ * Class for calling construct to deal with Warning Code and Marine Forecast Region as one set.
+ */
+
 public class WarningCodeMarineForecastRegion {
     private WarningCode warningCode;
     private MarineForecastRegion marineForecastRegion;

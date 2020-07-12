@@ -1,10 +1,16 @@
 package jp.ac.aiit.pbl.disaster.marine;
-
+import jp.ac.aiit.pbl.DisasterParser;
 import jp.ac.aiit.pbl.PrefixParser;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MarineParser{
+/**
+ * Class for Marine parser.
+ * The first, it returns Prefix.
+ * The second it returns 8 times of set of warning code and Marine forecast.
+ */
+
+public class MarineParser implements DisasterParser {
 
     public Marine parse(String qzMessage) {
         Marine marine = new Marine();

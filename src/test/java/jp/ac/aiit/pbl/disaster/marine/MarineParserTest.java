@@ -5,12 +5,18 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 public class MarineParserTest {
+    /**
+     * Marine parser test
+     * To verify if parse handling is performed as expected or not.
+     * To verify if each parameter value is obtained as expected or not.
+     */
+
     @Test
-    public void parseTest() {
+    public void MarineParser() {
         MarineParser parser = new MarineParser();
-        //Marine marine = parser.parse("010100111010110111110010110001010001010000000000000001010001000000001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000001111000101001010111010100");
         Marine marine = parser.parse("0101001110101101111100101100010100010100000000000000010100010000000011101010001000000001110101000100000000111010100010000000011101010001000000001110101000100000000111010100010000000011101010001000000001110101000100000000111010100010000000011100111010100");
         System.out.println(marine.toString());
+        assertThat(WarningCode.getById(22),is(WarningCode.SeaStormAlert));
+        assertThat(MarineForecastRegion.getById(4110),is(MarineForecastRegion.NihonKaiNorthernWest));
     }
-
 }
