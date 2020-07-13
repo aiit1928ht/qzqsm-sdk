@@ -1,4 +1,5 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.volcano;
+import jp.ac.aiit.pbl.disaster.volcano.WarningCode;
 import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
