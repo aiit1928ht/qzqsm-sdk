@@ -1,9 +1,20 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.volcano;
+import jp.ac.aiit.pbl.DisasterParser;
+import jp.ac.aiit.pbl.LocalGovernment;
+import jp.ac.aiit.pbl.PrefixParser;
+import jp.ac.aiit.pbl.VolcanoName;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VolcanoParser {
+/**
+ * Class for Marine parser.
+ * The first,it returns Prefix.
+ * The second,it returns Activity time, Warning Code and Volcano name.
+ * The third,it returns 5 times of Local Government.
+ */
+
+public class VolcanoParser implements DisasterParser {
 
     public Volcano parse(String qzMessage){
         Volcano volcano = new Volcano();
@@ -22,7 +33,6 @@ public class VolcanoParser {
         governments.add(LocalGovernment.getById(Integer.parseInt(qzMessage.substring(180,203),2)));
         volcano.setLocalGovernments(governments);
         return volcano;
-
     }
 
     private LocalDateTime toActivityTime(String message){
