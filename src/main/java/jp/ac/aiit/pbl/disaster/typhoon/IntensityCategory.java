@@ -1,4 +1,4 @@
-package jp.ac.aiit.pbl.disaster.Typhoon;
+package jp.ac.aiit.pbl.disaster.typhoon;
 
 import java.util.Arrays;
 

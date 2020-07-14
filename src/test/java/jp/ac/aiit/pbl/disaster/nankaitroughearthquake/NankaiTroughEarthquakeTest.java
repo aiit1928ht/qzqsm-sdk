@@ -1,7 +1,5 @@
-package jp.ac.aiit.pbl.disaster.NankaiTroughearthquake;
+package jp.ac.aiit.pbl.disaster.nankaitroughearthquake;
 
-import jp.ac.aiit.pbl.disaster.NankaiTroughEarthquake.NankaiTroughEarthquake;
-import jp.ac.aiit.pbl.disaster.NankaiTroughEarthquake.NankaiTroughEarthquakeParser;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
