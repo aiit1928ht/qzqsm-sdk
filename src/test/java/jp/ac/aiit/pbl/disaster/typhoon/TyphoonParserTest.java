@@ -1,6 +1,5 @@
-package jp.ac.aiit.pbl.disaster.Typhoon;
+package jp.ac.aiit.pbl.disaster.typhoon;
 
-import jp.ac.aiit.pbl.disaster.Typhoon.*;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
