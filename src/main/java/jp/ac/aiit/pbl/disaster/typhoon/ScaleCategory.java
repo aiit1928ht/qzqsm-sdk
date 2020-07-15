@@ -2,6 +2,11 @@ package jp.ac.aiit.pbl.disaster.typhoon;
 
 import java.util.Arrays;
 
+/**
+ * Enumeration for ScaleCategory.
+ * CASE1 getById:Return scaleCategory {None or LargeScale or SuperScale or Others}.
+ * CASE2 getId:Return Id.
+ */
 public enum ScaleCategory {
     scaleCategoryNone(0, "なし"),
     scaleCategoryLargeScale(1, "大型"),
