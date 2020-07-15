@@ -8,6 +8,10 @@ import jp.ac.aiit.pbl.Prefix;
 import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 
+/**
+ * Class for Typhoon disaster.
+ * Typhoon situation, estimation and forecast.
+ */
 public class Typhoon implements Disaster {
 
     private Prefix prefix;

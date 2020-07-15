@@ -2,6 +2,11 @@ package jp.ac.aiit.pbl.disaster.typhoon;
 
 import java.util.Arrays;
 
+/**
+ * Enumeration for TypeOfReferenceTime.
+ * CASE1 getById:Return typeOfReferenceTime {Live or Estimate or Forecast}.
+ * CASE2 getId:Return Id.
+ */
 public enum TypeOfReferenceTime {
     typeOfReferenceTimeLive(1, "実況"),
     typeOfReferenceTimeEstimate(2, "推定"),
