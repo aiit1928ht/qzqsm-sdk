@@ -3,6 +3,7 @@ package jp.ac.aiit.pbl.disaster.hypocenter;
 import jp.ac.aiit.pbl.DisasterParser;
 import jp.ac.aiit.pbl.Notification;
 import jp.ac.aiit.pbl.PrefixParser;
+import jp.ac.aiit.pbl.SeismicEpicenter;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
