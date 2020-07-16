@@ -4,8 +4,6 @@ import java.util.Arrays;
 
 /**
  * Enumeration for TypeOfReferenceTime.
- * CASE1 getById:Return typeOfReferenceTime {Live or Estimate or Forecast}.
- * CASE2 getId:Return Id.
  */
 public enum TypeOfReferenceTime {
     typeOfReferenceTimeLive(1, "実況"),
@@ -24,6 +22,13 @@ public enum TypeOfReferenceTime {
         return id;
     }
 
+    /**
+     * Returns the Enumeration at the specified id.
+     * ranges from <code>1</code> to <code>3</code>
+     *
+     * @param     id the index of the ReferenceTime.
+     * @return    typeOfReferenceTime.
+     */
     public static TypeOfReferenceTime getById(int id) {
         return Arrays.stream(TypeOfReferenceTime.values())
                 .filter(data -> data.getId().equals(id))

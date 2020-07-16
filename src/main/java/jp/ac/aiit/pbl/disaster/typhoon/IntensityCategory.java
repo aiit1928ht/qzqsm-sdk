@@ -4,8 +4,6 @@ import java.util.Arrays;
 
 /**
  * Enumeration for IntensityCategory.
- * CASE1 getById:Return intensityCategory {None or TropicalStorm or SevereTropicalStorm or Typhoon or Others}.
- * CASE2 getId:Return Id.
  * @see <a href="https://foreignlang.ecc.co.jp/know/k00046d/">Category</a>
  */
 public enum IntensityCategory {
@@ -27,6 +25,13 @@ public enum IntensityCategory {
         return id;
     }
 
+    /**
+     * Returns the Enumeration at the specified id.
+     * ranges from <code>0,1,2,3</code> and <code>15</code>
+     *
+     * @param     id the index of the IntensityCategory.
+     * @return    IntensityCategory.
+     */
     public static IntensityCategory getById(int id) {
         return Arrays.stream(IntensityCategory.values())
                 .filter(data -> data.getId().equals(id))
