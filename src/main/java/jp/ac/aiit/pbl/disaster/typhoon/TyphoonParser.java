@@ -5,6 +5,10 @@ import jp.ac.aiit.pbl.PrefixParser;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
+/**
+ * Class for TyphoonParser.
+ * Return Typhoon Class.
+ */
 public class TyphoonParser {
 
     public Typhoon parse(String qzqms) {
