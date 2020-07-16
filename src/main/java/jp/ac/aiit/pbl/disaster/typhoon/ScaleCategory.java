@@ -1,7 +1,10 @@
-package jp.ac.aiit.pbl.disaster.Typhoon;
+package jp.ac.aiit.pbl.disaster.typhoon;
 
 import java.util.Arrays;
 
+/**
+ * Enumeration for ScaleCategory.
+ */
 public enum ScaleCategory {
     scaleCategoryNone(0, "なし"),
     scaleCategoryLargeScale(1, "大型"),
@@ -20,6 +23,13 @@ public enum ScaleCategory {
         return id;
     }
 
+    /**
+     * Returns the Enumeration at the specified id.
+     * ranges from <code>0,1,2</code> and <code>15</code>
+     *
+     * @param     id the index of the ScaleCategory.
+     * @return    ScaleCategory.
+     */
     public static ScaleCategory getById(int id) {
         return Arrays.stream(ScaleCategory.values())
                 .filter(data -> data.getId().equals(id))

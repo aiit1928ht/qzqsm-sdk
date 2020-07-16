@@ -1,6 +1,9 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.volcano;
 import java.util.Arrays;
 
+/**
+ * Enum for Warning Code of Volcano
+ */
 public enum WarningCode {
     EruptionWarning(1,"噴火警報"),
     CraterWarning(2,"火口周辺警報"),

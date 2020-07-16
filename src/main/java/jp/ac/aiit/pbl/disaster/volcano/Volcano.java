@@ -1,8 +1,15 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.volcano;
+import jp.ac.aiit.pbl.*;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class Volcano {
+/**
+ * Class for Volcano parser.
+ * It consists of Prefix, Activity time, Warning Code, Volcano Name and Local Government.
+ */
+
+public class Volcano implements Disaster {
     private Prefix prefix;
     private LocalDateTime activityTime;                     //Activity Time(Td)Day(D1)  Hour(H1) Minute(M1)
     private WarningCode warningCode;                 //Warning Code(Dw)
@@ -53,6 +60,16 @@ public class Volcano {
                 ", volcanoName=" + volcanoName +
                 ", localGovernments=" + localGovernments +
                 '}';
+    }
+
+    @Override
+    public MessageType getMessageType() {
+        return null;
+    }
+
+    @Override
+    public DisasterCategory getDisasterCategory() {
+        return null;
     }
 }
 

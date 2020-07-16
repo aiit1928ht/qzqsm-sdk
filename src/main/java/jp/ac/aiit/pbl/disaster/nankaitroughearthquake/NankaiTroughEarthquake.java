@@ -1,10 +1,15 @@
-package jp.ac.aiit.pbl.disaster.NankaiTroughEarthquake;
+package jp.ac.aiit.pbl.disaster.nankaitroughearthquake;
 
 import jp.ac.aiit.pbl.Disaster;
 import jp.ac.aiit.pbl.DisasterCategory;
 import jp.ac.aiit.pbl.MessageType;
 import jp.ac.aiit.pbl.Prefix;
 
+/**
+ * Class for NankaiTroughEarthquake disaster.
+ * NankaiTroughEarthquake "Information on earthquake active status etc."
+ * Character information(getText() please.), one page (6 characters) in up to 63 pages in total.
+ */
 public class NankaiTroughEarthquake implements Disaster {
     private Prefix prefix;
     private String text;
