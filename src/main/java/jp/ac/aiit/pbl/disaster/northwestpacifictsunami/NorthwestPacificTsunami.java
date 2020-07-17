@@ -29,9 +29,9 @@ public class NorthwestPacificTsunami implements Disaster {
     @Override
     public String toString() {
         return "NorthwestPacificTsunami{" +
-                "prefix=" + prefix + /*
+                "prefix=" + prefix +
                 ", tsunamigenicPotential=" + tsunamigenicPotential +
-                ", tsunamiInformations=" + tsunamiInformations + */
+                ", tsunamiInformations=" + tsunamiInformations +
                 '}';
     }
 
