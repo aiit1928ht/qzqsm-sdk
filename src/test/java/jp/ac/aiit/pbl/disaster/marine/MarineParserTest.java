@@ -16,7 +16,7 @@ public class MarineParserTest {
         MarineParser parser = new MarineParser();
         Marine marine = parser.parse("0101001110101101111100101100010100010100000000000000010100010000000011101010001000000001110101000100000000111010100010000000011101010001000000001110101000100000000111010100010000000011101010001000000001110101000100000000111010100010000000011100111010100");
         System.out.println(marine.toString());
-        assertThat(WarningCode.getById(22),is(WarningCode.SeaStormAlert));
+        assertThat(WarningCode.getById(20),is(WarningCode.SeaWindAlert));
         assertThat(MarineForecastRegion.getById(4110),is(MarineForecastRegion.NihonKaiNorthernWest));
     }
 }

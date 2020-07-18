@@ -1,6 +1,8 @@
 package jp.ac.aiit.pbl;
 import java.util.Arrays;
-
+/**
+ * Enum for Volcano Name, which is called from Volcano and Ash Fall.
+ */
 public enum VolcanoName {
     Shiretokoiozan(101,"知床硫黄山"),
     Rausudake(102,"羅臼岳"),
