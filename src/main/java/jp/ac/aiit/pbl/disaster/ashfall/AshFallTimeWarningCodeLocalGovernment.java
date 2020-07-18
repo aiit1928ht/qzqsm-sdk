@@ -1,6 +1,9 @@
 package jp.ac.aiit.pbl.disaster.ashfall;
 
 import jp.ac.aiit.pbl.LocalGovernment;
+/**
+ * Class for calling construct to deal with Expected AshFall, Warning Code and Local Government as one set.
+ */
 
 public class AshFallTimeWarningCodeLocalGovernment {
         private int expectedAshFall;
