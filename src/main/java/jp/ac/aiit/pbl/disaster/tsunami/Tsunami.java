@@ -3,14 +3,24 @@ package jp.ac.aiit.pbl.disaster.tsunami;
 import jp.ac.aiit.pbl.*;
 import jp.ac.aiit.pbl.disaster.seismicIntensity.Warning;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class Tsunami implements Disaster {
     private Prefix prefix;
+    //private ExpectedTsunamiArrivalTime arrivalTime;
     private List<Notification> notifications;
     private WarningCode warningCode;
     private List<TsunamiRegion> tsunamiRegions;
     
+    //public LocalDateTime gethasseibi(){
+    //    if(arrivalTime.getDay() == 0) {
+    //        return prefix.getReportTime();
+    //    }else{
+    //        return prefix.getReportTime().plusDays(1);
+    //    }
+    //}
+
     public Prefix getPrefix() {
         return prefix;
     }
@@ -51,5 +61,15 @@ public class Tsunami implements Disaster {
     @Override
     public DisasterCategory getDisasterCategory() {
         return null;
+    }
+    
+    @Override
+    public String toString() {
+        return "Tsunami{" +
+                "prefix=" + prefix +
+                ", notifications=" + notifications +
+                ", warningCode=" + warningCode +
+                ", tsunamiRegions=" + tsunamiRegions +
+                '}';
     }
 }

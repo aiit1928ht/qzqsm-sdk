@@ -1,7 +1,5 @@
 package jp.ac.aiit.pbl.disaster.tsunami;
 
-import jp.ac.aiit.pbl.disaster.seismicIntensity.Warning;
-
 import java.util.Arrays;
 
 public enum TsunamiHeight {

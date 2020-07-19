@@ -4,12 +4,12 @@ import java.time.LocalDateTime;
 
 public class TsunamiRegion {
     
-    private LocalDateTime expectedTsunamiArrivalTime;
+    private LocalDateTime hasseibi;
     private TsunamiHeight tsunamiHeight;
     private TsunamiForecastRegion tsunamiForecastRegion;
     
-    TsunamiRegion(LocalDateTime expectedTsunamiArrivalTime, int tsunamiHeightCode, int tsunamiForecastRegionCode){
-        this.expectedTsunamiArrivalTime = expectedTsunamiArrivalTime;
+    TsunamiRegion(LocalDateTime hasseibi, int tsunamiHeightCode, int tsunamiForecastRegionCode){
+        this.hasseibi = hasseibi;
         this.tsunamiForecastRegion = TsunamiForecastRegion.getRegionName(tsunamiForecastRegionCode);
         this.tsunamiHeight = TsunamiHeight.getTsunamiHeight(tsunamiHeightCode);
     }
@@ -22,4 +22,12 @@ public class TsunamiRegion {
         return tsunamiForecastRegion;
     }
     
+    @Override
+    public String toString() {
+        return "{" +
+                "hasseibi=" + hasseibi +
+                ", tsunamiHeight=" + tsunamiHeight +
+                ", tsunamiForecastRegion=" + tsunamiForecastRegion +
+                '}';
+    }
 }
