@@ -3,6 +3,7 @@ package jp.ac.aiit.pbl.disaster.earthquakeearlywarning;
 import jp.ac.aiit.pbl.*;
 import jp.ac.aiit.pbl.disaster.hypocenter.SeismicEpicenter;
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class EarthquakeEarlyWarning implements Disaster {
     private Prefix prefix;
