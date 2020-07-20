@@ -26,6 +26,22 @@ public class NorthwestPacificTsunami implements Disaster {
         this.prefix = prefix;
     }
 
+    public TsunamigenicPotential getTsunamigenicPotential() {
+        return tsunamigenicPotential;
+    }
+
+    public void setTsunamigenicPotential(TsunamigenicPotential tsunamigenicPotential) {
+        this.tsunamigenicPotential = tsunamigenicPotential;
+    }
+
+    public List<TsunamiInformation> getTsunamiInformations() {
+        return tsunamiInformations;
+    }
+
+    public void setTsunamiInformations(List<TsunamiInformation> tsunamiInformations) {
+        this.tsunamiInformations = tsunamiInformations;
+    }
+
     @Override
     public String toString() {
         return "NorthwestPacificTsunami{" +
