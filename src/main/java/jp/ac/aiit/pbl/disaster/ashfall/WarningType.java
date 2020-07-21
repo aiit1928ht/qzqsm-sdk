@@ -1,9 +1,12 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.ashfall;
 
+/**
+ * Enum for WarningType of AshFall.
+ */
 public enum WarningType {
 
     AshFallForecastPreliminary(1,"Ash Fall Forecast (Preliminary)"),
-    AshFallForecastDetaied(2,"Ash Fall Forecast (Detailed)");
+    AshFallForecastDetailed(2,"Ash Fall Forecast (Detailed)");
 
     private int id;
 
@@ -26,7 +29,7 @@ public enum WarningType {
         if(id == 1){
             return AshFallForecastPreliminary;
         }else{
-            return AshFallForecastDetaied;
+            return AshFallForecastDetailed;
         }
     }
 }

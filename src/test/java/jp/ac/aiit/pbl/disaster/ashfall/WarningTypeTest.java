@@ -1,6 +1,5 @@
 package jp.ac.aiit.pbl.disaster.ashfall;
 
-import jp.ac.aiit.pbl.WarningType;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -14,6 +13,6 @@ public class WarningTypeTest {
 
     @Test
     public void canGetWarningType2(){
-        assertThat(WarningType.AshFallForecastDetaied,is(WarningType.getById(2)));
+        assertThat(WarningType.AshFallForecastDetailed,is(WarningType.getById(2)));
     }
 }

@@ -1,6 +1,9 @@
 package jp.ac.aiit.pbl.disaster.ashfall;
 import java.util.Arrays;
 
+/**
+ * Enum for Warning Code of AshFall.
+ */
 public enum WarningCode {
 
         SmallAshFall(1,"少量の降灰"),

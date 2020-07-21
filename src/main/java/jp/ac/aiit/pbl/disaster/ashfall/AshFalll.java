@@ -1,13 +1,16 @@
 package jp.ac.aiit.pbl.disaster.ashfall;
 
-import jp.ac.aiit.pbl.Prefix;
-import jp.ac.aiit.pbl.VolcanoName;
-import jp.ac.aiit.pbl.WarningType;
+import jp.ac.aiit.pbl.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class AshFalll {
+/**
+ * Class for Ash fall disaster.
+ * It consists of Activity Time, Warning Type, Volcano Name, Expected Ash Fall time, Warning Code and Local Government.
+ */
+
+public class AshFalll implements Disaster {
     private Prefix prefix;
     private LocalDateTime activityTime;                     //Activity Time(Td)Day(D1)  Hour(H1) Minute(M1)
     private WarningType warningtype;                        //WWarning Type(Dw1)
@@ -63,6 +66,16 @@ public class AshFalll {
                 ", volcanoName=" + volcanoName +
                 ", AshFallTimeWarningCodeLocalGovernments=" + ashFallTimeWarningCodeLocalGovernments +
                 '}';
+    }
+
+    @Override
+    public MessageType getMessageType() {
+        return null;
+    }
+
+    @Override
+    public DisasterCategory getDisasterCategory() {
+        return null;
     }
 }
 

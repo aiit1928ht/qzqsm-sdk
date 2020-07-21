@@ -1,14 +1,20 @@
 package jp.ac.aiit.pbl.disaster.ashfall;
 
+import jp.ac.aiit.pbl.DisasterParser;
 import jp.ac.aiit.pbl.PrefixParser;
 import jp.ac.aiit.pbl.VolcanoName;
-import jp.ac.aiit.pbl.WarningType;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AshFallParser {
+/**
+ *  The first, it returns Prefix.
+ *  The second it returns Activity Time, Warning Type and Volcano Name.
+ *  The third, it returns 4 times of Expected Ash Fall time, Warning Code and Local Government.
+ */
+
+public class AshFallParser implements DisasterParser {
 
     public AshFalll parse(String qzMessage){
         AshFalll ashFall = new AshFalll();
