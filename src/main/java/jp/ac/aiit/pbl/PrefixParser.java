@@ -22,7 +22,7 @@ public class PrefixParser {
         int month = Integer.parseInt(message.substring(0,4),2);
         int day = Integer.parseInt(message.substring(4,9),2);
         int hour = Integer.parseInt(message.substring(9,14),2);
-        int minute  = Integer.parseInt(message.substring(14,19),2);
+        int minute  = Integer.parseInt(message.substring(14,20),2);
         return LocalDateTime.of(LocalDateTime.now().getYear(),month,day,hour,minute);
     }
 }
