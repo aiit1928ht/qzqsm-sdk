@@ -8,9 +8,9 @@ import java.util.List;
 
 public class Tsunami implements Disaster {
     private Prefix prefix;
-    //private ExpectedTsunamiArrivalTime arrivalTime;
     private List<Notification> notifications;
     private WarningCode warningCode;
+    //private TsunamiRegion arrivalTime;
     private List<TsunamiRegion> tsunamiRegions;
     
     //public LocalDateTime gethasseibi(){
@@ -52,6 +52,14 @@ public class Tsunami implements Disaster {
     public void setTsunamiRegions(List<TsunamiRegion> tsunamiRegions) {
         this.tsunamiRegions = tsunamiRegions;
     }
+    
+    //public TsunamiRegion getArrivalTime() {
+    //    return arrivalTime;
+    //}
+    
+    //public void setArrivalTime(TsunamiRegion arrivalTime) {
+    //    this.arrivalTime = arrivalTime;
+    //}
     
     @Override
     public MessageType getMessageType() {
