@@ -48,6 +48,7 @@ public class TsunamiParser implements DisasterParser{
                 Integer.parseInt(qzMessage.substring(142, 148),2),
                 Integer.parseInt(qzMessage.substring(148, 152), 2),
                 Integer.parseInt(qzMessage.substring(152, 162), 2)));
+        
         tsunamiRegions.add(new TsunamiRegion(
                 tsunami.getPrefix().getReportTime(),
                 Integer.parseInt(qzMessage.substring(162, 163),2),
@@ -55,6 +56,7 @@ public class TsunamiParser implements DisasterParser{
                 Integer.parseInt(qzMessage.substring(168, 174), 2),
                 Integer.parseInt(qzMessage.substring(174, 178), 2),
                 Integer.parseInt(qzMessage.substring(178, 188), 2)));
+        
         tsunamiRegions.add(new TsunamiRegion(
                 tsunami.getPrefix().getReportTime(),
                 Integer.parseInt(qzMessage.substring(188, 189),2),
