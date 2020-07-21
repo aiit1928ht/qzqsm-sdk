@@ -1,5 +1,7 @@
 package jp.ac.aiit.pbl.disaster.earthquakeearlywarning;
 
+import java.util.Arrays;
+
 /**
  * This enum have definitions of Seismic Intensity Upper-Limit.
  * They are ID and Japanese name of Seismic Intensity.
@@ -7,4 +9,36 @@ package jp.ac.aiit.pbl.disaster.earthquakeearlywarning;
  */
 
 public enum SeismicIntensityUpperLimit {
+    ZERO(1, "震度0"),
+    ONE(2, "震度1"),
+    TWO(3, "震度2"),
+    THREE(4, "震度3"),
+    FOUR(5, "震度4"),
+    FIVE_LOWER(6, "震度5弱"),
+    FIVE_UPPER(7, "震度5強"),
+    SIX_LOWER(8, "震度6弱"),
+    SIX_UPPER(9, "震度6強"),
+    SEVEN(10, "震度7"),
+    OTHER(11, "〜程度以上"),
+    NONE(14, "なし"),
+    UNKNOW(15, "不明");
+
+    private final Integer id;
+    private final String seismicIntensityName;
+
+    SeismicIntensityUpperLimit(final int id, final String seismicIntensityName) {
+        this.id = id;
+        this.seismicIntensityName = seismicIntensityName;
+    }
+
+    public Integer getId() { return id; }
+
+    public String getSeismicIntensityName() { return seismicIntensityName; }
+
+    public static SeismicIntensityUpperLimit getById(int id){
+        return Arrays.stream(SeismicIntensityUpperLimit.values())
+                .filter(data -> data.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
 }
