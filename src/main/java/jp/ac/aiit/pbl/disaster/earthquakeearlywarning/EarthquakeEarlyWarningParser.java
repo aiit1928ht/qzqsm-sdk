@@ -149,9 +149,10 @@ public class EarthquakeEarlyWarningParser {
 
         String magnitude = String.valueOf(Integer.parseInt(Format.MAGNITUDE.getBitValue(qzqms),2));
         earthquakeEarlyWarning.setMagnitude(
+                Double.parseDouble(
                 magnitude.substring(0, magnitude.length() - 1)
                         + "."
-                        + magnitude.substring(magnitude.length() - 1)
+                        + magnitude.substring(magnitude.length() - 1))
         );
 
         earthquakeEarlyWarning.setSeismicEpicenter(SeismicEpicenter.getRegionName(

@@ -10,7 +10,7 @@ public class EarthquakeEarlyWarning implements Disaster {
     private List<Notification> notifications;
     private LocalDateTime occurrenceTimeOfEarthquake;
     private int depthOfSeismicEpicenter;
-    private String magnitude;
+    private double magnitude;
     private SeismicEpicenter seismicEpicenter;
     private SeismicIntensityLowerLimit seismicIntensityLowerLimit;
     private SeismicIntensityUpperLimit seismicIntensityUpperLimit;
@@ -48,11 +48,11 @@ public class EarthquakeEarlyWarning implements Disaster {
         this.depthOfSeismicEpicenter = depthOfSeismicEpicenter;
     }
 
-    public String getMagnitude() {
+    public double getMagnitude() {
         return magnitude;
     }
 
-    public void setMagnitude(String magnitude) {
+    public void setMagnitude(double magnitude) {
         this.magnitude = magnitude;
     }
 

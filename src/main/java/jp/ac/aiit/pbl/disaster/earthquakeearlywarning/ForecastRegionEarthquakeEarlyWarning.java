@@ -80,7 +80,7 @@ public enum ForecastRegionEarthquakeEarlyWarning {
     KYUSHU(68, "九州"),
     AMAMI(69, "奄美(群島)"),
     OKINAWA(70, "沖縄"),
-    OTHERE(80, "その他の府県予報区および地方予報区_緊急地震速報(警報)");
+    OTHER(80, "その他の府県予報区および地方予報区_緊急地震速報(警報)");
 
     private final Integer id;
     private final String EarthquakeEarlyWarningRegionName;
