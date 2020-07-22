@@ -5,6 +5,12 @@ import jp.ac.aiit.pbl.disaster.hypocenter.SeismicEpicenter;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * This class is the information of Earthquake Early Warning transmitted by QZSS.
+ * It has properties about disaster region, magnitude and seismic intensity etc.
+ * And It provides setter/getter of their properties.
+ */
+
 public class EarthquakeEarlyWarning implements Disaster {
     private Prefix prefix;
     private List<Notification> notifications;

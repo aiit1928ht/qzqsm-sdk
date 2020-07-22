@@ -8,6 +8,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class parses binary number of Earthquake Early Warning signal.
+ * It has definitions of every parameter's binary length on a binary line that is signal transmitted by QZSS.
+ * This class provides parse method for Earthquake Early Warning signal.
+ */
+
 public class EarthquakeEarlyWarningParser {
     String qzqms;
 
