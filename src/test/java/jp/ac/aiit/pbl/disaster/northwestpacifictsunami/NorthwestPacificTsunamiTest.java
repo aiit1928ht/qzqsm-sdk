@@ -1,6 +1,8 @@
 package jp.ac.aiit.pbl.disaster.northwestpacifictsunami;
 import org.junit.Test;
 
+import java.time.LocalDateTime;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -58,5 +60,13 @@ public class NorthwestPacificTsunamiTest {
     public void canGetTsunamiHeight_509() {
         TsunamiHeight expected = TsunamiHeight.TsunamiHeight509;
         assertThat(TsunamiHeight.getById(509),is(expected));
+    }
+
+    @Test
+    public void testForTsunamiArrivalExpectedTime() {
+        System.out.println("testforgetTsunamiArrivalExpectedTime()");
+        String qzqms = "1100011010101111101100111001111011010110010000000000011100000100001000000001100001001100111111111111111000001010000000000000111111101001010011011111101111111111001100101111111111111111111111100100000000000000000000000001000000000000000000000000000001";
+        NorthwestPacificTsunami northwestPacificTsunami = northwestPacificTsunamiParser.parse(qzqms);
+        System.out.println(northwestPacificTsunami.toString());
     }
 }
