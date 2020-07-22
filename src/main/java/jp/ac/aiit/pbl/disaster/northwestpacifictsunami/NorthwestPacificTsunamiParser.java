@@ -17,17 +17,17 @@ public class NorthwestPacificTsunamiParser {
 
         northwestPacificTsunami.setPrefix(prefixParser.parse(qzqms));
         northwestPacificTsunami.setTsunamigenicPotential(TsunamigenicPotential.getById(Integer.parseInt(qzqms.substring(53, 53 + 3), 2)));
-        northwestPacificTsunami.setTsunamiInformations(tsunamiInformationTransducer(qzqms.substring(56, 196),prefixParser.parse(qzqms).getReportTime()));
+        northwestPacificTsunami.setTsunamiInformations(storeTsunamiInformationListValiddata(qzqms.substring(56, 196),prefixParser.parse(qzqms).getReportTime()));
 
         return northwestPacificTsunami;
     }
 
-    private List<TsunamiInformation> tsunamiInformationTransducer(String qzqmsPart, LocalDateTime reportTime) {
+    private List<TsunamiInformation> storeTsunamiInformationListValiddata(String qzqmsPart, LocalDateTime reportTime) {
         List<TsunamiInformation> tsunamiInformationArrayList = new ArrayList<>();
         for (int bit = 0; bit < ((12 + 9 + 7) * 5); bit += (12 + 9 + 7)) {
             if (!qzqmsPart.startsWith("000000000000" + "000000000" + "0000000", bit)) {
                 TsunamiInformation tsunamiInformation = new TsunamiInformation(
-                        tsunamiDateTimeTransducer(qzqmsPart.substring(bit, bit + 12), reportTime),
+                        getTsunamiArrivalExpectedTime(qzqmsPart.substring(bit, bit + 12), reportTime),
                         TsunamiHeight.getById(
                                 Integer.parseInt(qzqmsPart.substring(bit + 12, bit + 12 + 9), 2)
                         ),
@@ -50,17 +50,17 @@ public class NorthwestPacificTsunamiParser {
      * if input message part "DAY" = 0 THEN same day arrival TSUNAMI. ELSE case of "1" is next day arrival.
      * if input "HOUR" = 31 THEN ariival hour is unkown. -> YEAR = 9999 and HOUR is ZERO CLEAR
      * if ipuut "MINUTE" == 63 THEN ariival minute is unkown. -> YEAR = 9999 and MINUTE is ZERO CLEAR
-     * @param     input the part of qzqms Stfing message.
+     * @param     qzqmsDayHourMinute the part of qzqms Stfing message.
      * @param     reportTime the reportTime.
      * @return    LocalDateTime expectedTsunamiArrivalTime.
      */
-    private LocalDateTime tsunamiDateTimeTransducer(String input, LocalDateTime reportTime) {
+    private LocalDateTime getTsunamiArrivalExpectedTime(String qzqmsDayHourMinute, LocalDateTime reportTime) {
         LocalDateTime tmp;
 
         int year = reportTime.getYear();
-        int day = Integer.valueOf(input.substring(0,1),2);
-        int hour = Integer.valueOf(input.substring(1, 1 + 5),2);
-        int minute = Integer.valueOf(input.substring(1 + 5, 1 + 5 + 6),2);
+        int day = Integer.valueOf(qzqmsDayHourMinute.substring(0,1),2);
+        int hour = Integer.valueOf(qzqmsDayHourMinute.substring(1, 1 + 5),2);
+        int minute = Integer.valueOf(qzqmsDayHourMinute.substring(1 + 5, 1 + 5 + 6),2);
 
         tmp = reportTime.plusDays(day);
 
