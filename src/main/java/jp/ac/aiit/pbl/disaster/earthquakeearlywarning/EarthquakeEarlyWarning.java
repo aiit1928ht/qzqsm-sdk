@@ -7,14 +7,14 @@ import java.util.List;
 
 public class EarthquakeEarlyWarning implements Disaster {
     private Prefix prefix;
-    private Notification notification;
+    private List<Notification> notifications;
     private LocalDateTime occurrenceTimeOfEarthquake;
-    private String depthOfSeismicEpicenter;
-    private String magnitude;
+    private int depthOfSeismicEpicenter;
+    private double magnitude;
     private SeismicEpicenter seismicEpicenter;
     private SeismicIntensityLowerLimit seismicIntensityLowerLimit;
     private SeismicIntensityUpperLimit seismicIntensityUpperLimit;
-    private List<ForecastRegionEarthquakeEarlyWarning> forecastRegionEarthquakeEarlyWarning;
+    private List<ForecastRegionEarthquakeEarlyWarning> forecastRegionEarthquakeEarlyWarnings;
 
     public Prefix getPrefix() {
         return prefix;
@@ -24,12 +24,12 @@ public class EarthquakeEarlyWarning implements Disaster {
         this.prefix = prefix;
     }
 
-    public Notification getNotification() {
-        return notification;
+    public List<Notification> getNotifications() {
+        return notifications;
     }
 
-    public void setNotification(Notification notification) {
-        this.notification = notification;
+    public void setNotifications(List<Notification> notifications) {
+        this.notifications = notifications;
     }
 
     public LocalDateTime getOccurrenceTimeOfEarthquake() {
@@ -40,19 +40,19 @@ public class EarthquakeEarlyWarning implements Disaster {
         this.occurrenceTimeOfEarthquake = occurrenceTimeOfEarthquake;
     }
 
-    public String getDepthOfSeismicEpicenter() {
+    public int getDepthOfSeismicEpicenter() {
         return depthOfSeismicEpicenter;
     }
 
-    public void setDepthOfSeismicEpicenter(String depthOfSeismicEpicenter) {
+    public void setDepthOfSeismicEpicenter(int depthOfSeismicEpicenter) {
         this.depthOfSeismicEpicenter = depthOfSeismicEpicenter;
     }
 
-    public String getMagnitude() {
+    public double getMagnitude() {
         return magnitude;
     }
 
-    public void setMagnitude(String magnitude) {
+    public void setMagnitude(double magnitude) {
         this.magnitude = magnitude;
     }
 
@@ -81,11 +81,11 @@ public class EarthquakeEarlyWarning implements Disaster {
     }
 
     public List<ForecastRegionEarthquakeEarlyWarning> getForecastRegionEarthquakeEarlyWarning() {
-        return forecastRegionEarthquakeEarlyWarning;
+        return forecastRegionEarthquakeEarlyWarnings;
     }
 
-    public void setForecastRegionEarthquakeEarlyWarning(List<ForecastRegionEarthquakeEarlyWarning> forecastRegionEarthquakeEarlyWarning) {
-        this.forecastRegionEarthquakeEarlyWarning = forecastRegionEarthquakeEarlyWarning;
+    public void setForecastRegionEarthquakeEarlyWarning(List<ForecastRegionEarthquakeEarlyWarning> forecastRegionEarthquakeEarlyWarnings) {
+        this.forecastRegionEarthquakeEarlyWarnings = forecastRegionEarthquakeEarlyWarnings;
     }
 
     @Override
@@ -93,13 +93,13 @@ public class EarthquakeEarlyWarning implements Disaster {
         return "{" +
                 "    \"EarthquakeEarlyWarning\": {" +
                 "        \"prefix\": " + prefix + "," +
-                "        \"notification\": " + notification + "," +
+                "        \"notification\": " + notifications + "," +
                 "        \"occurrenceTimeOfEarthquake\": " + occurrenceTimeOfEarthquake + "," +
                 "        \"depthOfSeismicEpicenter\": " + depthOfSeismicEpicenter + "," +
                 "        \"seismicEpicenter\": " + seismicEpicenter + "," +
                 "        \"seismicIntensityLowerLimit\": " + seismicIntensityLowerLimit + "," +
                 "        \"seismicIntensityUpperLimit\": " + seismicIntensityUpperLimit + "," +
-                "        \"forecastRegionEarthquakeEarlyWarning\": " + forecastRegionEarthquakeEarlyWarning + "," +
+                "        \"forecastRegionEarthquakeEarlyWarning\": " + forecastRegionEarthquakeEarlyWarnings + "," +
                 "    }" +
                 "}";
     }
