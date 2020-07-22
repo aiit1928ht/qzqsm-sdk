@@ -1,5 +1,6 @@
 package jp.ac.aiit.pbl;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public enum LocalGovernment {
     HokkaidoSapporoshi(110000, "北海道札幌市"),
@@ -185,6 +186,18 @@ public enum LocalGovernment {
     HokkaidoRausucho(169400,"北海道羅臼町"),
     HokkidoShikotanmura(169500,"北海道色丹村"),
     HokkaidoOthers(199999,"北海道のその他の市町村");
+
+
+    private static final HashMap<Integer, LocalGovernment> LOCAL_GOVERNMENT_HASH_MAP;
+
+    static {
+        LOCAL_GOVERNMENT_HASH_MAP = new HashMap<Integer, LocalGovernment>();
+        Arrays.stream(LocalGovernment.values()).forEach(value ->
+                LOCAL_GOVERNMENT_HASH_MAP.put(LocalGovernment.valueOf(value.toString()).getId(), value));
+    }
+    public static LocalGovernment get(int key) {
+        return LOCAL_GOVERNMENT_HASH_MAP.get(key);
+    }
 
     private Integer id;
     private String regionCode;
