@@ -1,24 +1,26 @@
 package jp.ac.aiit.pbl.disaster.northwestpacifictsunami;
 
+import java.time.LocalDateTime;
+
 /**
  * Class for TsunamiInformation.
  */
 public class TsunamiInformation {
-    private ExpectedTsunamiArrivalTime expectedTsunamiArrivalTime;
+    private LocalDateTime expectedTsunamiArrivalTime;
     private TsunamiHeight tsunamiHeight;
     private CoastalRegion coastalRegion;
 
-    public TsunamiInformation(ExpectedTsunamiArrivalTime expectedTsunamiArrivalTime, TsunamiHeight tsunamiHeight, CoastalRegion coastalRegion) {
+    public TsunamiInformation(LocalDateTime expectedTsunamiArrivalTime, TsunamiHeight tsunamiHeight, CoastalRegion coastalRegion) {
         this.expectedTsunamiArrivalTime = expectedTsunamiArrivalTime;
         this.tsunamiHeight = tsunamiHeight;
         this.coastalRegion = coastalRegion;
     }
 
-    public ExpectedTsunamiArrivalTime getExpectedTsunamiArrivalTime() {
+    public LocalDateTime getExpectedTsunamiArrivalTime() {
         return expectedTsunamiArrivalTime;
     }
 
-    public void setExpectedTsunamiArrivalTime(ExpectedTsunamiArrivalTime expectedTsunamiArrivalTime) {
+    public void setExpectedTsunamiArrivalTime(LocalDateTime expectedTsunamiArrivalTime) {
         this.expectedTsunamiArrivalTime = expectedTsunamiArrivalTime;
     }
 
