@@ -4,6 +4,9 @@ import java.time.LocalDateTime;
 
 /**
  * Class for TsunamiInformation.
+ *
+ * Holds the next information.
+ * Expected Tsunami Arrival Time, Tsunami Height and Coastal Region.
  */
 public class TsunamiInformation {
     private LocalDateTime expectedTsunamiArrivalTime;

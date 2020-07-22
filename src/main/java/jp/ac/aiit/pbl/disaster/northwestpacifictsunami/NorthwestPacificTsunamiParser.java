@@ -27,7 +27,11 @@ public class NorthwestPacificTsunamiParser {
         for (int bit = 0; bit < ((12 + 9 + 7) * 5); bit += (12 + 9 + 7)) {
             if (!qzqmsPart.startsWith("000000000000" + "000000000" + "0000000", bit)) {
                 TsunamiInformation tsunamiInformation = new TsunamiInformation(
-                        getTsunamiArrivalExpectedTime(qzqmsPart.substring(bit, bit + 12), reportTime),
+                        getTsunamiArrivalExpectedTime(
+                                Integer.valueOf(qzqmsPart.substring(bit, bit + 1),2),
+                                Integer.valueOf(qzqmsPart.substring(bit + 1, bit + 1 + 5),2),
+                                Integer.valueOf(qzqmsPart.substring(bit + 1 + 5, bit + 1 + 5 + 6),2),
+                                reportTime),
                         TsunamiHeight.getById(
                                 Integer.parseInt(qzqmsPart.substring(bit + 12, bit + 12 + 9), 2)
                         ),
@@ -50,17 +54,16 @@ public class NorthwestPacificTsunamiParser {
      * if input message part "DAY" = 0 THEN same day arrival TSUNAMI. ELSE case of "1" is next day arrival.
      * if input "HOUR" = 31 THEN ariival hour is unkown. -> YEAR = 9999 and HOUR is ZERO CLEAR
      * if ipuut "MINUTE" == 63 THEN ariival minute is unkown. -> YEAR = 9999 and MINUTE is ZERO CLEAR
-     * @param     qzqmsDayHourMinute the part of qzqms Stfing message.
+     * @param     day value is 0 or 1.
+     * @param     hour value 0 to 23, or 31.
+     * @param     minute value 0 to 59, or 63.
      * @param     reportTime the reportTime.
      * @return    LocalDateTime expectedTsunamiArrivalTime.
      */
-    private LocalDateTime getTsunamiArrivalExpectedTime(String qzqmsDayHourMinute, LocalDateTime reportTime) {
+    private LocalDateTime getTsunamiArrivalExpectedTime(int day, int hour, int minute, LocalDateTime reportTime) {
         LocalDateTime tmp;
 
         int year = reportTime.getYear();
-        int day = Integer.valueOf(qzqmsDayHourMinute.substring(0,1),2);
-        int hour = Integer.valueOf(qzqmsDayHourMinute.substring(1, 1 + 5),2);
-        int minute = Integer.valueOf(qzqmsDayHourMinute.substring(1 + 5, 1 + 5 + 6),2);
 
         tmp = reportTime.plusDays(day);
 
