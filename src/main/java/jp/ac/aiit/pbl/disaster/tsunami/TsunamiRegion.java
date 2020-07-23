@@ -26,6 +26,7 @@ public class TsunamiRegion {
         return expectedArrivalDate;
     }
     
+    
     @Override
     public String toString() {
         return "{" +
