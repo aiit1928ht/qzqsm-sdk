@@ -10,16 +10,7 @@ public class Tsunami implements Disaster {
     private Prefix prefix;
     private List<Notification> notifications;
     private WarningCode warningCode;
-    //private TsunamiRegion arrivalTime;
     private List<TsunamiRegion> tsunamiRegions;
-    
-    //public LocalDateTime gethasseibi(){
-    //    if(arrivalTime.getDay() == 0) {
-    //        return prefix.getReportTime();
-    //    }else{
-    //        return prefix.getReportTime().plusDays(1);
-    //    }
-    //}
 
     public Prefix getPrefix() {
         return prefix;
@@ -53,13 +44,6 @@ public class Tsunami implements Disaster {
         this.tsunamiRegions = tsunamiRegions;
     }
     
-    //public TsunamiRegion getArrivalTime() {
-    //    return arrivalTime;
-    //}
-    
-    //public void setArrivalTime(TsunamiRegion arrivalTime) {
-    //    this.arrivalTime = arrivalTime;
-    //}
     
     @Override
     public MessageType getMessageType() {
