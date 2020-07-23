@@ -1,4 +1,4 @@
-package jp.ac.aiit.pbl.disaster.hypocenter;
+package jp.ac.aiit.pbl;
 
 import java.util.Arrays;
 
