@@ -8,8 +8,8 @@ public class TsunamiRegion {
     private TsunamiHeight tsunamiHeight;
     private TsunamiForecastRegion tsunamiForecastRegion;
     
-    TsunamiRegion(LocalDateTime expectedArrivalDate, int tsunamiHeightCode, int tsunamiForecastRegionCode){
-        this.expectedArrivalDate = expectedArrivalDate;
+    TsunamiRegion(LocalDateTime reportTime, int day, int hour, int minute, int tsunamiHeightCode, int tsunamiForecastRegionCode){
+        this.expectedArrivalDate = getReachTimeToRegion(reportTime, day, hour, minute);
         this.tsunamiForecastRegion = TsunamiForecastRegion.getRegionName(tsunamiForecastRegionCode);
         this.tsunamiHeight = TsunamiHeight.getTsunamiHeight(tsunamiHeightCode);
     }
@@ -26,6 +26,23 @@ public class TsunamiRegion {
         return expectedArrivalDate;
     }
     
+    public LocalDateTime getReachTimeToRegion(LocalDateTime reportTime, int day, int hour, int minute){
+        LocalDateTime issueDate;
+        int year = reportTime.getYear();
+        issueDate = reportTime.plusDays(day);
+        
+        if (hour == 31){
+            year = 9999;
+            hour = 0;
+            minute = 0;
+        }
+        if (minute == 63){
+            year = 9999;
+            hour = 0;
+            minute = 0;
+        }
+        return LocalDateTime.of(year, issueDate.getMonth(), issueDate.getDayOfMonth(),hour , minute);
+    }
     
     @Override
     public String toString() {
