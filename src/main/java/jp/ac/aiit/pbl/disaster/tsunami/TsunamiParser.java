@@ -26,7 +26,7 @@ public class TsunamiParser implements DisasterParser{
         List<TsunamiRegion> tsunamiRegions = new ArrayList<>();
         
         tsunamiRegions.add(new TsunamiRegion(
-                tsunami.getPrefix().getReportTime(), //IssueDate
+                tsunami.getPrefix().getReportTime(), //reportDate
                 Integer.parseInt(qzMessage.substring(84, 85), 2), //day
                 Integer.parseInt(qzMessage.substring(85, 90),2),  //hour
                 Integer.parseInt(qzMessage.substring(90, 96), 2), //minute
@@ -34,7 +34,7 @@ public class TsunamiParser implements DisasterParser{
                 Integer.parseInt(qzMessage.substring(100, 110),2)));
         
         tsunamiRegions.add(new TsunamiRegion(
-                tsunami.getPrefix().getReportTime(), //IssueDate
+                tsunami.getPrefix().getReportTime(), //reportDate
                 Integer.parseInt(qzMessage.substring(110, 111), 2), //day
                 Integer.parseInt(qzMessage.substring(111, 116),2),  //hour
                 Integer.parseInt(qzMessage.substring(116, 122), 2), //minute
@@ -42,7 +42,7 @@ public class TsunamiParser implements DisasterParser{
                 Integer.parseInt(qzMessage.substring(126, 136),2)));
         
         tsunamiRegions.add(new TsunamiRegion(
-                tsunami.getPrefix().getReportTime(), //IssueDate
+                tsunami.getPrefix().getReportTime(), //reportDate
                 Integer.parseInt(qzMessage.substring(136, 137), 2), //day
                 Integer.parseInt(qzMessage.substring(137, 142),2),  //hour
                 Integer.parseInt(qzMessage.substring(142, 148), 2), //minute
@@ -50,7 +50,7 @@ public class TsunamiParser implements DisasterParser{
                 Integer.parseInt(qzMessage.substring(152, 162),2)));
         
         tsunamiRegions.add(new TsunamiRegion(
-                tsunami.getPrefix().getReportTime(), //IssueDate
+                tsunami.getPrefix().getReportTime(), //reportDate
                 Integer.parseInt(qzMessage.substring(162, 163), 2), //day
                 Integer.parseInt(qzMessage.substring(163, 168),2),  //hour
                 Integer.parseInt(qzMessage.substring(168, 174), 2), //minute
@@ -58,7 +58,7 @@ public class TsunamiParser implements DisasterParser{
                 Integer.parseInt(qzMessage.substring(178, 188),2)));
         
         tsunamiRegions.add(new TsunamiRegion(
-                tsunami.getPrefix().getReportTime(), //IssueDate
+                tsunami.getPrefix().getReportTime(), //reportDate
                 Integer.parseInt(qzMessage.substring(188, 189), 2), //day
                 Integer.parseInt(qzMessage.substring(189, 194),2),  //hour
                 Integer.parseInt(qzMessage.substring(194, 200), 2), //minute
