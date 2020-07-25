@@ -2,7 +2,7 @@ package jp.ac.aiit.pbl.disaster.earthquakeearlywarning;
 
 import jp.ac.aiit.pbl.Notification;
 import jp.ac.aiit.pbl.PrefixParser;
-import jp.ac.aiit.pbl.disaster.hypocenter.SeismicEpicenter;
+import jp.ac.aiit.pbl.SeismicEpicenter;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
