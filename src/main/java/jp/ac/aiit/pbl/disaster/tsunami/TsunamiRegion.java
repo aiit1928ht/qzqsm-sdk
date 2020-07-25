@@ -26,10 +26,9 @@ public class TsunamiRegion {
         return expectedArrivalDate;
     }
     
-    public LocalDateTime getReachTimeToRegion(LocalDateTime reportDate, int day, int hour, int minute){
-        LocalDateTime issueDate;
+    private LocalDateTime getReachTimeToRegion(LocalDateTime reportDate, int day, int hour, int minute){
+        LocalDateTime issueDate = reportDate.plusDays(day);
         int year = reportDate.getYear();
-        issueDate = reportDate.plusDays(day);
         
         if (hour == 31){
             year = 9999;
