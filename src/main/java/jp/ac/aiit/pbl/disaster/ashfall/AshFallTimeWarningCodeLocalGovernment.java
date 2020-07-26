@@ -13,7 +13,7 @@ public class AshFallTimeWarningCodeLocalGovernment {
         AshFallTimeWarningCodeLocalGovernment(int expectedAshFall, int warningCodeId, int localGovernmentId) {
             this.expectedAshFall=expectedAshFall;
             this.warningCode = WarningCode.getById(warningCodeId);
-            this.localGovernment = LocalGovernment.getById(localGovernmentId);
+            this.localGovernment = LocalGovernment.get(localGovernmentId);
         }
 
         public int getExpectedAshFall() {
