@@ -20,7 +20,7 @@ public class AshFallParserTest {
         assertThat(WarningType.getById(2),is(WarningType.AshFallForecastDetailed));
         assertThat(WarningCode.getById(2),is(WarningCode.MediumAshFall));
         assertThat(VolcanoName.getById(902),is(VolcanoName.NewActiveVolcano));
-        assertThat(LocalGovernment.getById(169400),is(LocalGovernment.HokkaidoRausucho));
+        assertThat(LocalGovernment.get(169400),is(LocalGovernment.HokkaidoRausucho));
     }
 
 }
