@@ -21,6 +21,6 @@ public class VolcanoParserTest {
             System.out.println(volcano.toString());
             assertThat(WarningCode.getById(1),is(WarningCode.EruptionWarning));
             assertThat(VolcanoName.getById(101),is(VolcanoName.Shiretokoiozan));
-            assertThat(LocalGovernment.getById(166700),is(LocalGovernment.HokkaidoTsuruimura));
+            assertThat(LocalGovernment.get(166700),is(LocalGovernment.HokkaidoTsuruimura));
         }
     }

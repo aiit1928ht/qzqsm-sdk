@@ -26,11 +26,11 @@ public class VolcanoParser implements DisasterParser {
 
         List<LocalGovernment> governments = new ArrayList<>();
 
-        governments.add(LocalGovernment.getById(Integer.parseInt(qzMessage.substring(88,111),2)));
-        governments.add(LocalGovernment.getById(Integer.parseInt(qzMessage.substring(111,134),2)));
-        governments.add(LocalGovernment.getById(Integer.parseInt(qzMessage.substring(134,157),2)));
-        governments.add(LocalGovernment.getById(Integer.parseInt(qzMessage.substring(157,180),2)));
-        governments.add(LocalGovernment.getById(Integer.parseInt(qzMessage.substring(180,203),2)));
+        governments.add(LocalGovernment.get(Integer.parseInt(qzMessage.substring(88,111),2)));
+        governments.add(LocalGovernment.get(Integer.parseInt(qzMessage.substring(111,134),2)));
+        governments.add(LocalGovernment.get(Integer.parseInt(qzMessage.substring(134,157),2)));
+        governments.add(LocalGovernment.get(Integer.parseInt(qzMessage.substring(157,180),2)));
+        governments.add(LocalGovernment.get(Integer.parseInt(qzMessage.substring(180,203),2)));
         volcano.setLocalGovernments(governments);
         return volcano;
     }
