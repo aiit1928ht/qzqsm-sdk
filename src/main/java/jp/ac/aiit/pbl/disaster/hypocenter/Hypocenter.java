@@ -15,7 +15,7 @@ public class Hypocenter implements Disaster {
     private List<Notification> notifications;
     private LocalDateTime occurrenceTimeOfEarthquake;
     private int depthOfHypocenter;
-    private int magnitude;
+    private double magnitude;
     private SeismicEpicenter seismicEpicenter;
     private boolean northLatitude;
     private double latitude;
@@ -55,11 +55,11 @@ public class Hypocenter implements Disaster {
         this.depthOfHypocenter = depthOfHypocenter;
     }
     
-    public int getMagnitude() {
+    public double getMagnitude() {
         return magnitude;
     }
     
-    public void setMagnitude(int magnitude) {
+    public void setMagnitude(double magnitude) {
         this.magnitude = magnitude;
     }
     
