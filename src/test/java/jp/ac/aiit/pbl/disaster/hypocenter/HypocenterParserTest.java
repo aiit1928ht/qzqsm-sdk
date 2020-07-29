@@ -66,7 +66,7 @@ public class HypocenterParserTest {
         HypocenterParser hypocenterParser = new HypocenterParser();
         Hypocenter hypocenter = hypocenterParser.parse("1100011010101101111100101100010100010110100000000000000110010100110011000110011101011000100011101111101010000000000000101111011010011110011110010110100011110011110");
         
-        assertThat(hypocenter.getMagnitude(), is(127.0));
+        assertThat(hypocenter.getMagnitude(), is(12.7));
     }
     /**
      * Magnitude (101 if more than 10.0, and 127 if unknown.
@@ -79,7 +79,7 @@ public class HypocenterParserTest {
         HypocenterParser hypocenterParser = new HypocenterParser();
         Hypocenter hypocenter = hypocenterParser.parse("1100011010101101111100101100010100010110100000000000000110010100110011000110011101011000100011100000000000001010000000101110011110011110011110000011110011110011110");
         
-        assertThat(hypocenter.getMagnitude(), is(101.0));
+        assertThat(hypocenter.getMagnitude(), is(10.1));
         assertThat(hypocenter.getDepthOfHypocenter(), is(0));
     }
     /**
@@ -93,7 +93,7 @@ public class HypocenterParserTest {
         HypocenterParser hypocenterParser = new HypocenterParser();
         Hypocenter hypocenter = hypocenterParser.parse("1100011010101101111100101100010100010110100000000000000110010100110011000110011101011000100011101111101010001000011111010110011110011110011110000011110011110011110");
   
-        assertThat(hypocenter.getMagnitude(), is(126.0));
+        assertThat(hypocenter.getMagnitude(), is(12.6));
     }
     /**
      * Magnitude (Return the magnitude that occurred,
@@ -114,7 +114,7 @@ public class HypocenterParserTest {
         Hypocenter hypocenter = hypocenterParser.parse("1100011010101101111100101100010100010110100000000000000110010100110011000110011101011000100011100000000000001010000000101110011110011110011110000011110011110011110");
         
         assertThat(hypocenter.getDepthOfHypocenter(), is(0));
-        assertThat(hypocenter.getMagnitude(), is(101.0));
+        assertThat(hypocenter.getMagnitude(), is(10.1));
         assertThat(hypocenter.getNotifications().size(), is(3));
         assertThat(hypocenter.getSeismicEpicenter().getCode(), is(11));
         assertThat(hypocenter.isNorthLatitude(), is(false));

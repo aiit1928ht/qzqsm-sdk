@@ -76,13 +76,13 @@ public class HypocenterParser implements DisasterParser {
             return magnitude;
         }
         else if (0.8 <= magnitude && magnitude < 1.0){
-            return 126;
+            return 12.6;
         }
         else if (1.0 <= magnitude){
-            return 101;
+            return 10.1;
         }
         else {
-            return 127;
+            return 12.7;
         }
     }
 }
