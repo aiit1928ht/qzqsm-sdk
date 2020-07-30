@@ -6,9 +6,10 @@ import jp.ac.aiit.pbl.SeismicEpicenter;
 import java.time.LocalDateTime;
 import java.util.List;
 /*
-This class holds the converted information about the Hypocenter of the signals received from QZSS.
-It retains the information of the region where the earthquake occurred,
-the content of the notification when it occurred, and the latitude and longitude.
+This class is the information about the Hypocenter of the signals received from QZSS.
+It has the properties of the region where the earthquake occurred.
+The contents are the notification when it occurred, and the latitude and longitude,
+magnitude and depthOfHypocenter.
  */
 public class Hypocenter implements Disaster {
     private Prefix prefix;

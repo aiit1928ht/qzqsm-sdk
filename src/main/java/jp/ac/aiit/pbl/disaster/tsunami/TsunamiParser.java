@@ -8,6 +8,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class parses binary number of signals of Tsunami from QZSS.
+ * Each parameter is defined by the specified number of bits.
+ * This class provides parse methods.
+ */
+
 public class TsunamiParser implements DisasterParser{
     
     public Tsunami parse(String qzMessage){

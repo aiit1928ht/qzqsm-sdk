@@ -2,6 +2,12 @@ package jp.ac.aiit.pbl.disaster.tsunami;
 
 import java.time.LocalDateTime;
 
+/**
+ * This class aggregates ExpectedArrivalTime of Tsunami and TsunamiHeight,
+ * TsunamiForecastRegion when an earthquake occurs.
+ * This class has method, in case of ExpectedArrivalTime and ReportTime are equal or not.
+ */
+
 public class TsunamiRegion {
     
     private LocalDateTime expectedArrivalDate;

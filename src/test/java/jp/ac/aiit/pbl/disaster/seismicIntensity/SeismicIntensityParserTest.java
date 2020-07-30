@@ -4,6 +4,11 @@ import jp.ac.aiit.pbl.disaster.seismicIntensity.SeismicIntensity;
 import jp.ac.aiit.pbl.disaster.seismicIntensity.SeismicIntensityParser;
 import org.junit.Test;
 
+/**
+ * This Class is SeismicIntensity Parser Test.
+ * To test that the parameter values ​​are properly parsed or not, according to the definition.
+ */
+
 public class SeismicIntensityParserTest {
     
     @Test

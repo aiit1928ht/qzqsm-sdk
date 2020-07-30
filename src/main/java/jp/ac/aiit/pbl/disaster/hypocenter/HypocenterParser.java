@@ -10,6 +10,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class parses binary number of signals of Hypocenter from QZSS.
+ * Each parameter is defined by the specified number of bits.
+ * This class provides parse methods.
+ */
+
 public class HypocenterParser implements DisasterParser {
     
     public Hypocenter parse(String qzMessage){
@@ -26,22 +32,21 @@ public class HypocenterParser implements DisasterParser {
         
         hypocenter.setOccurrenceTimeOfEarthquake(toOccurrenceTime(qzMessage.substring(80, 96)));
         
-        hypocenter.setDepthOfHypocenter(parserDepthOfHypocenter(Integer.parseInt(qzMessage.substring(96, 105), 2)));
-        hypocenter.setMagnitude(parserMagunitude(Double.valueOf(Integer.parseInt(qzMessage.substring(105, 112),2))/10));
-        //System.out.println(Double.valueOf(Integer.parseInt(qzMessage.substring(105, 112),2))/10);
+        hypocenter.setDepthOfHypocenter(obtainTheDepthKilometersOfHypocenter(Integer.parseInt(qzMessage.substring(96, 105), 2)));
+        hypocenter.setMagnitude(measureTheMagnitudeOfEarthquake(Double.valueOf(Integer.parseInt(qzMessage.substring(105, 112),2))/10));
         
         hypocenter.setSeismicEpicenter(SeismicEpicenter.getRegionName(Integer.parseInt(qzMessage.substring(112, 122), 2)));
         
         hypocenter.setNorthLatitude(qzMessage.substring(122, 123).equals("0"));
         
-        hypocenter.setLatitude(parserLatlon(
+        hypocenter.setLatitude(measureTheLatlonOfHypocenter(
                 Integer.parseInt(qzMessage.substring(123, 130), 2),
                 Integer.parseInt(qzMessage.substring(130, 136), 2),
                 Integer.parseInt(qzMessage.substring(136, 142), 2)));
         
         hypocenter.setEastLongitude(qzMessage.substring(142, 143).equals("0"));
         
-        hypocenter.setLongitude(parserLatlon(
+        hypocenter.setLongitude(measureTheLatlonOfHypocenter(
                 Integer.parseInt(qzMessage.substring(143, 151), 2),
                 Integer.parseInt(qzMessage.substring(151, 157), 2),
                 Integer.parseInt(qzMessage.substring(157, 163), 2)));
@@ -55,11 +60,11 @@ public class HypocenterParser implements DisasterParser {
         return LocalDateTime.of(LocalDateTime.now().getYear(),LocalDateTime.now().getMonth(),day,hour,minute);
     }
     
-    private double parserLatlon(int degree, int minute, int second) {
+    private double measureTheLatlonOfHypocenter(int degree, int minute, int second) {
         return (double)degree + (double)minute/60.0d + (double)second/3600d;
     }
     
-    private int parserDepthOfHypocenter(int depthOfHypocenter){
+    private int obtainTheDepthKilometersOfHypocenter(int depthOfHypocenter){
         if (0 <= depthOfHypocenter && depthOfHypocenter < 500){
             return depthOfHypocenter;
         }
@@ -71,7 +76,7 @@ public class HypocenterParser implements DisasterParser {
         }
     }
     
-    private double parserMagunitude(double magnitude){
+    private double measureTheMagnitudeOfEarthquake(double magnitude){
         if (0.1 <= magnitude && magnitude < 0.8){
             return magnitude;
         }

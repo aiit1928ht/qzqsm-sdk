@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /*
-This class holds the converted information about the SeismicIntensity of the signals received from QZSS.
-This class holds seismic intensity and area name in 16 areas.
+This class is the information about the SeismicIntensity of the signals received from QZSS.
+The contents are seismicIntensity when earthquake occurred each Prefectures.
  */
 
 public class SeismicIntensity implements Disaster {

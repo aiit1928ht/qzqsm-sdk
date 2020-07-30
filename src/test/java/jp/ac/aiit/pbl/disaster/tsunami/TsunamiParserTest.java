@@ -5,6 +5,11 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * This Class is Tsunami Parser Test.
+ * To test that the parameter values ​​are properly parsed or not, according to the definition.
+ */
+
 public class TsunamiParserTest {
     
     @Test

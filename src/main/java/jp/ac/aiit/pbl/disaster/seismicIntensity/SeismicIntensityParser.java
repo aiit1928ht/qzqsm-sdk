@@ -8,6 +8,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class parses binary number of signals of SeismicIntensity from QZSS.
+ * Each parameter is defined by the specified number of bits.
+ * This class provides parse methods.
+ */
+
 public class SeismicIntensityParser implements DisasterParser {
     
     public SeismicIntensity parse(String qzMessage){

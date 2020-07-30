@@ -6,6 +6,11 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
+/**
+ * This Class is Warning of SeismicIntensity parser test.
+ * To test that the parameter values ​​are properly parsed or not, according to the definition.
+ */
+
 public class WarningTest {
     
     @Test

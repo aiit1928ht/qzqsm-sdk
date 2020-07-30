@@ -2,6 +2,13 @@ package jp.ac.aiit.pbl.disaster.tsunami;
 
 import java.util.Arrays;
 
+/**
+ * This enum have definitions of TsunamiForecastRegion of Tsunami.
+ * They are ID and Notification with Japanese.
+ * this enum class provides methods to get a property and get a TsunamiForecastRegion of Tsunami
+ * associated with the id.
+ */
+
 public enum TsunamiForecastRegion {
     
     HokkaidoPacificCoastEast(100, "北海道太平洋沿岸東部"),

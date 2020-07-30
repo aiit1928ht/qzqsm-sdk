@@ -7,6 +7,11 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * This Class is Hypocenter parser test.
+ * To test that the parameter values ​​are properly parsed or not, according to the definition.
+ */
+
 public class HypocenterParserTest {
     
     @Test
