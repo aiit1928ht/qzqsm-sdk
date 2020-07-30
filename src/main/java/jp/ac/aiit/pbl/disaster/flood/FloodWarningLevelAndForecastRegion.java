@@ -6,8 +6,8 @@ package jp.ac.aiit.pbl.disaster.flood;
  */
 
 public class FloodWarningLevelAndForecastRegion {
-    WarningLevel warningLevel;
-    FloodForecastRegion floodForecastRegion;
+    private WarningLevel warningLevel;
+    private FloodForecastRegion floodForecastRegion;
 
     FloodWarningLevelAndForecastRegion(int warningLevel, Long floodForecastRegion) {
         this.warningLevel = WarningLevel.getById(warningLevel);

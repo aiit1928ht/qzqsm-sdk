@@ -17,10 +17,10 @@ public enum WarningLevel {
     LEVEL4(4, "氾濫発生情報"),
     OTHER(15, "その他の警戒レベル");
 
-    private final Integer id;
-    private final String warningLevelName;
+    private Integer id;
+    private String warningLevelName;
 
-    WarningLevel(final int id, final String warningLevelName) {
+    WarningLevel(int id, String warningLevelName) {
         this.id = id;
         this.warningLevelName = warningLevelName;
     }
