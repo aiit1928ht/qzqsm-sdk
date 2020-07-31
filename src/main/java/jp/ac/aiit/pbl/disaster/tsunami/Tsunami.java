@@ -6,6 +6,12 @@ import jp.ac.aiit.pbl.disaster.seismicIntensity.Warning;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/*
+This class is the information about the Tsunami of the signals received from QZSS.
+The contents are the notification when earthquake occurred, and the height of the tsunami,
+the type of warning, the tsunami forecast area, and the estimated arrival time when the tsunami occurs.
+ */
+
 public class Tsunami implements Disaster {
     private Prefix prefix;
     private List<Notification> notifications;

@@ -2,6 +2,13 @@ package jp.ac.aiit.pbl.disaster.seismicIntensity;
 
 import java.util.Arrays;
 
+/**
+ * This enum have definitions of SeismicIntensity.
+ * They are ID and Notification with Japanese.
+ * this enum class provides methods to get a property and get a SeismicIntensity
+ * associated with the id.
+ */
+
 public enum Warning {
     
     SeismicIntensityLessThan4(1, "震度4未満"),

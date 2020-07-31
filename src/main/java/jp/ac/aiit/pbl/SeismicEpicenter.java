@@ -2,6 +2,12 @@ package jp.ac.aiit.pbl;
 
 import java.util.Arrays;
 
+/**
+ * This enum have definitions of SeismicEpicenter.
+ * They are ID and Regions name of SeismicEpicenter with Japanese.
+ * this enum class provides methods to get a property and get a RegionName associated with the id.
+ */
+
 public enum SeismicEpicenter {
     
     HokkaidoRegion(11, "北海道地方"),

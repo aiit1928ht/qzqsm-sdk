@@ -1,5 +1,9 @@
 package jp.ac.aiit.pbl.disaster.seismicIntensity;
 
+/**
+ * This class aggregates Prefecture and SeismicIntensity information when an earthquake occurs.
+ */
+
 public class SeismicIntensityRegion {
     private Warning warning;
     private Prefecture prefecture;

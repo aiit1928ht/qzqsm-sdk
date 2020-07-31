@@ -2,6 +2,13 @@ package jp.ac.aiit.pbl.disaster.tsunami;
 
 import java.util.Arrays;
 
+/**
+ * This enum have definitions of TsunamiHeight of Tsunami.
+ * They are ID and Notification with Japanese.
+ * this enum class provides methods to get a property and get a TsunamiHeight of Tsunami
+ * associated with the id.
+ */
+
 public enum TsunamiHeight {
     
     HeightLessThan2m(1, "0.2m 未満"),

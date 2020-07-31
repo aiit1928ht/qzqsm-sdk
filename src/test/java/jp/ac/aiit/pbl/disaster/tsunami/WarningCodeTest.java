@@ -4,6 +4,11 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
+/**
+ * This Class is WarningCode parser test of Tsunami.
+ * To test that the parameter values ​​are properly parsed or not, according to the definition.
+ */
+
 public class WarningCodeTest {
     
     /**

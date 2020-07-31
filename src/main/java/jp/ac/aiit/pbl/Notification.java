@@ -2,6 +2,12 @@ package jp.ac.aiit.pbl;
 
 import java.util.Arrays;
 
+/**
+ * This enum have definitions of Notification on Disaster Prevention.
+ * They are ID and Notifications with Japanese.
+ * this enum class provides methods to get a property and get a Notification associated with the id.
+ */
+
 public enum Notification {
     
     Notification0(0, "なし"),
