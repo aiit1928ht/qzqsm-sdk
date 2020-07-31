@@ -24,8 +24,8 @@ public enum FloodForecastRegion {
     YAMAGATA_OTHER("69999999999", "山形県のその他の河川"),
     UDAGAWA("70006000100", "宇多川(福島県)");
 
-    private final Long id;
-    private final String floodForecastRegionName;
+    private Long id;
+    private String floodForecastRegionName;
     private static final HashMap<Long, FloodForecastRegion> FLOOD_FORECAST_REGION_HASH_MAP;
 
     FloodForecastRegion(final String id, final String floodForecastRegionName) {
