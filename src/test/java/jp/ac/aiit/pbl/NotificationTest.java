@@ -44,5 +44,9 @@ public class NotificationTest {
     public void canGetNotification110() {
         assertThat(Notification.Notification110, is(Notification.getNotificationContent(110)));
     }
-    
+    /* If CodeNumber is 500, return Notification500*/
+    @Test
+    public void canGetNotification500() {
+        assertThat(Notification.Notification500, is(Notification.getNotificationContent(500)));
+    }
 }
