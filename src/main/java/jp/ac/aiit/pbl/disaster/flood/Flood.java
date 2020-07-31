@@ -1,5 +1,8 @@
 package jp.ac.aiit.pbl.disaster.flood;
 
+import jp.ac.aiit.pbl.Disaster;
+import jp.ac.aiit.pbl.DisasterCategory;
+import jp.ac.aiit.pbl.MessageType;
 import jp.ac.aiit.pbl.Prefix;
 
 import java.util.List;
@@ -10,9 +13,9 @@ import java.util.List;
  * And It provides setter/getter of their properties.
  */
 
-public class Flood {
+public class Flood implements Disaster {
     private Prefix prefix;
-    private List<FloodWarningLevelAndForecastRegion> floodWarningLevelAndForecastRegion;
+    private List<FloodWarningLevelAndForecastRegion> floodWarningLevelAndForecastRegions;
 
     public Prefix getPrefix() {
         return prefix;
@@ -23,10 +26,31 @@ public class Flood {
     }
 
     public List<FloodWarningLevelAndForecastRegion> getFloodWarningLevelAndForecastRegion() {
-        return floodWarningLevelAndForecastRegion;
+        return floodWarningLevelAndForecastRegions;
     }
 
-    public void setFloodWarningLevelAndForecastRegion(List<FloodWarningLevelAndForecastRegion> floodWarningLevelAndForecastRegion) {
-        this.floodWarningLevelAndForecastRegion = floodWarningLevelAndForecastRegion;
+    public void setFloodWarningLevelAndForecastRegion(List<FloodWarningLevelAndForecastRegion> floodWarningLevelAndForecastRegions) {
+        this.floodWarningLevelAndForecastRegions = floodWarningLevelAndForecastRegions;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "    \"Flood\": {" +
+                "        \"prefix\": " + prefix + "," +
+                "        \"WarningLevelRegion1\": " + floodWarningLevelAndForecastRegions.get(0).getWarningLevel() + "," +
+                "        \"ForecastRegionRegion1\": " + floodWarningLevelAndForecastRegions.get(0).getFloodForecastRegion() + "," +
+                "    }" +
+                "}";
+    }
+
+    @Override
+    public MessageType getMessageType() {
+        return prefix.getMessageType();
+    }
+
+    @Override
+    public DisasterCategory getDisasterCategory() {
+        return prefix.getDisasterCategory();
     }
 }

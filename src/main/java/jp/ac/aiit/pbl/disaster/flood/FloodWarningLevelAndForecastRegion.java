@@ -9,7 +9,7 @@ public class FloodWarningLevelAndForecastRegion {
     private WarningLevel warningLevel;
     private FloodForecastRegion floodForecastRegion;
 
-    FloodWarningLevelAndForecastRegion(int warningLevel, String floodForecastRegion) {
+    FloodWarningLevelAndForecastRegion(int warningLevel, Long floodForecastRegion) {
         this.warningLevel = WarningLevel.getById(warningLevel);
         this.floodForecastRegion = FloodForecastRegion.get(floodForecastRegion);
     }
