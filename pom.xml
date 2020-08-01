@@ -46,6 +46,11 @@
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
+          <configuration>
+            <junitArtifactName>junit:junit</junitArtifactName>
+            <encoding>UTF-8</encoding>
+            <argLine>-Dfile.encoding=UTF-8</argLine>
+          </configuration>
           <version>2.22.1</version>
         </plugin>
         <plugin>

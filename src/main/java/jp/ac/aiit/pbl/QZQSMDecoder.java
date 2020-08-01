@@ -5,9 +5,11 @@ import java.util.List;
 
 public class QZQSMDecoder {
 
-    public void decode(String QZDCMessage){
+    public Disaster decode(String QZDCMessage){
+        DisasterParserFactory factory = new DisasterParserFactory();
+        DisasterParser parser = factory.create(toBinaryString(QZDCMessage));
 
-
+        return parser.parse(toBinaryString(QZDCMessage));
     }
 
 
