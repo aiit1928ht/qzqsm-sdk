@@ -2,7 +2,7 @@ package jp.ac.aiit.pbl;
 
 import java.util.List;
 
-public class Weather {
+public class Weather implements  Disaster{
     private Prefix prefix;
     private WarningState warningState;
     private List<WeatherSubcategoryAndRegion> weatherSubcategoryAndRegions;
@@ -27,5 +27,15 @@ public class Weather {
     }
     public void setWeatherSubcategoryAndRegions(List<WeatherSubcategoryAndRegion> weatherSubcategoryAndRegions) {
         this.weatherSubcategoryAndRegions = weatherSubcategoryAndRegions;
+    }
+
+    @Override
+    public MessageType getMessageType() {
+        return prefix.getMessageType();
+    }
+
+    @Override
+    public DisasterCategory getDisasterCategory() {
+        return prefix.getDisasterCategory();
     }
 }
