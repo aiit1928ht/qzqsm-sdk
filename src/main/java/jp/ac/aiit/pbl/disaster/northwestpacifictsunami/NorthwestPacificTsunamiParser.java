@@ -1,5 +1,6 @@
 package jp.ac.aiit.pbl.disaster.northwestpacifictsunami;
 
+import jp.ac.aiit.pbl.DisasterParser;
 import jp.ac.aiit.pbl.PrefixParser;
 
 import java.time.LocalDateTime;
@@ -10,7 +11,9 @@ import java.util.List;
  * Class for NorthwestPacificTsunamiParser.
  * Return NorthwestPacificTsunami Class.
  */
-public class NorthwestPacificTsunamiParser {
+public class NorthwestPacificTsunamiParser implements DisasterParser {
+
+
     public NorthwestPacificTsunami parse(String qzqms) {
         NorthwestPacificTsunami northwestPacificTsunami = new NorthwestPacificTsunami();
         PrefixParser prefixParser = new PrefixParser();

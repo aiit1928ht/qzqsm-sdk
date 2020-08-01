@@ -1,12 +1,13 @@
 package jp.ac.aiit.pbl.disaster.nankaitroughearthquake;
 
+import jp.ac.aiit.pbl.DisasterParser;
 import jp.ac.aiit.pbl.PrefixParser;
 
 /**
  * Class for NankaiTroughEarthquakeParser.
  * Return NankaiTroughEarthquakeParser Class.
  */
-public class NankaiTroughEarthquakeParser {
+public class NankaiTroughEarthquakeParser implements DisasterParser {
     public NankaiTroughEarthquake parse(String qzqms) {
         NankaiTroughEarthquake nankaiTroughEarthquake = new NankaiTroughEarthquake();
         PrefixParser preParser = new PrefixParser();
