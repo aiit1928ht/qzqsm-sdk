@@ -12,37 +12,39 @@ import jp.ac.aiit.pbl.disaster.typhoon.TyphoonParser;
 import jp.ac.aiit.pbl.disaster.volcano.VolcanoParser;
 
 /**
- * This class is
+ * This class is factory of DisasterParser
  */
 public class DisasterParserFactory {
 
     public DisasterParser create(String qzMessage){
         PrefixParser parser = new PrefixParser();
         Prefix prefix = parser.parse(qzMessage);
-        if(prefix.getDisasterCategory().equals(DisasterCategory.AshFall)){
-            return new AshFallParser();
-        }else if(prefix.getDisasterCategory().equals(DisasterCategory.Flood)){
-            return new FloodParser();
-        }else if(prefix.getDisasterCategory().equals(DisasterCategory.Hypocenter)){
-            return new HypocenterParser();
-        }else if(prefix.getDisasterCategory().equals(DisasterCategory.Marine)){
-            return new MarineParser();
-        }else if(prefix.getDisasterCategory().equals(DisasterCategory.NankaiTroughEarthquake)){
-            return new NankaiTroughEarthquakeParser();
-        }else if(prefix.getDisasterCategory().equals(DisasterCategory.NorthwestPacificTsunami)){
-            return new NorthwestPacificTsunamiParser();
-        }else if(prefix.getDisasterCategory().equals(DisasterCategory.SeismicIntensity)){
-            return new SeismicIntensityParser();
-        }else if(prefix.getDisasterCategory().equals(DisasterCategory.Tsunami)){
-            return new TsunamiParser();
-        }else if(prefix.getDisasterCategory().equals(DisasterCategory.Typhoon)){
-            return new TyphoonParser();
-        }else if(prefix.getDisasterCategory().equals(DisasterCategory.Volcano)){
-            return new VolcanoParser();
-        }else if (prefix.getDisasterCategory().equals(DisasterCategory.Weather)){
-            //return new WeatherParser();
-        }
 
-        return null;
+        switch (prefix.getDisasterCategory()) {
+            case AshFall:
+                return new AshFallParser();
+            case Flood:
+                return new FloodParser();
+            case Hypocenter:
+                return new HypocenterParser();
+            case Marine:
+                return new MarineParser();
+            case NankaiTroughEarthquake:
+                return new NankaiTroughEarthquakeParser();
+            case NorthwestPacificTsunami:
+                return new NorthwestPacificTsunamiParser();
+            case SeismicIntensity:
+                return new SeismicIntensityParser();
+            case Tsunami:
+                return new TsunamiParser();
+            case Typhoon:
+                return new TyphoonParser();
+            case Volcano:
+                return new VolcanoParser();
+            case Weather:
+                return new WeatherParser();
+            default:
+                return null;
+        }
     }
 }
