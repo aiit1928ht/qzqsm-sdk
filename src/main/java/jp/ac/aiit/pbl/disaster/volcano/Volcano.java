@@ -67,11 +67,11 @@ public class Volcano implements Disaster {
 
     @Override
     public MessageType getMessageType() {
-        return null;
+        return prefix.getMessageType();
     }
 
     @Override
     public DisasterCategory getDisasterCategory() {
-        return null;
+        return prefix.getDisasterCategory();
     }
 }
