@@ -3,11 +3,11 @@ package jp.ac.aiit.pbl;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WeatherParser {
-    String qzqms;
+public class WeatherParser implements DisasterParser {
 
-    public WeatherParser(String qzqms) {
-        this.qzqms = qzqms;
+
+    public WeatherParser() {
+
     }
 
     public enum Format {
@@ -42,7 +42,7 @@ public class WeatherParser {
         }
     }
 
-    public Weather parse() {
+    public Weather parse(String qzqms) {
         Weather weather = new Weather();
 
         PrefixParser prefixParser = new PrefixParser();

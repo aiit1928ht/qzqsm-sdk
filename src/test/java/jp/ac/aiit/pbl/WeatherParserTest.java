@@ -7,8 +7,8 @@ import static org.junit.Assert.assertThat;
 
 public class WeatherParserTest {
     String qzqms = new String("110001101010110111010011011011001000101000000000000000101011111000011010100000001011111001000001100100001011111010110110110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100110111111110101101101011101000");
-    WeatherParser weatherParser = new WeatherParser(qzqms);
-    Weather weather = weatherParser.parse();
+    WeatherParser weatherParser = new WeatherParser();
+    Weather weather = weatherParser.parse(qzqms);
 
     @Test
     public  void canGetPrefix(){

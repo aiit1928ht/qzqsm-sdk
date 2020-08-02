@@ -1,5 +1,6 @@
 package jp.ac.aiit.pbl.disaster.earthquakeearlywarning;
 
+import jp.ac.aiit.pbl.DisasterParser;
 import jp.ac.aiit.pbl.Notification;
 import jp.ac.aiit.pbl.PrefixParser;
 import jp.ac.aiit.pbl.SeismicEpicenter;
@@ -14,10 +15,10 @@ import java.util.List;
  * This class provides parse method for Earthquake Early Warning signal.
  */
 
-public class EarthquakeEarlyWarningParser {
-    String qzqms;
+public class EarthquakeEarlyWarningParser implements DisasterParser {
 
-    public EarthquakeEarlyWarningParser(String qzqms) { this.qzqms = qzqms; }
+
+    public EarthquakeEarlyWarningParser() {}
 
     public enum Format {
         NOTIFICATION_ON_DISASTER_PREVENTION_INFORMATION1(53, 62),
@@ -127,7 +128,7 @@ public class EarthquakeEarlyWarningParser {
     }
 
 
-    public EarthquakeEarlyWarning parse() {
+    public EarthquakeEarlyWarning parse(String qzqms) {
         EarthquakeEarlyWarning earthquakeEarlyWarning = new EarthquakeEarlyWarning();
 
         PrefixParser prefixParser = new PrefixParser();

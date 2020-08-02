@@ -1,5 +1,6 @@
 package jp.ac.aiit.pbl.disaster.typhoon;
 
+import jp.ac.aiit.pbl.DisasterParser;
 import jp.ac.aiit.pbl.PrefixParser;
 
 import java.time.ZoneId;
@@ -9,7 +10,7 @@ import java.time.ZonedDateTime;
  * Class for TyphoonParser.
  * Return Typhoon Class.
  */
-public class TyphoonParser {
+public class TyphoonParser implements DisasterParser {
 
     public Typhoon parse(String qzqms) {
         PrefixParser prePerser = new PrefixParser();
