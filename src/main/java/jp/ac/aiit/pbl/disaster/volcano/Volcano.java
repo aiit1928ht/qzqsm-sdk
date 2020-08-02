@@ -1,5 +1,8 @@
 package jp.ac.aiit.pbl.disaster.volcano;
-import jp.ac.aiit.pbl.*;
+import jp.ac.aiit.pbl.disaster.Disaster;
+import jp.ac.aiit.pbl.disaster.DisasterCategory;
+import jp.ac.aiit.pbl.disaster.prefix.MessageType;
+import jp.ac.aiit.pbl.disaster.prefix.Prefix;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -72,20 +75,3 @@ public class Volcano implements Disaster {
         return null;
     }
 }
-
-
-
-//   private String preamble;                //Preample(PUB)
-//    private String messageType;             //Message Type(MT)
-//    private String reportClassification;    //Report Classification (rc) 2: Priority 3: Regular 7: Training/Test
-//    private String disasterCategory;        //Disaster Category (dc) 8: 防災気象情報(火山
-//    private String reportTimeMonth;         //Month(AtMo) The UTC time when JMA issued the information.(At)
-//    private String reportTimeDay;           //Day(AtD)
-//    private String reportTimeHour;          //Hour(AtH)
-//    private String reportTimeMinute;        //Minute(AtMi)
-//    private String informationType;         //Information Type 0: Issue: 発表 1: Correction: 訂正 2: Cancellation: 取消
-//    private String Spare1;                  //Spare1 Fix to "0" for spare
-//    private String spare2;                  //Spare2
-//    private String version;                 //Version number(vn)
-//    private String Reserved;
-//    private String crc;                     //Cyclic Redundancy Check

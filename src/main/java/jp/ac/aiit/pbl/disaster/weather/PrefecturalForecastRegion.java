@@ -1,9 +1,9 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.weather;
 
 import java.util.Arrays;
 import java.util.HashMap;
 
-public enum PrefecturalForecastRegion {
+    public enum PrefecturalForecastRegion {
     SOUYACHIHO(11000, "宗谷地方"),
     KAMIKAWA_RUMOICHIHO(12000, "上川・留萌地方"),
     KAMIKAWACHIHO(12010, "上川地方"),
@@ -80,11 +80,11 @@ public enum PrefecturalForecastRegion {
     YAEYAMACHIHO(474000, "八重山地方"),
     OTHERS(500000, "その他の府県予報区");
 
-    private final int id;
-    private final String prefecturalForecastRegionName;
-    private static final HashMap<Integer, PrefecturalForecastRegion> PREFECTURAL_FORECAST_REGION_HASH_MAP;
+    private int id;
+    private String prefecturalForecastRegionName;
+    private static HashMap<Integer, PrefecturalForecastRegion> PREFECTURAL_FORECAST_REGION_HASH_MAP;
 
-    PrefecturalForecastRegion(final int id, final String region) {
+    PrefecturalForecastRegion(int id, String region) {
         this.id = id;
         this.prefecturalForecastRegionName = region;
     }

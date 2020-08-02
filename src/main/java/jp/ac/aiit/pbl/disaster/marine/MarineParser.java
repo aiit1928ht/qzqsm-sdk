@@ -1,6 +1,6 @@
 package jp.ac.aiit.pbl.disaster.marine;
-import jp.ac.aiit.pbl.DisasterParser;
-import jp.ac.aiit.pbl.PrefixParser;
+import jp.ac.aiit.pbl.disaster.DisasterParser;
+import jp.ac.aiit.pbl.disaster.prefix.PrefixParser;
 import java.util.ArrayList;
 import java.util.List;
 

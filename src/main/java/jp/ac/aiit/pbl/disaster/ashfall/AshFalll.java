@@ -1,6 +1,10 @@
 package jp.ac.aiit.pbl.disaster.ashfall;
 
-import jp.ac.aiit.pbl.*;
+import jp.ac.aiit.pbl.disaster.Disaster;
+import jp.ac.aiit.pbl.disaster.DisasterCategory;
+import jp.ac.aiit.pbl.disaster.prefix.MessageType;
+import jp.ac.aiit.pbl.disaster.prefix.Prefix;
+import jp.ac.aiit.pbl.disaster.volcano.VolcanoName;
 
 import java.time.LocalDateTime;
 import java.util.List;

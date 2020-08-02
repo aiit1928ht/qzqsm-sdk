@@ -1,13 +1,13 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.weather;
 
 public enum WarningState {
     ISSUE(1, "発表"),
     CANCEL(2, "解除");
 
-    private final int id;
-    private final String warningStateName;
+    private  int id;
+    private  String warningStateName;
 
-    WarningState(final int id, final String warningStateName) {
+    WarningState(int id,  String warningStateName) {
         this.id = id;
         this.warningStateName = warningStateName;
     }

@@ -22,10 +22,10 @@ public enum SeismicIntensityLowerLimit {
     NONE(14, "なし"),
     UNKNOWN(15, "不明");
 
-    private final Integer id;
-    private final String seismicIntensityName;
+    private Integer id;
+    private String seismicIntensityName;
 
-    SeismicIntensityLowerLimit(final int id, final String seismicIntensityName) {
+    SeismicIntensityLowerLimit(int id, String seismicIntensityName) {
         this.id = id;
         this.seismicIntensityName = seismicIntensityName;
     }

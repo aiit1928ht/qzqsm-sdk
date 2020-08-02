@@ -1,5 +1,10 @@
 package jp.ac.aiit.pbl;
 
+import jp.ac.aiit.pbl.disaster.DisasterSubcategory;
+import jp.ac.aiit.pbl.disaster.weather.PrefecturalForecastRegion;
+import jp.ac.aiit.pbl.disaster.weather.WarningState;
+import jp.ac.aiit.pbl.disaster.weather.Weather;
+import jp.ac.aiit.pbl.disaster.weather.WeatherParser;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

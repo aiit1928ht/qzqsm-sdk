@@ -1,10 +1,8 @@
 package jp.ac.aiit.pbl.disaster.hypocenter;
 
-import jp.ac.aiit.pbl.DisasterParser;
-import jp.ac.aiit.pbl.Notification;
-import jp.ac.aiit.pbl.PrefixParser;
-import jp.ac.aiit.pbl.SeismicEpicenter;
-import jp.ac.aiit.pbl.disaster.earthquakeearlywarning.EarthquakeEarlyWarningParser;
+import jp.ac.aiit.pbl.disaster.DisasterParser;
+import jp.ac.aiit.pbl.disaster.earthquakeearlywarning.Notification;
+import jp.ac.aiit.pbl.disaster.prefix.PrefixParser;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

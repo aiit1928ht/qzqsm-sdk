@@ -1,7 +1,6 @@
 package jp.ac.aiit.pbl.disaster.earthquakeearlywarning;
 
-import jp.ac.aiit.pbl.Notification;
-import jp.ac.aiit.pbl.SeismicEpicenter;
+import jp.ac.aiit.pbl.disaster.hypocenter.SeismicEpicenter;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

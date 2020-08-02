@@ -1,5 +1,7 @@
 package jp.ac.aiit.pbl;
 
+import jp.ac.aiit.pbl.disaster.DisasterParser;
+import jp.ac.aiit.pbl.disaster.DisasterParserFactory;
 import jp.ac.aiit.pbl.disaster.ashfall.AshFallParser;
 import jp.ac.aiit.pbl.disaster.flood.FloodParser;
 import org.junit.Test;

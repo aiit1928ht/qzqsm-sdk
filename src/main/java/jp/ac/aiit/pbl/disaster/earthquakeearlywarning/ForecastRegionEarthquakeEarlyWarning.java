@@ -82,11 +82,11 @@ public enum ForecastRegionEarthquakeEarlyWarning {
     OKINAWA(70, "沖縄"),
     OTHER(80, "その他の府県予報区および地方予報区_緊急地震速報(警報)");
 
-    private final Integer id;
-    private final String EarthquakeEarlyWarningRegionName;
-    private static final HashMap<Integer, ForecastRegionEarthquakeEarlyWarning> FORECAST_REGION_EARTHQUAKE_EARLY_WARNING_HASH_MAP;
+    private Integer id;
+    private  String EarthquakeEarlyWarningRegionName;
+    private static  HashMap<Integer, ForecastRegionEarthquakeEarlyWarning> FORECAST_REGION_EARTHQUAKE_EARLY_WARNING_HASH_MAP;
 
-    ForecastRegionEarthquakeEarlyWarning(final Integer id, final String EarthquakeEarlyWarningRegionName) {
+    ForecastRegionEarthquakeEarlyWarning(Integer id, String EarthquakeEarlyWarningRegionName) {
         this.id = id;
         this.EarthquakeEarlyWarningRegionName = EarthquakeEarlyWarningRegionName;
     }

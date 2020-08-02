@@ -1,6 +1,5 @@
 package jp.ac.aiit.pbl.disaster.volcano;
 
-import jp.ac.aiit.pbl.VolcanoName;
 import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;

@@ -53,6 +53,7 @@ public enum WarningCode {
 
     private Integer id;
     private String warningCode;
+
     private WarningCode(int id, String warningCode){
         this.id  = id;
         this.warningCode = warningCode;

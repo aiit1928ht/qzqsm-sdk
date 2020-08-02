@@ -1,10 +1,9 @@
 package jp.ac.aiit.pbl.disaster.tsunami;
 
-import jp.ac.aiit.pbl.DisasterParser;
-import jp.ac.aiit.pbl.Notification;
-import jp.ac.aiit.pbl.Prefix;
-import jp.ac.aiit.pbl.PrefixParser;
-import java.time.LocalDateTime;
+import jp.ac.aiit.pbl.disaster.DisasterParser;
+import jp.ac.aiit.pbl.disaster.earthquakeearlywarning.Notification;
+import jp.ac.aiit.pbl.disaster.prefix.PrefixParser;
+
 import java.util.ArrayList;
 import java.util.List;
 

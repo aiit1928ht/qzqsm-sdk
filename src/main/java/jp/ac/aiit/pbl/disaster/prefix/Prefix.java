@@ -1,6 +1,7 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.prefix;
 
-import java.time.LocalDate;
+import jp.ac.aiit.pbl.disaster.DisasterCategory;
+
 import java.time.LocalDateTime;
 
 public class Prefix {

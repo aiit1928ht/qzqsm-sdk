@@ -1,5 +1,6 @@
 package jp.ac.aiit.pbl;
 
+import jp.ac.aiit.pbl.disaster.Disaster;
 import jp.ac.aiit.pbl.disaster.ashfall.AshFalll;
 import jp.ac.aiit.pbl.disaster.marine.Marine;
 import org.junit.Test;

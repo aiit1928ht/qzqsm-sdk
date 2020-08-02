@@ -26,7 +26,7 @@ public enum FloodForecastRegion {
 
     private Long id;
     private String floodForecastRegionName;
-    private static final HashMap<Long, FloodForecastRegion> FLOOD_FORECAST_REGION_HASH_MAP;
+    private static HashMap<Long, FloodForecastRegion> FLOOD_FORECAST_REGION_HASH_MAP;
 
     FloodForecastRegion(final String id, final String floodForecastRegionName) {
         this.id = Long.parseLong(id);

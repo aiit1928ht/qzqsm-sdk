@@ -1,15 +1,19 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster;
 
+import jp.ac.aiit.pbl.disaster.DisasterParser;
 import jp.ac.aiit.pbl.disaster.ashfall.AshFallParser;
 import jp.ac.aiit.pbl.disaster.flood.FloodParser;
 import jp.ac.aiit.pbl.disaster.hypocenter.HypocenterParser;
 import jp.ac.aiit.pbl.disaster.marine.MarineParser;
 import jp.ac.aiit.pbl.disaster.nankaitroughearthquake.NankaiTroughEarthquakeParser;
 import jp.ac.aiit.pbl.disaster.northwestpacifictsunami.NorthwestPacificTsunamiParser;
+import jp.ac.aiit.pbl.disaster.prefix.Prefix;
+import jp.ac.aiit.pbl.disaster.prefix.PrefixParser;
 import jp.ac.aiit.pbl.disaster.seismicIntensity.SeismicIntensityParser;
 import jp.ac.aiit.pbl.disaster.tsunami.TsunamiParser;
 import jp.ac.aiit.pbl.disaster.typhoon.TyphoonParser;
 import jp.ac.aiit.pbl.disaster.volcano.VolcanoParser;
+import jp.ac.aiit.pbl.disaster.weather.WeatherParser;
 
 /**
  * This class is factory of DisasterParser

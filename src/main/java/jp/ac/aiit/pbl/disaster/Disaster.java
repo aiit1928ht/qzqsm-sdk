@@ -1,5 +1,7 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster;
 
+
+import jp.ac.aiit.pbl.disaster.prefix.MessageType;
 
 public interface Disaster {
 

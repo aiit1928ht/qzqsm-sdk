@@ -1,7 +1,11 @@
 package jp.ac.aiit.pbl.disaster.earthquakeearlywarning;
 
-import jp.ac.aiit.pbl.*;
-import jp.ac.aiit.pbl.SeismicEpicenter;
+import jp.ac.aiit.pbl.disaster.Disaster;
+import jp.ac.aiit.pbl.disaster.DisasterCategory;
+import jp.ac.aiit.pbl.disaster.hypocenter.SeismicEpicenter;
+import jp.ac.aiit.pbl.disaster.prefix.MessageType;
+import jp.ac.aiit.pbl.disaster.prefix.Prefix;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
