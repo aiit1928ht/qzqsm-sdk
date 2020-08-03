@@ -1,5 +1,9 @@
 package jp.ac.aiit.pbl;
 
+import jp.ac.aiit.pbl.disaster.Disaster;
+import jp.ac.aiit.pbl.disaster.DisasterParser;
+import jp.ac.aiit.pbl.disaster.DisasterParserFactory;
+
 import java.util.Arrays;
 import java.util.List;
 

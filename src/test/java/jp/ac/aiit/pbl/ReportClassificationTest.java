@@ -1,5 +1,6 @@
 package jp.ac.aiit.pbl;
 
+import jp.ac.aiit.pbl.disaster.prefix.ReportClassification;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

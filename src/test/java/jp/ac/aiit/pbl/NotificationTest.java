@@ -1,6 +1,6 @@
 package jp.ac.aiit.pbl;
 
-import jp.ac.aiit.pbl.Notification;
+import jp.ac.aiit.pbl.disaster.earthquakeearlywarning.Notification;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

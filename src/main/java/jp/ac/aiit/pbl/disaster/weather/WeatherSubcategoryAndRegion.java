@@ -1,4 +1,6 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.weather;
+
+import jp.ac.aiit.pbl.disaster.DisasterSubcategory;
 
 public class WeatherSubcategoryAndRegion {
     public final DisasterSubcategory disasterSubcategory;

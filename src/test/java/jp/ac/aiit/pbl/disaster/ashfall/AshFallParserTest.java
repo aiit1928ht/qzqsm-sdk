@@ -1,7 +1,7 @@
 package jp.ac.aiit.pbl.disaster.ashfall;
 
-import jp.ac.aiit.pbl.LocalGovernment;
-import jp.ac.aiit.pbl.VolcanoName;
+import jp.ac.aiit.pbl.disaster.volcano.LocalGovernment;
+import jp.ac.aiit.pbl.disaster.volcano.VolcanoName;
 import org.junit.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;

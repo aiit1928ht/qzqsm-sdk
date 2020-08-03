@@ -1,6 +1,5 @@
 package jp.ac.aiit.pbl.disaster.hypocenter;
 
-import jp.ac.aiit.pbl.SeismicEpicenter;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

@@ -1,4 +1,4 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.volcano;
 import java.util.Arrays;
 /**
  * Enum for Volcano Name, which is called from Volcano and Ash Fall.

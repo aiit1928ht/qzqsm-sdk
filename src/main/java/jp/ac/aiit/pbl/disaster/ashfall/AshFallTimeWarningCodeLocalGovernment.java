@@ -1,6 +1,6 @@
 package jp.ac.aiit.pbl.disaster.ashfall;
 
-import jp.ac.aiit.pbl.LocalGovernment;
+import jp.ac.aiit.pbl.disaster.volcano.LocalGovernment;
 /**
  * Class for calling construct to deal with Expected AshFall, Warning Code and Local Government as one set.
  */

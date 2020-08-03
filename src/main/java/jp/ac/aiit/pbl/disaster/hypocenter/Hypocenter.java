@@ -1,7 +1,10 @@
 package jp.ac.aiit.pbl.disaster.hypocenter;
 
-import jp.ac.aiit.pbl.*;
-import jp.ac.aiit.pbl.SeismicEpicenter;
+import jp.ac.aiit.pbl.disaster.Disaster;
+import jp.ac.aiit.pbl.disaster.DisasterCategory;
+import jp.ac.aiit.pbl.disaster.earthquakeearlywarning.Notification;
+import jp.ac.aiit.pbl.disaster.prefix.MessageType;
+import jp.ac.aiit.pbl.disaster.prefix.Prefix;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -105,12 +108,12 @@ public class Hypocenter implements Disaster {
     }
     @Override
     public MessageType getMessageType() {
-        return null;
+        return prefix.getMessageType();
     }
     
     @Override
     public DisasterCategory getDisasterCategory() {
-        return null;
+        return prefix.getDisasterCategory();
     }
     
     @Override

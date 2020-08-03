@@ -1,8 +1,8 @@
 package jp.ac.aiit.pbl.disaster.ashfall;
 
-import jp.ac.aiit.pbl.DisasterParser;
-import jp.ac.aiit.pbl.PrefixParser;
-import jp.ac.aiit.pbl.VolcanoName;
+import jp.ac.aiit.pbl.disaster.DisasterParser;
+import jp.ac.aiit.pbl.disaster.prefix.PrefixParser;
+import jp.ac.aiit.pbl.disaster.volcano.VolcanoName;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

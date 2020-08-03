@@ -1,5 +1,7 @@
 package jp.ac.aiit.pbl;
 
+import jp.ac.aiit.pbl.disaster.prefix.Prefix;
+import jp.ac.aiit.pbl.disaster.prefix.PrefixParser;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

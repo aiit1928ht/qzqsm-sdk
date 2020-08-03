@@ -1,8 +1,8 @@
 package jp.ac.aiit.pbl.disaster.marine;
-import jp.ac.aiit.pbl.Disaster;
-import jp.ac.aiit.pbl.DisasterCategory;
-import jp.ac.aiit.pbl.MessageType;
-import jp.ac.aiit.pbl.Prefix;
+import jp.ac.aiit.pbl.disaster.Disaster;
+import jp.ac.aiit.pbl.disaster.DisasterCategory;
+import jp.ac.aiit.pbl.disaster.prefix.MessageType;
+import jp.ac.aiit.pbl.disaster.prefix.Prefix;
 import java.util.List;
 
 /**
@@ -39,11 +39,11 @@ public class Marine implements Disaster {
 
     @Override
     public MessageType getMessageType() {
-        return null;
+        return prefix.getMessageType();
     }
 
     @Override
     public DisasterCategory getDisasterCategory() {
-        return null;
+        return prefix.getDisasterCategory();
     }
 }

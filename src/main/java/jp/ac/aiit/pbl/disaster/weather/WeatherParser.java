@@ -1,4 +1,7 @@
-package jp.ac.aiit.pbl;
+package jp.ac.aiit.pbl.disaster.weather;
+
+import jp.ac.aiit.pbl.disaster.DisasterParser;
+import jp.ac.aiit.pbl.disaster.prefix.PrefixParser;
 
 import java.util.ArrayList;
 import java.util.List;
