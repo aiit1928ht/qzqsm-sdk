@@ -34,7 +34,7 @@ public class PrefixParserTest {
     @Test
     public  void inCaseOfParsingAshFall(){
         PrefixParser parser = new PrefixParser();
-        Prefix prefix =parser.parse("0101001110101101110010101100010100010100000000000000010100010000000010000111");
+        Prefix prefix = parser.parse("0101001110101101110010101100010100010100000000000000010100010000000010000111");
         assertThat(prefix.getPreamble(),is(Preamble.PatternA));
         assertThat(prefix.getMessageType(),is(MessageType.MT43));
         assertThat(prefix.getReportClassification(),is(ReportClassification.Regular));
@@ -50,7 +50,7 @@ public class PrefixParserTest {
     @Test
     public void inCaseOfParsingEarthQuakeEarlyWarning(){
         PrefixParser parser = new PrefixParser();
-        Prefix prefix =parser.parse("1001101010101111100010111010100000100000000000000000000110010100000000000000");
+        Prefix prefix = parser.parse("1001101010101111100010111010100000100000000000000000000110010100000000000000");
         assertThat(prefix.getPreamble(),is(Preamble.PatternB));
         assertThat(prefix.getMessageType(),is(MessageType.MT43));
         assertThat(prefix.getReportClassification(),is(ReportClassification.TrainingTest));
@@ -66,7 +66,7 @@ public class PrefixParserTest {
     @Test
     public void inCaseOfParsingFlood(){
         PrefixParser parser = new PrefixParser();
-        Prefix prefix =parser.parse("1100011010101101010110111111000001101111000000000000000100001000001001100101");
+        Prefix prefix = parser.parse("1100011010101101010110111111000001101111000000000000000100001000001001100101");
         assertThat(prefix.getPreamble(),is(Preamble.PatternC));
         assertThat(prefix.getMessageType(),is(MessageType.MT43));
         assertThat(prefix.getReportClassification(),is(ReportClassification.Priority));
