@@ -21,7 +21,7 @@ public enum SeismicIntensityUpperLimit {
     SEVEN(10, "震度7"),
     OTHER(11, "〜程度以上"),
     NONE(14, "なし"),
-    UNKNOW(15, "不明");
+    UNKNOWN(15, "不明");
 
     private Integer id;
     private String seismicIntensityName;
