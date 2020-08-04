@@ -21,7 +21,6 @@ public class VolcanoParserTest {
         public void parseTest(){
             VolcanoParser parser = new VolcanoParser();
             Volcano volcano = parser.parse("010100111010110111000010110001010001010000000000000001010001000000001000000100000110010100000101000101100101100000001010001011001011000000010100010110010110000000101000101100101100000001010001011001011000000000000000000100000001111000101001010111010100");
-            System.out.println(volcano.toString());
             assertThat(volcano.getPrefix().getPreamble(),is(Preamble.PatternA));
             assertThat(volcano.getPrefix().getReportClassification(),is(ReportClassification.Regular));
             assertThat(volcano.getPrefix().getDisasterCategory(),is(DisasterCategory.Volcano));
