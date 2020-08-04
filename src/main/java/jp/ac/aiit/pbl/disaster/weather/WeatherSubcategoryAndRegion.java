@@ -3,8 +3,8 @@ package jp.ac.aiit.pbl.disaster.weather;
 import jp.ac.aiit.pbl.disaster.DisasterSubcategory;
 
 public class WeatherSubcategoryAndRegion {
-    public final DisasterSubcategory disasterSubcategory;
-    public final PrefecturalForecastRegion prefecturalForecastRegion;
+    private DisasterSubcategory disasterSubcategory;
+    private   PrefecturalForecastRegion prefecturalForecastRegion;
 
     WeatherSubcategoryAndRegion(int disasterSubcategoryId, int prefecturalForecastRegionId) {
         this.disasterSubcategory = DisasterSubcategory.get(disasterSubcategoryId);

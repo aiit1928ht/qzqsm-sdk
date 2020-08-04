@@ -83,7 +83,7 @@ public enum ForecastRegionEarthquakeEarlyWarning {
     OTHER(80, "その他の府県予報区および地方予報区_緊急地震速報(警報)");
 
     private Integer id;
-    private  String EarthquakeEarlyWarningRegionName;
+    private String EarthquakeEarlyWarningRegionName;
     private static  HashMap<Integer, ForecastRegionEarthquakeEarlyWarning> FORECAST_REGION_EARTHQUAKE_EARLY_WARNING_HASH_MAP;
 
     ForecastRegionEarthquakeEarlyWarning(Integer id, String EarthquakeEarlyWarningRegionName) {
